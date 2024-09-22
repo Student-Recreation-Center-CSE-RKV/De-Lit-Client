@@ -3,7 +3,7 @@
 import { useState, useRef, useEffect } from "react";
 import styles from "./Magazine.module.css";
 import PDFViewer from "./PDFViewer";
-import Modal from "@/components/ui/Modal";
+
 
 const Magazine = ({ title, text, image }) => {
   const cardRef = useRef(null);
@@ -54,9 +54,7 @@ const Magazine = ({ title, text, image }) => {
 
   return (
     <>
-      <Modal open={open} onCancel={toggleModel}>
-        <PDFViewer onCancel={toggleModel} />
-      </Modal>
+
 
       <div
         className={styles.cardWarp}
@@ -67,8 +65,8 @@ const Magazine = ({ title, text, image }) => {
         <div
           className={styles.card}
           style={{
-            transform: `rotateY(${(mouseX * 20) / width}deg) rotateX(${
-              (mouseY * -20) / height
+            transform: `rotateY(${(mouseX * 7) / width}deg) rotateX(${
+              (mouseY * -7) / height
             }deg)`,
           }}
         >
@@ -76,8 +74,8 @@ const Magazine = ({ title, text, image }) => {
             className={styles.cardBg}
             style={{
               backgroundImage: `url(${image})`,
-              transform: `translateX(${(mouseX * 20) / width}px) translateY(${
-                (mouseY * -20) / height
+              transform: `translateX(${(mouseX * 30) / width}px) translateY(${
+                (mouseY * -30) / height
               }px)`,
             }}
           ></div>
