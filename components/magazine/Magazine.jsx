@@ -1,0 +1,94 @@
+"use client";
+
+import { useState, useRef, useEffect } from "react";
+import styles from "./Magazine.module.css";
+import PDFViewer from "./PDFViewer";
+import Modal from "@/components/ui/Modal";
+
+const Magazine = ({ title, text, image }) => {
+  const cardRef = useRef(null);
+  const [open, setOpen] = useState(false);
+
+  function toggleModel() {
+    setOpen((prev) => !prev);
+  }
+
+  const [width, setWidth] = useState(0);
+  const [height, setHeight] = useState(0);
+
+  const [{ mouseX, mouseY }, setMousePosition] = useState({
+    mouseX: 0,
+    mouseY: 0,
+  });
+
+  let requestId = null;
+
+  // Function to handle mouse movement
+  const handleMouseMove = (e) => {
+    if (requestId === null) {
+      requestId = requestAnimationFrame(() => {
+        const rect = cardRef.current.getBoundingClientRect();
+        setMousePosition({
+          mouseX: e.clientX - rect.left - width / 2, // Mouse position relative to card
+          mouseY: e.clientY - rect.top - height / 2, // Mouse position relative to card
+        });
+      });
+      requestId = null;
+    }
+  };
+
+  // Function to reset parallax effect on mouse leave
+  const handleMouseLeave = () => {
+    setTimeout(() => {
+      setMousePosition({ mouseX: 0, mouseY: 0 });
+    }, 10);
+  };
+
+  // Measure the card dimensions when it mounts
+  useEffect(() => {
+    if (cardRef.current) {
+      setWidth(cardRef.current.offsetWidth);
+      setHeight(cardRef.current.offsetHeight);
+    }
+  }, [cardRef.current]);
+
+  return (
+    <>
+      <Modal open={open} onCancel={toggleModel}>
+        <PDFViewer onCancel={toggleModel} />
+      </Modal>
+
+      <div
+        className={styles.cardWarp}
+        ref={cardRef}
+        onMouseLeave={handleMouseLeave}
+        onMouseMove={handleMouseMove}
+      >
+        <div
+          className={styles.card}
+          style={{
+            transform: `rotateY(${(mouseX * 20) / width}deg) rotateX(${
+              (mouseY * -20) / height
+            }deg)`,
+          }}
+        >
+          <div
+            className={styles.cardBg}
+            style={{
+              backgroundImage: `url(${image})`,
+              transform: `translateX(${(mouseX * 20) / width}px) translateY(${
+                (mouseY * -20) / height
+              }px)`,
+            }}
+          ></div>
+          <div className={styles.cardInfo}>
+            <h3 className={styles.title}>{title}</h3>
+            <p className={styles.content}>{text}</p>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Magazine;
