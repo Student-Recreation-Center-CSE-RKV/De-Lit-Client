@@ -20,7 +20,7 @@ const Footer = () => {
           {/* Logo Section */}
           <div className="mb-6 md:mb-0">
             {/* <h1 className="text-2xl font-bold text-white">Your Logo</h1> */}
-            <img src="/logo.jpg" alt="" className="w-32  mx-auto h-auto"/>
+            <img src="/footer_logo.jpg" alt="" className="w-32  mx-auto h-auto"/>
           </div>
 
           {/* Navigation Links */}
