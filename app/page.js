@@ -2,17 +2,17 @@ import Image from "next/image";
 import MagazineWrapper from "@/components/magazine/MagazineWrapper";
 import Footer from "@/components/footer/Footer";
 import Block from "@/components/Block";
+import Navbar  from "@/components/Navbar/Navbar";
 
 export default function Home() {
   return (
     <div>
+      <Navbar /> 
       <Block />
       <Footer />
     </div>
-    
   );
 }
-
 
 // return (
 //   <div className="flex flex-row space-x-24 h-screen items-center ">
