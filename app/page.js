@@ -1,10 +1,15 @@
 import Image from "next/image";
 import MagazineWrapper from "@/components/magazine/MagazineWrapper";
+import Footer from "@/components/footer/Footer";
 import Block from "@/components/Block";
 
 export default function Home() {
   return (
-    <Block />
+    <div>
+      <Block />
+      <Footer />
+    </div>
+    
   );
 }
 
