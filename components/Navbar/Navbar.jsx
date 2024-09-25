@@ -1,29 +1,32 @@
 "use client";
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
-import { FaBars, FaTimes } from "react-icons/fa"; // Uncommented the icons
+import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
   const [navBackground, setNavBackground] = useState("rgba(0, 0, 0, 0)");
-  const [textColor, setTextColor] = useState("black"); // Initial text color black
-  const [logoColor, setLogoColor] = useState("black"); // Start with transparent background
+  const [textColor, setTextColor] = useState("black");
+  const [logoColor, setLogoColor] = useState("black");
+  const [sidebarBackground, setSidebarBackground] =
+    useState("rgba(0, 0, 0, 0)"); // State for sidebar background
 
+  // Scroll effect for navbar and sidebar background and text color
   useEffect(() => {
     const handleScroll = () => {
-      const scrollY = window.scrollY; // Get current scroll position
-      const maxScroll = 300; // Max scroll where the background should be fully black
-      let opacity = Math.min(scrollY / maxScroll, 1); // Calculate opacity (0 to 1 based on scroll)
-      console.log(scrollY);
-      // Create the rgba color with increasing opacity
+      const scrollY = window.scrollY;
+      const maxScroll = 300;
+      let opacity = Math.min(scrollY / maxScroll, 1);
+
       if (scrollY < 40) {
-        setTextColor(`black`);
-        setLogoColor(`black`);
+        setTextColor("black");
+        setLogoColor("black");
       } else {
         setTextColor(`rgba(255,255,255, ${opacity})`);
         setLogoColor(`rgba(255,255,255, ${opacity})`);
       }
       setNavBackground(`rgba(0, 0, 0, ${opacity})`);
+      setSidebarBackground(`rgba(0, 0, 0, ${opacity})`); // Update sidebar background with scroll
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -33,44 +36,33 @@ export default function Navbar() {
     };
   }, []);
 
+  // Disable body scroll when mobile menu is open
+  useEffect(() => {
+    if (nav) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+  }, [nav]);
+
   const links = [
-    {
-      id: 1,
-      link: "home",
-    },
-    {
-      id: 2,
-      link: "about",
-    },
-    {
-      id: 3,
-      link: "portfolio",
-    },
-    {
-      id: 4,
-      link: "experience",
-    },
-    {
-      id: 5,
-      link: "contact",
-    },
+    { id: 1, link: "magazines", text: "Magazines & Publications" },
+    { id: 2, link: "#", text: "Blog" },
+    { id: 3, link: "#", text: "Gallery" },
+    { id: 4, link: "#", text: "Club Talk" },
+    { id: 5, link: "#", text: "About Us" },
+    { id: 6, link: "#", text: "Contact Us" },
   ];
 
   return (
-    // <div className="flex justify-between items-center w-full h-[20vh] px-4 top-0 z-50 text-white bg-black fixed nav border-b-2 border-transparent transition-all duration-300 ease-in-out hover:border-b-white">
     <div
-      className="flex justify-between items-center w-full h-[10vh] md:h-[15vh] px-4 text-white bg-transparent  top-0 z-50 fixed nav"
+      className="flex justify-between items-center w-full h-[10vh] md:h-[15vh] px-4 top-0 z-50 fixed"
       style={{ backgroundColor: navBackground }}
     >
+      {/* Logo */}
       <div>
-        <h1 className="text-5xl font-signature ml-2 w-[100px]">
-          <a
-            className="link-underline link-underline-black"
-            href=""
-            target="_blank"
-            rel="noreferrer"
-          >
-            {/* <img src="logo1.png" alt="Delit" className="w-[65px]" /> */}
+        <h1 className="text-5xl font-signature ml-2">
+          <a href="/" target="_blank" rel="noreferrer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               version="1.0"
@@ -90,38 +82,57 @@ export default function Navbar() {
         </h1>
       </div>
 
+      {/* Desktop Menu */}
       <ul className="hidden md:flex">
-        {links.map(({ id, link }) => (
+        {links.map(({ id, link, text }) => (
           <li
             key={id}
-            className="nav-links px-4 cursor-pointer capitalize font-medium  hover:scale-105 hover:text-white duration-200 link-underline"
+            className="nav-links px-4 cursor-pointer capitalize font-medium hover:scale-105 hover:text-white duration-200 link-underline"
             style={{ color: textColor }}
           >
-            <Link href={link}>{link}</Link>
+            <Link href={link}>{text}</Link>
           </li>
         ))}
       </ul>
 
+      {/* Hamburger Icon for Mobile */}
       <div
         onClick={() => setNav(!nav)}
-        className="cursor-pointer pr-4 z-10 text-gray-500 md:hidden"
+        className="cursor-pointer pr-4 z-10 md:hidden"
       >
-        {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
+        {nav ? (
+          <FaTimes size={30} style={{ color: textColor }} />
+        ) : (
+          <FaBars size={30} style={{ color: textColor }} />
+        )}
       </div>
 
-      {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
-          {links.map(({ id, link }) => (
+      {/* Mobile Sidebar Menu */}
+      <div
+        className={`fixed top-0 left-0 h-full text-white w-[50vw] p-6 z-50 transition-transform duration-300 ${
+          nav ? "translate-x-0" : "-translate-x-full"
+        }`}
+        style={{ backgroundColor: sidebarBackground }} // Dynamically set the background based on scroll
+      >
+        <ul className="flex flex-col space-y-4 top-[10vh]">
+          {links.map(({ id, link, text }) => (
             <li
               key={id}
-              className="px-4 cursor-pointer capitalize py-6 text-4xl"
+              className="text-2xl capitalize hover:text-black hover:text-3xl transition-all duration-200"
+              onClick={() => setNav(false)} // Close menu on link click
             >
-              <Link onClick={() => setNav(!nav)} href={link}>
-                {link}
-              </Link>
+              <Link href={link}>{text}</Link>
             </li>
           ))}
         </ul>
+      </div>
+
+      {/* Overlay to close the menu when clicking outside */}
+      {nav && (
+        <div
+          onClick={() => setNav(false)}
+          className="fixed top-0 left-0 w-full h-full bg-black opacity-50 z-40"
+        ></div>
       )}
     </div>
   );
