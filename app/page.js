@@ -2,15 +2,18 @@ import Image from "next/image";
 import MagazineWrapper from "@/components/magazine/MagazineWrapper";
 import Footer from "@/components/footer/Footer";
 import Block from "@/components/Block";
-import Navbar  from "@/components/Navbar/Navbar";
+import Navbar from "@/components/Navbar/Navbar";
 
 export default function Home() {
   return (
-    <div>
-      <Navbar /> 
+    <>
+      <Navbar />
+      <Block />
+      <Block />
+      <Block />
       <Block />
       <Footer />
-    </div>
+    </>
   );
 }
 
