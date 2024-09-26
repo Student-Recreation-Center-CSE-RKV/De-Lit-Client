@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@wojtekmaj/react-hooks": "^1.21.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.5.6",
     "next": "14.2.13",
     "react": "^18",
     "react-dom": "^18",
