@@ -14,6 +14,7 @@ module.exports = {
         colorD: 'var(--color-d)',
         colorE: 'var(--color-e)',
         colorF: 'var(--color-f)',
+        pdfBg: 'var(--pdfbackground)',
       },
     },
   },

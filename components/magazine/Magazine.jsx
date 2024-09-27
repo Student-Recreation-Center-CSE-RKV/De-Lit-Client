@@ -2,16 +2,20 @@
 
 import { useState, useRef, useEffect } from "react";
 import styles from "./Magazine.module.css";
-import PDFViewer from "./PDFViewer";
 
+import Modal from "./Modal";
 
 const Magazine = ({ title, text, image }) => {
   const cardRef = useRef(null);
   const [open, setOpen] = useState(false);
 
-  function toggleModel() {
-    setOpen((prev) => !prev);
-  }
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   const [width, setWidth] = useState(0);
   const [height, setHeight] = useState(0);
@@ -54,16 +58,16 @@ const Magazine = ({ title, text, image }) => {
 
   return (
     <>
-
-
+      <Modal open={open} handleClose={handleClose} />
       <div
         className={styles.cardWarp}
         ref={cardRef}
         onMouseLeave={handleMouseLeave}
         onMouseMove={handleMouseMove}
+        onClick={handleClickOpen}
       >
         <div
-          className={styles.card}
+          className={`${styles.card} w-[19rem] h-[37rem] md:w-[21.5rem] md:h-[39.75rem]`}
           style={{
             transform: `rotateY(${(mouseX * 7) / width}deg) rotateX(${
               (mouseY * -7) / height
