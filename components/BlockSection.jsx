@@ -1,6 +1,6 @@
 "use client";
 import { useRef, useEffect, useState } from 'react';
-import { useScroll, useTransform, motion } from 'framer-motion';
+import { useScroll, useTransform, useMotionValueEvent, motion } from 'framer-motion';
 import Block from '@/components/Block';
 
 const data = [
@@ -33,11 +33,14 @@ export default function BlockSection() {
     const targetRef = useRef(null);
     const [activeBlock, setActiveBlock] = useState(0);
     const {scrollYProgress} = useScroll({target: targetRef, offset: ["start start", "end end"]});
-    const activeBlockValue = useTransform(scrollYProgress, (latest) => Math.floor(latest * 4));
-    useEffect(() => activeBlockValue.on("change", latest => {setActiveBlock(latest)}), [])
+    // const activeBlockValue = useTransform(scrollYProgress, (latest) => Math.floor(latest * 4));
+    // useEffect(() => activeBlockValue.on("change", latest => {setActiveBlock(latest)}), [])
+    useMotionValueEvent(scrollYProgress, "change", (latest) => setActiveBlock(Math.floor(latest * 4)));
     return (
       <>
-        <motion.div ref={targetRef} className={`min-h-[${(data.length + 1) * 100}vh]`}>
+        {/* <motion.p className="fixed top-[16vh] left-5">{activeBlock}</motion.p>
+        <motion.p className="fixed top-[18vh] left-5">{scrollYProgress}</motion.p> */}
+        <motion.div ref={targetRef} style={{height: `${(data.length + 1) * 100}vh`}}>
         {data.map(block => <Block key={block.id} {...block} isActive={activeBlock === block.id} />)}
         </motion.div>
       </>

@@ -15,7 +15,6 @@ export default function Block({title, image, description, isActive}) {
     "translate-y-20": !isActive
   }
 
-
   return (
     <div className={clsx("min-h-[85vh] flex items-center justify-center sticky top-[15vh] overflow-x-hidden transition-opacity duration-700", blockClasses)}>
       <div className="flex md:flex-row lg:space-x-24 my-auto mx-20 items-center flex-col md:space-x-10 max-md:space-y-12 self-stretch md:max-h-[70vh] max-md:h-1/3">
