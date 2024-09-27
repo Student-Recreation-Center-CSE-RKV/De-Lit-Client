@@ -18,7 +18,7 @@ import React from 'react';
 
 const Banner = () => {
   return (
-    <div className="relative w-full bg-cover bg-center h-[90vh] "> {/* Placeholder background color */}
+    <div className="relative w-full bg-cover bg-center h-[100vh] "> {/* Placeholder background color */}
       <div className="absolute inset-0 w-full bg-black bg-opacity-50 flex flex-col items-center justify-center text-white">
         
         {/* Example SVG logo or icon */}
