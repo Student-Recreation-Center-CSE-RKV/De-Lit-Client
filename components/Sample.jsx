@@ -6,13 +6,10 @@ import { pdfjs, Document, Page } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
 
-// pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-//   "pdfjs-dist/legacy/build/pdf.worker.min.mjs",
-//   import.meta.url
-// ).toString();
-
-
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/legacy/build/pdf.worker.min.mjs`;
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+  "pdfjs-dist/legacy/build/pdf.worker.min.mjs",
+  import.meta.url
+).toString();
 
 const options = {
   cMapUrl: "/cmaps/",
@@ -23,8 +20,8 @@ const resizeObserverOptions = {};
 
 const maxWidth = 800;
 
-export default function PDFViewer({file}) {
-
+export default function Sample() {
+  const [file, setFile] = useState("./sample.pdf");
   const [numPages, setNumPages] = useState();
   const [containerRef, setContainerRef] = useState(null);
   const [containerWidth, setContainerWidth] = useState();

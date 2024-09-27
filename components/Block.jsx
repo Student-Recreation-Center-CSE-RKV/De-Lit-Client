@@ -2,17 +2,18 @@ import Link from 'next/link';
 import clsx from 'clsx';
 
 export default function Block({title, image, description, isActive}) {
+
   const titleClasses = {
     "md:left-3/4 md:top-[calc(14%)]": isActive,
     "md:left-[169%] md:top-0": !isActive
   }
-  const blockClasses = {
-    "opacity-1": isActive,
-    "opacity-0": !isActive
-  }
+    const blockClasses = {
+      "opacity-0 -z-50": !isActive,
+      "opacity-1 z-0": isActive,
+    }
   const contentClasses = {
     "translate-y-0": isActive,
-    "translate-y-20": !isActive
+    "translate-y-20": !isActive 
   }
 
   return (

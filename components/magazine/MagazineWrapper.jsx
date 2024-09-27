@@ -2,6 +2,9 @@ import React from "react";
 import Magazine from "./Magazine";
 import styles from "./Magazine.module.css";
 
+
+
+
 export default function MagazineWrapper() {
   return (
     <div className={styles.container}>
