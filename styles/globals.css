@@ -23,5 +23,15 @@
   .no-scrollbar {
       -ms-overflow-style: none;  /* IE and Edge */
       scrollbar-width: none;  /* Firefox */
-}
+  }
+  body::-webkit-scrollbar {
+    width: 7px;
+  }
+  body::-webkit-scrollbar-thumb {
+    background: linear-gradient(90deg, var(--color-b) 0%, var(--color-a) 100%);
+  }
+
+  /* body {
+    cursor: url("/feather.png"), auto;
+  } */
 }

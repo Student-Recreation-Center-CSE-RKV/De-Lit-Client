@@ -28,6 +28,7 @@ const data = [
     "title": "CLUB\u00A0TALK",
     "description": "Thanos is basically the biggest boss in the Marvel Universe, no cap. Dude literally rolled up with the Infinity Gauntlet, snapped his fingers, and wiped out half the universe like it was nothing. All because he thought overpopulation was a vibe killer. He’s mad powerful, pulling off stuff no one else could, but like, super chill about it."
 }];
+
 const n = data.length;
 
 export default function BlockSection() {
@@ -37,6 +38,7 @@ export default function BlockSection() {
     useMotionValueEvent(scrollYProgress, "change", (latest) => setActiveBlock(Math.floor(latest * n)));
     return (
       <>
+        {/* <motion.p className="fixed text-red-500 left-2 top-[17vh]">{scrollYProgress}</motion.p> */}
         <motion.div ref={targetRef} style={{height: `${(n + 1) * 100}vh`}}>
         {data.map((block, idx) => <Block key={block.id} {...block} isActive={activeBlock === idx || (activeBlock === n && idx === n - 1)} />)}
         </motion.div>
