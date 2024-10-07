@@ -31,7 +31,7 @@
     background: linear-gradient(90deg, var(--color-b) 0%, var(--color-a) 100%);
   }
 
-  /* body {
+  body {
     cursor: url("/feather.png"), auto;
-  } */
+  }
 }
