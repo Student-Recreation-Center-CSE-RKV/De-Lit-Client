@@ -24,9 +24,9 @@ const data = [
 },
 {
     "id": 3,
-    "image": "https://plus.unsplash.com/premium_photo-1661844581764-eb881c5a7462?q=80&w=1428&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "image": "https://images.unsplash.com/photo-1607396508599-5d61627a058f?q=80&w=1494&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "title": "CLUB\u00A0TALK",
-    "description": "Thanos is basically the biggest boss in the Marvel Universe, no cap. Dude literally rolled up with the Infinity Gauntlet, snapped his fingers, and wiped out half the universe like it was nothing. All because he thought overpopulation was a vibe killer. He’s mad powerful, pulling off stuff no one else could, but like, super chill about it."
+    "description": "Most birds can fly, which distinguishes them from almost all other vertebrate classes. Flight is the primary means of locomotion for most bird species and is used for searching for food and for escaping from predators. Birds have various adaptations for flight, including a lightweight skeleton, two large flight muscles, the pectoralis and the supracoracoideus, as well as a modified forelimb"
 }];
 
 const n = data.length;
