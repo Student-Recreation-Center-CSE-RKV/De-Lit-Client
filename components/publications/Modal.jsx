@@ -1,6 +1,6 @@
 "use client";
 import { useRef, useEffect } from "react";
-import PDFViewer from "@/components/magazine/PDFViewer";
+import PDFViewer from "@/components/publications/PDFViewer";
 export default function Modal({ open, handleClose }) {
   const dialog = useRef();
   useEffect(() => {
