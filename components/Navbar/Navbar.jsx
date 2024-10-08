@@ -46,7 +46,7 @@ export default function Navbar() {
   }, [nav]);
 
   const links = [
-    { id: 1, link: "magazines", text: "Magazines & Publications" },
+    { id: 1, link: "publications", text: "Magazines & Publications" },
     { id: 2, link: "#", text: "Blog" },
     { id: 3, link: "#", text: "Gallery" },
     { id: 4, link: "#", text: "Club Talk" },

@@ -7,7 +7,7 @@ import styles from "./Magazine.module.css";
 
 export default function MagazineWrapper() {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container}`}>
       <Magazine
         title="Canyon"
         text="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
