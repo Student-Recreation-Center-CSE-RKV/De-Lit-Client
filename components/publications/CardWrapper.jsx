@@ -1,14 +1,31 @@
-import React from "react";
+"use client";
+import { useState } from "react";
 import Card from "./Card";
 import styles from "@/components/publications/Card.module.css";
-import { MAGAZINES, ANTHOLOGIES } from "@/utils/dummy";
+import Modal from "@/components/publications/Modal";
 
-const CardWrapper = ({ header, to }) => {
-  const data = to === "magazines" ? MAGAZINES : ANTHOLOGIES;
+const CardWrapper = ({ header, data, textPos }) => {
+  const [selected, setSelected] = useState(null);
+  const [open, setOpen] = useState(false);
+
+  const handleClickOpen = (idx) => {
+    setSelected(idx);
+    document.getElementById("body").classList.toggle("opacity-75");
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    document.getElementById("body").classList.toggle("opacity-75");
+    setOpen(false);
+  };
+
   return (
     <>
+      {open && (
+        <Modal open={open} handleClose={handleClose} data={data[selected]} />
+      )}
       <div className="ml-3 md:ml-16">
-        <h1 className={`text-5xl font-medium mb-16 ${to === "magazines" ? "": "text-center"}`}>{header}</h1>
+        <h1 className={`text-4xl md:text-5xl font-medium mb-8 md:mb-16 text-center ${textPos}`}>{header}</h1>
         <div className={`${styles.container} no-scrollbar space-x-6`}>
           {data.map((item, index) => (
             <Card
@@ -16,6 +33,7 @@ const CardWrapper = ({ header, to }) => {
               title={item.title}
               text={item.text}
               image={item.image}
+              onClick={() => handleClickOpen(index)}
             />
           ))}
         </div>
