@@ -25,10 +25,14 @@
 }
 .cardBg {
 <<<<<<< HEAD
+<<<<<<< HEAD
   opacity: 0.9;
 =======
   opacity: 0.7;
 >>>>>>> 927fde7 (style(publications): complete layout for publications page)
+=======
+  opacity: 0.9;
+>>>>>>> 5bc5bb0 (feat(publications page): add magazine and anthology sections)
   position: absolute;
   inset: 0;
   margin: auto;
@@ -47,10 +51,14 @@
 .cardInfo p {
   opacity: 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
   /* font-size: 18px; */
 =======
   font-size: 22px;
 >>>>>>> 927fde7 (style(publications): complete layout for publications page)
+=======
+  font-size: 18px;
+>>>>>>> 5bc5bb0 (feat(publications page): add magazine and anthology sections)
   text-shadow: black 0 2px 3px;
   transition: 0.5s 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
@@ -60,6 +68,7 @@
 }
 
 .cardInfo .title {
+<<<<<<< HEAD
 <<<<<<< HEAD
   /* font-size: 32px; */
   font-weight: 700;
@@ -71,12 +80,20 @@
 
 =======
   font-size: 36px;
+=======
+  font-size: 32px;
+>>>>>>> 5bc5bb0 (feat(publications page): add magazine and anthology sections)
   font-weight: 700;
-  /* text-shadow: rgba(0, 0, 0, 0.5) 0 10px 10px; */
+  text-shadow: rgba(0, 0, 0, 0.5) 0 5px 5px;
 }
 
 
+<<<<<<< HEAD
 >>>>>>> 927fde7 (style(publications): complete layout for publications page)
+=======
+
+
+>>>>>>> 5bc5bb0 (feat(publications page): add magazine and anthology sections)
 .container {
   display: flex;
   overflow-x: scroll;
