@@ -10,12 +10,12 @@ const CardWrapper = ({ header, data, textPos }) => {
 
   const handleClickOpen = (idx) => {
     setSelected(idx);
-    document.getElementById("body").classList.toggle("opacity-75");
+    document.getElementById("body").classList.toggle("blur-sm");
     setOpen(true);
   };
 
   const handleClose = () => {
-    document.getElementById("body").classList.toggle("opacity-75");
+    document.getElementById("body").classList.toggle("blur-sm");
     setOpen(false);
   };
 
