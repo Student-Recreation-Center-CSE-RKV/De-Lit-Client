@@ -9,7 +9,7 @@ polyfillPromiseWithResolvers();
 export default function page() {
   return (
     <>
-      <div className="flex flex-col my-32 space-y-24">
+      <div className="flex flex-col mt-32">
         <MagazineWrapper />
         <AnthologyWrapper />
         {/* <CardWrapper header={"Articles"} /> */}

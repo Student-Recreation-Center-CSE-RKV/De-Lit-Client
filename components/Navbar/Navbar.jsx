@@ -56,7 +56,7 @@ export default function Navbar() {
 
   return (
     <div
-      className="flex justify-between items-center w-full h-[10vh] md:h-[15vh] px-4 top-0 z-50 fixed"
+      className="flex justify-between items-center w-full h-[10vh] md:h-[15vh] px-4 top-0 z-30 fixed"
       style={{ backgroundColor: navBackground }}
     >
       {/* Logo */}
