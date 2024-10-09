@@ -5,7 +5,6 @@ import Footer from "@/components/Footer";
 export const metadata = {
   title: "De-LiT",
   description: "Building a like-minded community!",
-  
 };
 
 export default function RootLayout({ children }) {
