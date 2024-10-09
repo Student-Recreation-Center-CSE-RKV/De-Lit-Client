@@ -66,7 +66,7 @@ export default function Navbar() {
     "#",
     (
       <div
-        className="flex justify-between items-center w-full h-[10vh] md:h-[15vh] px-4 top-0 z-50  sticky overflow-hidden"
+        className="flex justify-between items-center w-full h-[10vh] md:h-[15vh] px-4 top-0 z-50  fixed overflow-hidden"
         style={{
           backgroundColor: navBackground,
           // borderBottom: "1px solid gray",
