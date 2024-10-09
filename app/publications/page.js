@@ -8,9 +8,9 @@ export default function page() {
   return (
     <>
       <div className="flex flex-col my-36 space-y-24">
-        <CardWrapper header={"Get to know about magazines"} />
-        <CardWrapper header={"Get to know about magazines"} />
-        <CardWrapper header={"Articles"} />
+        <CardWrapper header={"Dive Into Our Curated Magazine Collection"} to={"magazines"}/>
+        <CardWrapper header={"A Journey Through Words: Our Anthologies"} />
+        {/* <CardWrapper header={"Articles"} /> */}
       </div>
     </>
   );
