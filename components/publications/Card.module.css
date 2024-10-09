@@ -42,7 +42,7 @@
 }
 .cardInfo p {
   opacity: 0;
-  font-size: 18px;
+  /* font-size: 18px; */
   text-shadow: black 0 2px 3px;
   transition: 0.5s 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
@@ -52,7 +52,7 @@
 }
 
 .cardInfo .title {
-  font-size: 32px;
+  /* font-size: 32px; */
   font-weight: 700;
   text-shadow: rgba(0, 0, 0, 0.5) 0 5px 5px;
 }
