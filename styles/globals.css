@@ -36,3 +36,7 @@
     cursor: url("/feather.png") 0 41, auto;
   }
 }
+
+.customScrollbar::-webkit-scrollbar {
+  width: 5px;
+}

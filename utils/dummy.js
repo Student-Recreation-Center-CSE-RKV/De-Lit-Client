@@ -82,58 +82,58 @@ export const MAGAZINES = [
 ];
 
 export const CLUB_TALK = [
-    {
-      "title": "Shakespeare",
-      "description": "There's no place like 127.0.0.1"
-    },
-    {
-      "title": "Thanos",
-      "description": "I am inevitable"
-    },
-    {
-      "title": "Albert Einstein",
-      "description": "Life is like a loop. Once you break it, nothing remains."
-    },
-    {
-      "title": "Tony Stark",
-      "description": "Sometimes you gotta run before you can walk."
-    },
-    {
-      "title": "Yoda",
-      "description": "Do or do not, there is no try... unless it's debugging."
-    },
-    {
-      "title": "Gandalf",
-      "description": "A wizard is never late, nor is he early; he arrives precisely when he gets a Wi-Fi signal."
-    },
-    {
-      "title": "Elon Musk",
-      "description": "Mars isn't going to terraform itself."
-    },
-    {
-      "title": "Neo",
-      "description": "The Matrix has a bug. I can feel it."
-    },
-    {
-      "title": "Sherlock Holmes",
-      "description": "Data, Watson. I need more data."
-    },
-    {
-      "title": "The Terminator",
-      "description": "I'll be back... after this reboot."
-    },
-    {
-      "title": "Captain Jack Sparrow",
-      "description": "Why is the code gone?"
-    },
-    {
-      "title": "Voldemort",
-      "description": "Only I can program in the dark arts."
-    },
-    {
-      "title": "Tanjiro",
-      "description": "No matter how hard the debugging, I will never give up!"
-    }
+  {
+    "title": "Shakespeare",
+    "description": "To read, or not to read—there is no question at De-Lit. It’s a place where stories flow like poetry, and every discussion is an act in the grand play of life. Truly, all the world’s a page here!"
+  },
+  {
+    "title": "Thanos",
+    "description": "De-Lit taught me one thing: perfect balance. Half the books make you think, the other half make you feel. And just like my snap, one good discussion can change everything."
+  },
+  {
+    "title": "Albert Einstein",
+    "description": "In De-Lit, I've learned that imagination is stronger than reality. It’s like reading the same paragraph in a loop—except here, you break out of it with every new perspective. It's all relative!"
+  },
+  {
+    "title": "Tony Stark",
+    "description": "De-Lit is like building a suit of armor. You start with scraps—an idea, a sentence—and before you know it, you’ve created something brilliant. It’s not rocket science, unless you're me."
+  },
+  {
+    "title": "Yoda",
+    "description": "Powerful De-Lit is. Discussions here, insightful they are. Read, you must. Judge a book by its cover, you will not. The path to wisdom, through many pages it lies."
+  },
+  {
+    "title": "Gandalf",
+    "description": "De-Lit is like a long journey. You never know where the next chapter will take you, but one thing’s for sure—you shall not pass up the chance for a great story!"
+  },
+  {
+    "title": "Elon Musk",
+    "description": "De-Lit is like a SpaceX launch—bold ideas, fast discussions, and sometimes things blow up in unexpected ways. But hey, that’s how we innovate, one book at a time."
+  },
+  {
+    "title": "Neo",
+    "description": "In De-Lit, I’ve learned that stories are the red pill. Once you dive into a book, there's no going back. The truth is out there, hidden between the lines—just like code in the Matrix."
+  },
+  {
+    "title": "Sherlock Holmes",
+    "description": "Elementary, my dear reader. De-Lit is a place where we deduce meaning from even the most obscure tales. Every book is a mystery, and every discussion is a clue that brings us closer to the truth."
+  },
+  {
+    "title": "Batman",
+    "description": "I am vengeance, I am the night, and at De-Lit, I am a reader. Every book here is a case to solve, each story a puzzle. In this club, we shine the light on every dark narrative and uncover justice through words."
+  },
+  {
+    "title": "Captain Jack Sparrow",
+    "description": "Why is the rum gone? Because I traded it for a good book at De-Lit. This club’s discussions are like navigating the seas—sometimes rough, sometimes smooth, but always full of treasure."
+  },
+  {
+    "title": "Voldemort",
+    "description": "De-Lit? It’s a club of magic, where words hold power. Trust me, I know a thing or two about power. Here, we explore stories even darker than my soul (if I had one)."
+  },
+  {
+    "title": "Tanjiro",
+    "description": "At De-Lit, even the toughest books can't break my spirit! Each story feels like facing another demon, but with every discussion, I grow stronger. Reading here is like breathing—necessary and life-giving."
+  }
 ];
 
 export const BLOCKS_DATA = [
