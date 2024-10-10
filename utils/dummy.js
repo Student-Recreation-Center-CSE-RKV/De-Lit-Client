@@ -80,3 +80,91 @@ export const MAGAZINES = [
     link: "https://example.com/writers-world",
   },
 ];
+
+export const CLUB_TALK = [
+    {
+      "title": "Shakespeare",
+      "description": "There's no place like 127.0.0.1"
+    },
+    {
+      "title": "Thanos",
+      "description": "I am inevitable"
+    },
+    {
+      "title": "Albert Einstein",
+      "description": "Life is like a loop. Once you break it, nothing remains."
+    },
+    {
+      "title": "Tony Stark",
+      "description": "Sometimes you gotta run before you can walk."
+    },
+    {
+      "title": "Yoda",
+      "description": "Do or do not, there is no try... unless it's debugging."
+    },
+    {
+      "title": "Gandalf",
+      "description": "A wizard is never late, nor is he early; he arrives precisely when he gets a Wi-Fi signal."
+    },
+    {
+      "title": "Elon Musk",
+      "description": "Mars isn't going to terraform itself."
+    },
+    {
+      "title": "Neo",
+      "description": "The Matrix has a bug. I can feel it."
+    },
+    {
+      "title": "Sherlock Holmes",
+      "description": "Data, Watson. I need more data."
+    },
+    {
+      "title": "The Terminator",
+      "description": "I'll be back... after this reboot."
+    },
+    {
+      "title": "Captain Jack Sparrow",
+      "description": "Why is the code gone?"
+    },
+    {
+      "title": "Voldemort",
+      "description": "Only I can program in the dark arts."
+    },
+    {
+      "title": "Tanjiro",
+      "description": "No matter how hard the debugging, I will never give up!"
+    }
+];
+
+export const BLOCKS_DATA = [
+  {
+      "id": 0,
+      "image": "/mag.jpg",
+      "title": "MAGAZINES",
+      "description": "We call ourselves 'dreamers and doers' for a reason: we can make happen not just what is possible, but what is impossible. NEOM is a unique investment opportunity, unrivalled anywhere else.",
+      "link": '/publications'
+  },
+  {
+      "id": 1,
+      "image": "https://images.unsplash.com/photo-1528359645462-5ff224bf906e?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "title": "BLOGS",
+      "description": "Pandas are large, peaceful bears native to the mountainous forests of China, known for their distinctive black-and-white fur. They primarily eat bamboo, which makes up over 99% of their diet, though they occasionally eat other plants and small animals. Pandas are solitary animals and spend most of their time eating and resting.",
+      "link": "/blogs"
+  },
+  {
+      "id": 2,
+      "image": "https://plus.unsplash.com/premium_photo-1664303314018-d59cbbb5b13d?q=80&w=1370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "title": "GALLERY",
+      "description": "I am ChatGPT, an AI language model created by OpenAI, designed to assist with a wide range of tasks, including answering questions, generating text, solving problems, and even engaging in creative writing",
+      "link": "/gallery"
+  },
+  {
+      "id": 3,
+      "image": "https://images.unsplash.com/photo-1607396508599-5d61627a058f?q=80&w=1494&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "title": "CLUB\u00A0TALK",
+      "description": "Most birds can fly, which distinguishes them from almost all other vertebrate classes. Flight is the primary means of locomotion for most bird species and is used for searching for food and for escaping from predators. Birds have various adaptations for flight, including a lightweight skeleton, two large flight muscles.",
+      "link": "/clubtalk"
+  }
+];
+
+export const BANNER_IMAGE = "https://images.unsplash.com/photo-1500320821405-8fc1732209ca?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3";
