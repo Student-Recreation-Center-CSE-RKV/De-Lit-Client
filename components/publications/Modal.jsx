@@ -26,7 +26,7 @@ export default function Modal({ open, handleClose, data }) {
     <dialog
       ref={dialog}
       onClose={handleClose}
-      className="z-20 md:w-[90%] max-h-screen w-full my-0 rounded-t-3xl mt-[3%] scroll-smooth overflow-scroll md:mx-auto"
+      className="z-20 md:w-[90%] max-h-screen w-full my-0 rounded-t-3xl mt-[3%] scroll-smooth overflow-scroll md:mx-auto customScrollbar"
       onScroll={handleScroll}
     >
       <button className="fixed z-30 m-2 w-8 h-8 md:m-5" onClick={handleClose}>
