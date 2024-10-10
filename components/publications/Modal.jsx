@@ -15,9 +15,11 @@ export default function Modal({ open, handleClose, data }) {
     console.log(e.target.scrollTop);
     if (e.target.scrollTop > 150){
       dialog.current.classList.remove("mt-[3%]");
+      dialog.current.classList.remove("rounded-t-3xl");
     }
     if (e.target.scrollTop < 150){
       dialog.current.classList.add("mt-[3%]");
+      dialog.current.classList.add("rounded-t-3xl");
     }
   };
   return (
