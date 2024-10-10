@@ -19,20 +19,25 @@ export default function Navbar() {
       const scrollY = window.scrollY;
       const maxScroll =
         document.documentElement.scrollHeight - window.innerHeight;
-      let opacity = Math.min(scrollY / maxScroll, 1);
-      if (opacity < 0.5) {
-        setTextColor("black");
+      setSidebarBackground(`rgb(22, 22, 22)`);
+      if (scrollY<40){
+      setNavBackground(`rgba(22, 22, 22, 0)`);
+      setTextColor("black");
         setLogoColor("black");
-      } else {
-        setTextColor(`rgb(255,255,255)`);
-        setLogoColor(`rgb(255,255,255)`);
       }
-      setNavBackground(`rgba(22, 22, 22, ${opacity})`);
-      setSidebarBackground(`rgba(22, 22, 22, ${opacity})`); 
+      else{
+      
+      setNavBackground(`rgba(22, 22, 22)`);
+      setTextColor(`white`);
+	setLogoColor(`rgb(255,255,255)`);
+      }
+      
       // Update sidebar background with scroll
       if (scrollY < 40 || scrollY+70 >= maxScroll) {
+      
         setShowCurve(true);
       } else {
+       
         setShowCurve(false);
       }
     };
@@ -67,6 +72,25 @@ export default function Navbar() {
       className="flex justify-between items-center w-full h-[10vh] md:h-[15vh] px-4 top-0 z-30 fixed"
       style={{ backgroundColor: navBackground }}
     >
+    <svg
+          height="30"
+          width="100%"
+          xmlns="http://www.w3.org/2000/svg"
+          className={`absolute top-[9.3vh] left-[4.6vw] transition-opacity duration-300 ${
+            showCurve ? "block" : "hidden"
+          }`}
+          style={{
+            zIndex: "1", // Ensure it stays on top
+          }}
+        >
+          <path
+            className="animated-line"
+            d="M0 20 Q 50 10, 100 20 T 200 20 T 300 20 T 400 20 T 500 20 T 600 20 T 700 20 T 800 20 T 900 20 T 1000 20 T 1100 20 T 1200 20 T 1300 20 T 1400 20 T 1500 20"
+            fill="transparent"
+            stroke={logoColor}
+            strokeWidth="1"
+          />
+        </svg>
       {/* Logo */}
       <div>
         <h1 className="text-5xl font-signature ml-2">
