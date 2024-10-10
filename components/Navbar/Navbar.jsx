@@ -6,12 +6,12 @@ import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
-  const [navBackground, setNavBackground] = useState("rgba(0, 0, 0, 0)");
+  const [navBackground, setNavBackground] = useState("rgba(22, 22, 22, 0)");
   const [textColor, setTextColor] = useState("black");
   const [logoColor, setLogoColor] = useState("black");
   const [showCurve, setShowCurve] = useState(true);
   const [sidebarBackground, setSidebarBackground] =
-    useState("rgba(0, 0, 0, 0)"); // State for sidebar background
+    useState("rgba(22, 22, 22, 0)"); // State for sidebar background
 
   // Scroll effect for navbar and sidebar background and text color
   useEffect(() => {
@@ -27,8 +27,8 @@ export default function Navbar() {
         setTextColor(`rgb(255,255,255)`);
         setLogoColor(`rgb(255,255,255)`);
       }
-      setNavBackground(`rgba(0, 0, 0, ${opacity})`);
-      setSidebarBackground(`rgba(0, 0, 0, ${opacity})`); 
+      setNavBackground(`rgba(22, 22, 22, ${opacity})`);
+      setSidebarBackground(`rgba(22, 22, 22, ${opacity})`); 
       // Update sidebar background with scroll
       if (scrollY < 40 || scrollY+70 >= maxScroll) {
         setShowCurve(true);
@@ -57,7 +57,7 @@ export default function Navbar() {
     { id: 1, link: "publications", text: "Magazines & Publications" },
     { id: 2, link: "blog", text: "Blog" },
     { id: 3, link: "gallery", text: "Gallery" },
-    { id: 4, link: "#", text: "Club Talk" },
+    { id: 4, link: "clubtalk", text: "Club Talk" },
     { id: 5, link: "#", text: "About Us" },
     { id: 6, link: "#", text: "Contact Us" },
   ];
