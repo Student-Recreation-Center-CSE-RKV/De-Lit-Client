@@ -1,34 +1,14 @@
-// import React from 'react';
-
-// const Banner = () => {
-//   return (
-//     <div className="relative w-full bg-cover bg-center h-64 md:h-80 lg:h-96" >
-//       <div className="absolute inset-0 w-full bg-black bg-opacity-50 flex flex-col items-center justify-center text-white">
-
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default Banner;
-
 import React from "react";
 import { Playfair_Display } from "next/font/google";
+import { BANNER_IMAGE } from "@/utils/dummy";
 
 const font = Playfair_Display({ subsets: ["latin"], weight: ["400"] });
 
 const Banner = () => {
   return (
-    <div
-      className="relative w-full h-screen bg-cover bg-center"
-      style={{
-        backgroundImage:
-          'url("https://plus.unsplash.com/premium_photo-1675369009502-4125a781576a?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")',
-      }}
-    >
+    <div className="relative w-full h-screen bg-cover bg-center" style={{backgroundImage:`url(${BANNER_IMAGE})`}} >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black opacity-50"></div>
-
       {/* Content */}
       <div className="relative h-full flex md:flex-row flex-col items-center md:justify-around justify-center">
         <div className="md:w-1/2 max-md:h-1/2">

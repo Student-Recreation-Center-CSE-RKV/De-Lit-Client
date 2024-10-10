@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import clsx from 'clsx';
 
-export default function Block({title, image, description, isActive}) {
+export default function Block({title, image, description, link, isActive}) {
 
   const titleClasses = {
     "md:left-3/4 md:top-[calc(14%)]": isActive,
@@ -29,7 +29,7 @@ export default function Block({title, image, description, isActive}) {
         </div>
         <div className="md:w-3/6 mt-[20%] mb-7 text-center md:text-justify">
             <p className={clsx("lg:text-lg md:text-sm max-md:text-xs text-colorB transition-all duration-500", contentClasses)}>{description}</p>
-            <Link href="/magazines">
+            <Link href={link}>
               <button className="transition-none bg-gradient-to-br from-colorA to-colorB hover:from-black hover:to-colorB text-white lg:py-4 lg:px-6 md:py-2 md:px-3 lg:text-lg md:text-sm rounded-full mt-10 px-3 py-2 tracking-widest">EXPLORE !</button>
             </Link>
         </div>
