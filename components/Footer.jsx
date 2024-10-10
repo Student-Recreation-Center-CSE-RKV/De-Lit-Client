@@ -15,7 +15,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-black lg:h-[86vh] flex items-center text-gray-300 py-0">
+    <footer className="bg-myblack lg:h-[86vh] flex items-center text-gray-300 py-0">
       <div className="container mx-auto   px-4 py-0">
         <div className=" flex flex-col lg:flex-row justify-between items-center mb-8">
           {/* Logo Section */}
@@ -77,7 +77,7 @@ const Footer = () => {
               />
               <button
                 type="submit"
-                className="bg-black px-6 py-3 rounded-full hover:bg-gradient-to-r hover:from-black hover:to-colorB hover:transition-all duration-500 text-sm tracking-widest"
+                className="bg-myblack px-6 py-3 rounded-full hover:bg-gradient-to-r hover:from-black hover:to-colorB hover:transition-all duration-500 text-sm tracking-widest"
               >
                 SUBSCRIBE
               </button>

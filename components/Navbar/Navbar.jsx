@@ -6,12 +6,12 @@ import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
-  const [navBackground, setNavBackground] = useState("rgba(0, 0, 0, 0)");
+  const [navBackground, setNavBackground] = useState("rgba(22, 22, 22, 0)");
   const [textColor, setTextColor] = useState("black");
   const [logoColor, setLogoColor] = useState("black");
   const [showCurve, setShowCurve] = useState(true);
   const [sidebarBackground, setSidebarBackground] =
-    useState("rgba(0, 0, 0, 0)"); // State for sidebar background
+    useState("rgba(22, 22, 22, 0)"); // State for sidebar background
 
   // Scroll effect for navbar and sidebar background and text color
   useEffect(() => {
@@ -35,6 +35,7 @@ export default function Navbar() {
       } else {
         setShowCurve(false);
       }
+
     };
 
     window.addEventListener("scroll", handleScroll);

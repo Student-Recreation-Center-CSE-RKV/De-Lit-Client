@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --black: #000000;
+  --myblack: #161616;
   --color-a: #242424;
   --color-b: #494949;
   --color-c: #6d6d6d;
   --color-d: #929292;
   --color-e: #b6b6b6;
   --color-f: #dbdbdb;
-  --white: #ffffff;
+  --mywhite: #f1f0ee;
   --pdfbackground: #525659;
 }
 
@@ -33,5 +33,6 @@
 
   body {
     cursor: url("/feather.png"), auto;
+    background-color: var(--mywhite);
   }
 }
