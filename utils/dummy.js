@@ -149,7 +149,7 @@ export const BLOCKS_DATA = [
       "image": "https://images.unsplash.com/photo-1528359645462-5ff224bf906e?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "title": "BLOGS",
       "description": "Pandas are large, peaceful bears native to the mountainous forests of China, known for their distinctive black-and-white fur. They primarily eat bamboo, which makes up over 99% of their diet, though they occasionally eat other plants and small animals. Pandas are solitary animals and spend most of their time eating and resting.",
-      "link": "/blogs"
+      "link": "/blog"
   },
   {
       "id": 2,
