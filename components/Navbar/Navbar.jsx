@@ -10,8 +10,9 @@ export default function Navbar() {
   const [textColor, setTextColor] = useState("black");
   const [logoColor, setLogoColor] = useState("black");
   const [showCurve, setShowCurve] = useState(true);
-  const [sidebarBackground, setSidebarBackground] =
-    useState("rgba(0, 0, 0, 0)"); // State for sidebar background
+  const [sidebarBackground, setSidebarBackground] = useState(
+    "rgba(20, 20, 20, 0)"
+  ); // State for sidebar background
 
   // Scroll effect for navbar and sidebar background and text color
   useEffect(() => {
@@ -19,7 +20,7 @@ export default function Navbar() {
       const scrollY = window.scrollY;
       const maxScroll =
         document.documentElement.scrollHeight - window.innerHeight;
-      let opacity = Math.min(scrollY / maxScroll, 1);
+      let opacity = Math.min(scrollY / 200, 1);
       if (opacity < 0.5) {
         setTextColor("black");
         setLogoColor("black");
@@ -27,10 +28,10 @@ export default function Navbar() {
         setTextColor(`rgb(255,255,255)`);
         setLogoColor(`rgb(255,255,255)`);
       }
-      setNavBackground(`rgba(0, 0, 0, ${opacity})`);
-      setSidebarBackground(`rgba(0, 0, 0, ${opacity})`); 
+      setNavBackground(`rgba(20, 20, 20, ${opacity})`);
+      setSidebarBackground(`rgba(20, 20, 20, ${opacity})`);
       // Update sidebar background with scroll
-      if (scrollY < 40 || scrollY+70 >= maxScroll) {
+      if (scrollY < 40 || scrollY + 70 >= maxScroll) {
         setShowCurve(true);
       } else {
         setShowCurve(false);
@@ -150,7 +151,7 @@ export default function Navbar() {
             {links.map(({ id, link, text }) => (
               <li
                 key={id}
-                className="text-2xl capitalize hover:text-black hover:text-3xl transition-all duration-200"
+                className="text-2xl capitalize hover:text-mywhite hover:text-3xl transition-all duration-200"
                 onClick={() => setNav(false)} // Close menu on link click
               >
                 <Link href={link}>{text}</Link>
