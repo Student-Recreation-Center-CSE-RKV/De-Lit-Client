@@ -7,7 +7,7 @@ export default function Card({ title, description, idno, cardNum }) {
         "ml-[10%] -mt-2 -rotate-3 max-md:ml-[5%] max-md:-mt-1 max-md:rotate-3",
         "ml-auto mr-[2%] -mt-2 rotate-6",
         "ml-[2%] mt-2 -rotate-12 max-md:mt-1",
-        "ml-auto mr-[10%] -mt-3",
+        "ml-auto mr-[10%] -mt-3 rotate-2",
         "ml-[30%] -mt-2 rotate-2",  {/* if this is the last and single card in big screens */}
     ]
     const clipClasses = [
@@ -24,8 +24,10 @@ export default function Card({ title, description, idno, cardNum }) {
                 <div className="border-colorE border-[1px] p-5 mb-5 rounded-xl">
                     <p className="mt-2 lg:text-lg md:text-sm text-base">{description}</p>
                 </div>
-                <h3 className="font-bold text-xl lg:text-xl md:text-lg">{title}</h3>
-                <p className="text-sm">R2XXXXX</p>
+                <div className="pl-5">
+                    <h3 className="text-xl lg:text-xl md:text-lg">{title}</h3>
+                    <p className="text-sm">R2XXXXX</p>
+                </div>
             </div>
         </div>
     )

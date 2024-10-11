@@ -83,6 +83,10 @@ export const MAGAZINES = [
 
 export const CLUB_TALK = [
   {
+    "title": "Batman",
+    "description": "I am vengeance, I am the night, and at De-Lit, I am a reader. Every book here is a case to solve, each story a puzzle. In this club, we shine the light on every dark narrative and uncover justice through words."
+  },
+  {
     "title": "Shakespeare",
     "description": "To read, or not to read—there is no question at De-Lit. It’s a place where stories flow like poetry, and every discussion is an act in the grand play of life. Truly, all the world’s a page here!"
   },
@@ -117,10 +121,6 @@ export const CLUB_TALK = [
   {
     "title": "Sherlock Holmes",
     "description": "Elementary, my dear reader. De-Lit is a place where we deduce meaning from even the most obscure tales. Every book is a mystery, and every discussion is a clue that brings us closer to the truth."
-  },
-  {
-    "title": "Batman",
-    "description": "I am vengeance, I am the night, and at De-Lit, I am a reader. Every book here is a case to solve, each story a puzzle. In this club, we shine the light on every dark narrative and uncover justice through words."
   },
   {
     "title": "Captain Jack Sparrow",
