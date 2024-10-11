@@ -80,3 +80,91 @@ export const MAGAZINES = [
     link: "https://example.com/writers-world",
   },
 ];
+
+export const CLUB_TALK = [
+  {
+    "title": "Batman",
+    "description": "I am vengeance, I am the night, and at De-Lit, I am a reader. Every book here is a case to solve, each story a puzzle. In this club, we shine the light on every dark narrative and uncover justice through words."
+  },
+  {
+    "title": "Shakespeare",
+    "description": "To read, or not to read—there is no question at De-Lit. It’s a place where stories flow like poetry, and every discussion is an act in the grand play of life. Truly, all the world’s a page here!"
+  },
+  {
+    "title": "Thanos",
+    "description": "De-Lit taught me one thing: perfect balance. Half the books make you think, the other half make you feel. And just like my snap, one good discussion can change everything."
+  },
+  {
+    "title": "Albert Einstein",
+    "description": "In De-Lit, I've learned that imagination is stronger than reality. It’s like reading the same paragraph in a loop—except here, you break out of it with every new perspective. It's all relative!"
+  },
+  {
+    "title": "Tony Stark",
+    "description": "De-Lit is like building a suit of armor. You start with scraps—an idea, a sentence—and before you know it, you’ve created something brilliant. It’s not rocket science, unless you're me."
+  },
+  {
+    "title": "Yoda",
+    "description": "Powerful De-Lit is. Discussions here, insightful they are. Read, you must. Judge a book by its cover, you will not. The path to wisdom, through many pages it lies."
+  },
+  {
+    "title": "Gandalf",
+    "description": "De-Lit is like a long journey. You never know where the next chapter will take you, but one thing’s for sure—you shall not pass up the chance for a great story!"
+  },
+  {
+    "title": "Elon Musk",
+    "description": "De-Lit is like a SpaceX launch—bold ideas, fast discussions, and sometimes things blow up in unexpected ways. But hey, that’s how we innovate, one book at a time."
+  },
+  {
+    "title": "Neo",
+    "description": "In De-Lit, I’ve learned that stories are the red pill. Once you dive into a book, there's no going back. The truth is out there, hidden between the lines—just like code in the Matrix."
+  },
+  {
+    "title": "Sherlock Holmes",
+    "description": "Elementary, my dear reader. De-Lit is a place where we deduce meaning from even the most obscure tales. Every book is a mystery, and every discussion is a clue that brings us closer to the truth."
+  },
+  {
+    "title": "Captain Jack Sparrow",
+    "description": "Why is the rum gone? Because I traded it for a good book at De-Lit. This club’s discussions are like navigating the seas—sometimes rough, sometimes smooth, but always full of treasure."
+  },
+  {
+    "title": "Voldemort",
+    "description": "De-Lit? It’s a club of magic, where words hold power. Trust me, I know a thing or two about power. Here, we explore stories even darker than my soul (if I had one)."
+  },
+  {
+    "title": "Tanjiro",
+    "description": "At De-Lit, even the toughest books can't break my spirit! Each story feels like facing another demon, but with every discussion, I grow stronger. Reading here is like breathing—necessary and life-giving."
+  }
+];
+
+export const BLOCKS_DATA = [
+  {
+      "id": 0,
+      "image": "/mag.jpg",
+      "title": "MAGAZINES",
+      "description": "We call ourselves 'dreamers and doers' for a reason: we can make happen not just what is possible, but what is impossible. NEOM is a unique investment opportunity, unrivalled anywhere else.",
+      "link": '/publications'
+  },
+  {
+      "id": 1,
+      "image": "https://images.unsplash.com/photo-1528359645462-5ff224bf906e?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "title": "BLOGS",
+      "description": "Pandas are large, peaceful bears native to the mountainous forests of China, known for their distinctive black-and-white fur. They primarily eat bamboo, which makes up over 99% of their diet, though they occasionally eat other plants and small animals. Pandas are solitary animals and spend most of their time eating and resting.",
+      "link": "/blog"
+  },
+  {
+      "id": 2,
+      "image": "https://plus.unsplash.com/premium_photo-1664303314018-d59cbbb5b13d?q=80&w=1370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "title": "GALLERY",
+      "description": "I am ChatGPT, an AI language model created by OpenAI, designed to assist with a wide range of tasks, including answering questions, generating text, solving problems, and even engaging in creative writing",
+      "link": "/gallery"
+  },
+  {
+      "id": 3,
+      "image": "https://images.unsplash.com/photo-1607396508599-5d61627a058f?q=80&w=1494&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "title": "CLUB\u00A0TALK",
+      "description": "Most birds can fly, which distinguishes them from almost all other vertebrate classes. Flight is the primary means of locomotion for most bird species and is used for searching for food and for escaping from predators. Birds have various adaptations for flight, including a lightweight skeleton, two large flight muscles.",
+      "link": "/clubtalk"
+  }
+];
+
+export const BANNER_IMAGE = "https://images.unsplash.com/photo-1500320821405-8fc1732209ca?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3";
