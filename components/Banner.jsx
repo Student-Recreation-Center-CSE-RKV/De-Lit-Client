@@ -6,7 +6,10 @@ const font = Playfair_Display({ subsets: ["latin"], weight: ["400"] });
 
 const Banner = () => {
   return (
-    <div className="relative w-full h-screen bg-cover bg-center" style={{backgroundImage:`url(${BANNER_IMAGE})`}} >
+    <div
+      className="relative w-full h-screen bg-cover bg-center"
+      style={{ backgroundImage: `url(${BANNER_IMAGE})` }}
+    >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black opacity-50"></div>
       {/* Content */}

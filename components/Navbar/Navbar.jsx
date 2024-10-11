@@ -6,12 +6,13 @@ import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
-  const [navBackground, setNavBackground] = useState("rgba(22, 22, 22, 0)");
+  const [navBackground, setNavBackground] = useState("rgba(0, 0, 0, 0)");
   const [textColor, setTextColor] = useState("black");
   const [logoColor, setLogoColor] = useState("black");
   const [showCurve, setShowCurve] = useState(true);
-  const [sidebarBackground, setSidebarBackground] =
-    useState("rgba(22, 22, 22, 0)"); // State for sidebar background
+  const [sidebarBackground, setSidebarBackground] = useState(
+    "rgba(20, 20, 20, 0)"
+  ); // State for sidebar background
 
   // Scroll effect for navbar and sidebar background and text color
   useEffect(() => {
@@ -19,25 +20,20 @@ export default function Navbar() {
       const scrollY = window.scrollY;
       const maxScroll =
         document.documentElement.scrollHeight - window.innerHeight;
-      setSidebarBackground(`rgb(22, 22, 22)`);
-      if (scrollY<40){
-      setNavBackground(`rgba(22, 22, 22, 0)`);
-      setTextColor("black");
+      let opacity = Math.min(scrollY / 200, 1);
+      if (opacity < 0.5) {
+        setTextColor("black");
         setLogoColor("black");
+      } else {
+        setTextColor(`rgb(255,255,255)`);
+        setLogoColor(`rgb(255,255,255)`);
       }
-      else{
-      
-      setNavBackground(`rgba(22, 22, 22)`);
-      setTextColor(`white`);
-	setLogoColor(`rgb(255,255,255)`);
-      }
-      
+      setNavBackground(`rgba(20, 20, 20, ${opacity})`);
+      setSidebarBackground(`rgba(20, 20, 20, ${opacity})`);
       // Update sidebar background with scroll
-      if (scrollY < 40 || scrollY+70 >= maxScroll) {
-      
+      if (scrollY < 40 || scrollY + 70 >= maxScroll) {
         setShowCurve(true);
       } else {
-       
         setShowCurve(false);
       }
     };
@@ -68,17 +64,22 @@ export default function Navbar() {
   ];
 
   return (
-    <div
-      className="flex justify-between items-center w-full h-[10vh] md:h-[15vh] px-4 top-0 z-30 fixed"
-      style={{ backgroundColor: navBackground }}
-    >
-    <svg
+    "#",
+    (
+      <div
+        className="flex justify-between items-center w-full h-[10vh] md:h-[15vh] px-4 top-0 z-50  fixed overflow-hidden"
+        style={{
+          backgroundColor: navBackground,
+          // borderBottom: "1px solid gray",
+        }}
+      >
+        <svg
           height="30"
           width="100%"
           xmlns="http://www.w3.org/2000/svg"
           className={`absolute top-[9.3vh] left-[4.6vw] transition-opacity duration-300 ${
             showCurve ? "block" : "hidden"
-          } overflow-x-hidden`}
+          }`}
           style={{
             zIndex: "1", // Ensure it stays on top
           }}
@@ -150,7 +151,7 @@ export default function Navbar() {
             {links.map(({ id, link, text }) => (
               <li
                 key={id}
-                className="text-2xl capitalize hover:text-black hover:text-3xl transition-all duration-200"
+                className="text-2xl capitalize hover:text-mywhite hover:text-3xl transition-all duration-200"
                 onClick={() => setNav(false)} // Close menu on link click
               >
                 <Link href={link}>{text}</Link>
@@ -167,6 +168,6 @@ export default function Navbar() {
           ></div>
         )}
       </div>
-    
+    )
   );
 }
