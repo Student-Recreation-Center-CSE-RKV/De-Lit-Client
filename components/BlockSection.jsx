@@ -14,7 +14,7 @@ export default function BlockSection() {
     return (
       <>
         {/* <motion.p className="fixed text-red-500 left-2 top-[17vh]">{scrollYProgress}</motion.p> */}
-        <motion.div ref={targetRef} style={{height: `${(n + 1) * 100}vh`}}>
+        <motion.div className="container" ref={targetRef} style={{height: `${(n + 1) * 100}vh`}}>
         {
           BLOCKS_DATA.map((block, idx) => 
             <Block key={block.id} {...block} isActive={activeBlock === idx || (activeBlock === n && idx === n - 1)} />
