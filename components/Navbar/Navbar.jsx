@@ -77,9 +77,9 @@ export default function Navbar() {
           height="30"
           width="100%"
           xmlns="http://www.w3.org/2000/svg"
-          className={`absolute top-[9.3vh] left-[4.6vw] transition-opacity duration-300 ${
+          className={`absolute top-[9.3vh] left-[4.6vw] transition-opacity duration-300 md:${
             showCurve ? "block" : "hidden"
-          }`}
+          } hidden`} // for mobile svg is overflowing which causing horizantal scroll bar when opening dialog box. So, I hide it for mobile
           style={{
             zIndex: "1", // Ensure it stays on top
           }}
