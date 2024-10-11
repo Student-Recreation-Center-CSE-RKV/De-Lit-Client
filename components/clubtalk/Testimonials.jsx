@@ -7,6 +7,7 @@ export default function Testimonials() {
       pairs.push([CLUB_TALK[i], CLUB_TALK[i + 1] || null]);
     }
 
+    // console.log(pairs);
     return (
         <>
         {/* two cards per row in big screens */}

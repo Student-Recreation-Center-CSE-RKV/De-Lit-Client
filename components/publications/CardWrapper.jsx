@@ -3,7 +3,7 @@ import { useState } from "react";
 import Card from "./Card";
 import styles from "@/components/publications/Card.module.css";
 import Modal from "@/components/publications/Modal";
-import Overlay from "@/components/publications/Overlay";
+// import Overlay from "@/components/publications/Overlay";
 
 const CardWrapper = ({ header, data, textPos }) => {
   const [selected, setSelected] = useState(null);
