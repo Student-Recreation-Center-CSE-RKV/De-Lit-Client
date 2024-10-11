@@ -1,34 +1,3 @@
-// export default function BlogWrapper({ children, isSent }) {
-//     return (
-//       <div
-//         className={`outline-dashed flex ${isSent ? 'justify-end' : 'justify-start'} mb-4`}
-//       >
-//         <div
-//           className={`outline-dotted bg-${isSent ? 'green-200' : 'white'} 
-//                       border border-gray-300 
-//                       rounded-lg 
-//                       shadow-md 
-//                       p-3 
-                      
-//                       relative`}
-//         >
-//           {children}
-//           <div
-//             className={`outline-double absolute ${isSent ? 'right-0' : 'left-0'} 
-//                         top-2 
-//                         w-0 
-//                         h-0 
-//                         border-t-4 
-//                         border-b-4 
-//                         border-l-${isSent ? 'transparent' : 'white'} 
-//                         border-r-${isSent ? 'white' : 'transparent'} 
-//                         border-t-${isSent ? 'green-200' : 'white'}`}
-//           ></div>
-//         </div>
-//       </div>
-//     );
-//   }
-  
 
 export default function BlogWrapper({ children, isSent }) {
     return (
