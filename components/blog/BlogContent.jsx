@@ -14,7 +14,7 @@ export default function Blog() {
 
   return (
     <div className="flex flex-col items-center bg-mywhite min-h-screen">
-      <h1 className="text-5xl font-bold text-gray-900 mb-8">Blog</h1>
+      <h1 className="text-5xl font-bold text-gray-900 my-8">Blog</h1>
       <ul className="mx-4
        max-w-7xl">
         {posts.map((post) => (
