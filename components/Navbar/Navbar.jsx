@@ -77,7 +77,7 @@ export default function Navbar() {
           width="100%"
           xmlns="http://www.w3.org/2000/svg"
           className={`absolute top-[9.3vh] left-[4.6vw] transition-opacity duration-300 ${
-            showCurve ? "block" : "hidden"
+            showCurve ? "hidden" : "hidden"
           }`}
           style={{
             zIndex: "1", // Ensure it stays on top
