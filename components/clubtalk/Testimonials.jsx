@@ -9,12 +9,13 @@ export default function Testimonials() {
     return (
         <>
         {/* two cards per row in big screens */}
-        <div className="min-h-screen md:block hidden">
+        <div className="min-h-screen lg:block hidden">
             {
                 pairs.map((pair, index) => (
                     <TestimonialRow 
-                        key={index} 
-                        first={index % 2 === 0} 
+                        key={index}
+                        firstRow={index === 0}
+                        firstTheega={index % 2 === 0} 
                         talk1={pair[0]} 
                         talk2={pair[1]} 
                         lastAndSingle={pair[1] === null} 
@@ -24,12 +25,12 @@ export default function Testimonials() {
         </div>
 
         {/* one card per row in mobiles */}
-        <div className="min-h-screen block md:hidden">
+        <div className="min-h-screen block lg:hidden">
             {
                 CLUB_TALK.map((talk, index) => (
                     <TestimonialRow 
                         key={index} 
-                        first={index % 2 === 0} 
+                        firstTheega={index % 2 === 0} 
                         talk1={talk} 
                         talk2={null} 
                     />

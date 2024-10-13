@@ -15,7 +15,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-myblack lg:h-[86vh] flex items-center text-gray-300 py-0">
+    <footer className="bg-myblack min-h-[90vh] flex items-center text-gray-300 py-0">
       <div className="container mx-auto   px-4 py-0">
         <div className=" flex flex-col lg:flex-row justify-between items-center mb-8">
           {/* Logo Section */}

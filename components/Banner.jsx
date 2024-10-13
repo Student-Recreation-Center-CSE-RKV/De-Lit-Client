@@ -14,7 +14,7 @@ const Banner = () => {
       <div className="absolute inset-0 bg-black opacity-50 -z-0"></div>
       {/* Content */}
       <div className="relative h-screen md:w-2/3 w-5/6 m-auto flex items-center justify-center">
-          <h1 className={`text-white md:leading-[1] md:text-[5rem] text-3xl text-center ${font.className}`} >
+          <h1 className={`text-white md:leading-[1] lg:text-[5rem] sm:text-5xl text-3xl text-center ${font.className}`} >
             Building a like-minded community!
           </h1>
       </div>
