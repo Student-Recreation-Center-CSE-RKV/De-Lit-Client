@@ -7,47 +7,18 @@ import clsx from "clsx";
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
-  const [navOpacity, setNavOpacity] = useState(1);
-  const [navColor, setNavColor] = useState("black");
-  const [showCurve, setShowCurve] = useState(true);
-  const [navBackground, setNavBackground] = useState("mywhite");
-  const [sidebarBackground, setSidebarBackground] = useState(
-    "rgba(20, 20, 20, 0)"
-  ); // State for sidebar background
+  const [atStart, setAtStart] = useState(true);
+  const [atEnd, setAtEnd] = useState(false);
 
   // Scroll effect for navbar and sidebar background and text color
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      const maxScroll =
-        document.documentElement.scrollHeight - window.innerHeight;
-      setNavOpacity(Math.min(Math.max(0, window.scrollY - 23), 1));
-      // if (opacity < 0.5) {
-      //   setTextColor("black");
-      //   setLogoColor("black");
-      // } else {
-      //   setTextColor(`rgb(255,255,255)`);
-      //   setLogoColor(`rgb(255,255,255)`);
-      // }
-      setNavBackground("mywhite");
-      setSidebarBackground(`rgba(20, 20, 20, ${navOpacity})`);
-      // Update sidebar background with scroll
-      if (scrollY < 40 || scrollY + 70 >= maxScroll) {
-        setShowCurve(true);
-      } else {
-        setShowCurve(false);
-      }
-      if (scrollY + 100 >= maxScroll) {
-        setNavColor("white");
-        setNavBackground("myblack");
-      } else {
-        setNavColor("black");
-        setNavBackground("mywhite");
-      }
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      setAtStart(scrollY < 40);
+      setAtEnd(scrollY + 200 >= maxScroll);
     };
-
     window.addEventListener("scroll", handleScroll);
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -71,6 +42,11 @@ export default function Navbar() {
     { id: 6, link: "#", text: "Contact Us" },
   ];
 
+  // derived variables from states
+  const navMode = atEnd ? "dark" : "light";
+  const navBackground = navMode === "light" ? "mywhite" : "myblack";
+  const navColor = navMode === "light" ? "black" : "white";
+
   return (
     "#",
     (
@@ -78,7 +54,7 @@ export default function Navbar() {
         className={
           clsx(
             `bg-${navBackground} flex justify-between items-center w-full h-[10vh] md:h-[15vh] px-4 top-0 z-50 fixed overflow-hidden transition-all duration-500`, 
-            { "shadow-lg": !showCurve, "bg-transparent": scrollY - 23 < 0 }
+            { "shadow-lg": !(atStart | atEnd), "bg-transparent": atStart }
         )}
       >
         <svg
@@ -86,7 +62,7 @@ export default function Navbar() {
           width="100%"
           xmlns="http://www.w3.org/2000/svg"
           className={`absolute top-[9.3vh] left-[4.6vw] transition-opacity duration-300 md:${
-            showCurve ? "block" : "hidden"
+            (atStart | atEnd) ? "block" : "hidden"
           } hidden`} // for mobile svg is overflowing which causing horizantal scroll bar when opening dialog box. So, I hide it for mobile
           style={{
             zIndex: "1", // Ensure it stays on top
@@ -139,7 +115,7 @@ export default function Navbar() {
         {/* Hamburger Icon for Mobile */}
         <div
           onClick={() => setNav(!nav)}
-          className="cursor-pointer pr-4 z-10 md:hidden"
+          className="cursor-pointer pr-4 md:hidden"
         >
           {nav ? (
             <FaTimes size={30} style={{ color: navColor }} />
@@ -150,29 +126,30 @@ export default function Navbar() {
 
         {/* Mobile Sidebar Menu */}
         <div
-          className={`fixed top-0 left-0 h-full text-white w-[50vw] p-6 z-50 transition-transform duration-300 ${
+          className={`fixed top-[15vh] left-0 h-[80vh] text-white w-screen p-6 z-50 transition-transform duration-300 bg-transparent ${
             nav ? "translate-x-0" : "-translate-x-full"
           }`}
-          style={{ backgroundColor: sidebarBackground }} // Dynamically set the background based on scroll
         >
-          <ul className="flex flex-col space-y-4 top-[10vh]">
-            {links.map(({ id, link, text }) => (
-              <li
-                key={id}
-                className="text-2xl capitalize hover:text-mywhite hover:text-3xl transition-all duration-200"
-                onClick={() => setNav(false)} // Close menu on link click
-              >
-                <Link href={link}>{text}</Link>
-              </li>
-            ))}
-          </ul>
+          <div className="flex items-center justify-center">
+            <ul className="flex flex-col space-y-4 top-[10vh]">
+              {links.map(({ id, link, text }) => (
+                <li
+                  key={id}
+                  className="text-2xl capitalize hover:text-mywhite hover:text-3xl transition-all duration-200"
+                  onClick={() => setNav(false)} // Close menu on link click
+                >
+                  <Link href={link}>{text}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         {/* Overlay to close the menu when clicking outside */}
         {nav && (
           <div
             onClick={() => setNav(false)}
-            className="fixed top-0 left-0 w-full h-full bg-black opacity-50 z-40"
+            className="fixed top-0 left-0 w-full h-full bg-black opacity-70 z-40"
           ></div>
         )}
       </div>
