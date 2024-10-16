@@ -15,17 +15,18 @@
 }
 
 @layer base {
-  *::-webkit-scrollbar {
+  /* *::-webkit-scrollbar {
     width: 7px;
   }
   
   *::-webkit-scrollbar-thumb {
     background: linear-gradient(90deg, var(--color-b) 0%, var(--color-a) 100%);
-  }
+  } */
   
   body {
     background-color: var(--mywhite);
-    cursor: url("/feather.png") 0 41, auto;
+    /* cursor: url("/feather.png") 0 41, auto; */
+    /* overflow: hidden; */
   }
 }
 
