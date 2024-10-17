@@ -12,6 +12,7 @@
   --color-f: #dbdbdb;
   --mywhite: #f1f0ee;
   --pdfbackground: #525659;
+  --nav-height: 10vh;
 }
 
 @layer base {
@@ -26,14 +27,6 @@
   body {
     background-color: var(--mywhite);
     /* cursor: url("/feather.png") 0 41, auto; */
-    /* overflow: hidden; */
-  }
-}
-
-@layer components {
-  .container {
-    max-width: 1500px;
-    margin: auto;
   }
 }
 

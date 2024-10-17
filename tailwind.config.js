@@ -6,6 +6,9 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    container: {
+      center: true,
+    },
     extend: {
       colors: {
         myblack: 'var(--myblack)',
@@ -18,6 +21,9 @@ module.exports = {
         colorF: 'var(--color-f)',
         pdfBg: 'var(--pdfbackground)',
       },
+      spacing: {
+        navHeight: 'var(--nav-height)',
+      }
     },
   },
   plugins: [],

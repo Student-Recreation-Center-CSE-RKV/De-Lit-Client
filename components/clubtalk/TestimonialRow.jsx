@@ -11,7 +11,7 @@ export default function TestimonialRow({firstRow, firstTheega, talk1, talk2, las
             whileInView={{opacity: 1, scale: 1}} 
             viewport={{amount: 0.4, once: true}}  
             transition={{duration: 1, type: "spring", stiffness: 200}}
-            className="lg:m-40 mx-10 mb-24"
+            className="lg:my-40 lg:mx-24 mx-10 mb-24"
         >
             <img className="w-full" src={theegasvg} alt="Theega" />
             <div className="md:flex md:flex-row block">

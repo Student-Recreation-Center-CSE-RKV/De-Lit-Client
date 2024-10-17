@@ -53,7 +53,7 @@ export default function Navbar() {
       <div
         className={
           clsx(
-            `bg-${navBackground} flex justify-between items-center w-full h-[10vh] md:h-[15vh] px-4 top-0 z-50 fixed overflow-hidden transition-all duration-500`, 
+            `bg-${navBackground} flex justify-between items-center w-full h-[10vh] md:h-navHeight px-4 top-0 z-50 fixed overflow-hidden transition-all duration-500`, 
             { "shadow-lg": !(atStart | atEnd), "bg-transparent": atStart }
         )}
       >
@@ -62,10 +62,10 @@ export default function Navbar() {
           width="100%"
           xmlns="http://www.w3.org/2000/svg"
           className={`absolute top-[9.3vh] left-[4.6vw] transition-opacity duration-300 md:${
-            (atStart | atEnd) ? "block" : "hidden"
+            (atEnd) ? "block" : "hidden"
           } hidden`} // for mobile svg is overflowing which causing horizantal scroll bar when opening dialog box. So, I hide it for mobile
           style={{
-            zIndex: "1", // Ensure it stays on top
+            zIndex: "100", // Ensure it stays on top
           }}
         >
           <path
