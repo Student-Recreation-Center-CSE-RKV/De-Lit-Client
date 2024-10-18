@@ -18,22 +18,19 @@ const Card = ({ title, text, image, link }) => {
   return (
     <>
       {open && <Overlay handleClose={handleClose} link={link} />}
-      <div className={`${styles.cardWarp}`} onClick={handleClickOpen}>
+      <div onClick={handleClickOpen}>
         <div
-          className={`${styles.card} w-[16rem] h-[30rem] md:w-[18rem] md:h-[32rem] `}
+          className={`relative bg-gray-800 overflow-hidden rounded-[28px] transition-all duration-200 ease-[cubic-bezier(0.445,0.05,0.55,0.95)]  w-[16rem] h-[30rem] md:w-[18rem] md:h-[32rem] cursor-pointer`}
         >
           <img
             className={`${styles.cardBg} object-cover hover:scale-110 transition-all duration-300 ease-in-out`}
             src={image}
           />
-          <div className={styles.cardInfo}>
-            <h3 className={`${styles.title} text-3xl md:text-[32px] mb-5`}>
-              {title}
-            </h3>
-            <p className={`${styles.content} md:text-[18px] text-colorF`}>
-              {text}
-            </p>
-          </div>
+          <h3
+            className={`absolute font-bold text-mywhite bottom-0 ml-3 md:ml-5 mb-4 text-3xl md:text-[32px]`}
+          >
+            {title}
+          </h3>
         </div>
       </div>
     </>
