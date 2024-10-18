@@ -7,7 +7,6 @@ export default async function MagazineWrapper() {
     <CardWrapper
       data={MAGAZINES}
       header={"Dive Into Our Curated Magazine Collection"}
-      textPos="md:text-left"
     />
   );
 }

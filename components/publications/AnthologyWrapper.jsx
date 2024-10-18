@@ -7,7 +7,6 @@ export default function AnthologyWrapper() {
     <CardWrapper
       data={ANTHOLOGIES}
       header={"A Journey Through Words: Our Anthologies"}
-      texPos={"md:text-center"}
     />
   );
 }
