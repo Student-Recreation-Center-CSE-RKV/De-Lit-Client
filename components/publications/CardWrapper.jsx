@@ -1,11 +1,10 @@
 "use client";
-import { useRef} from "react";
+import { useRef } from "react";
 import Card from "./Card";
-import styles from "@/components/publications/Card.module.css";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
-const CardWrapper = ({ header, data}) => {
+const CardWrapper = ({ header, data, subheader, isFirst }) => {
   const scrollRef = useRef();
 
   const handleScrollLeft = () => {
@@ -22,24 +21,23 @@ const CardWrapper = ({ header, data}) => {
 
   return (
     <>
-      <div className="ml-3 md:ml-16">
-        <h1
-          className={`text-4xl md:text-5xl font-medium mb-8 md:mb-16 text-center tracking-wide`}
-        >
-          {header}
-        </h1>
+      <div className={`ml-3 md:ml-16 mb-3 ${isFirst ? "" : "md:-mt-8"}`}>
+        <div class="mb-3 md:mb-8">
+          <h1 className="text-[2.8rem] md:text-7xl text-center text-myblack tracking-wide">
+            {header}
+          </h1>
+          <p className="hidden md:block text-center mt-4 text-colorA">{subheader}</p>
+        </div>
         <div
-          className={`${styles.container} no-scrollbar gap-3 scroll-smooth mb-8 md:mb-0`}
           ref={scrollRef}
+          className="w-full overflow-x-auto gap-3 p-4 flex no-scrollbar scroll-smooth"
         >
-          {data.map((item, index) => (
-            <Card
-              key={index}
-              {...item}
-            />
+          {data.map((card, index) => (
+            <Card key={index} {...card} scrollRef={scrollRef} />
           ))}
         </div>
-        <div className="text-end pt-6 mr-12 mb-3 hidden md:block">
+
+        <div className="text-end pt-6 mr-12  hidden md:block">
           <button
             className="bg-colorF m-1 rounded-full hover:opacity-75"
             onClick={handleScrollLeft}

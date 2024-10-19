@@ -1,8 +1,7 @@
 import { useState } from "react";
-import styles from "@/components/publications/Card.module.css";
 import Overlay from "@/components/publications/Overlay";
 
-const Card = ({ title, text, image, link }) => {
+const Card = ({ title, text, image, link, scrollRef }) => {
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {
@@ -13,25 +12,23 @@ const Card = ({ title, text, image, link }) => {
   const handleClose = () => {
     document.body.style.overflow = "visible";
     setOpen(false);
+    if (scrollRef.current) {
+      scrollRef.current.scrollLeft += 280;
+    }
   };
 
   return (
     <>
       {open && <Overlay handleClose={handleClose} link={link} />}
-      <div onClick={handleClickOpen}>
-        <div
-          className={`relative bg-gray-800 overflow-hidden rounded-[28px] transition-all duration-200 ease-[cubic-bezier(0.445,0.05,0.55,0.95)]  w-[16rem] h-[30rem] md:w-[18rem] md:h-[32rem] cursor-pointer`}
-        >
-          <img
-            className={`${styles.cardBg} object-cover hover:scale-110 transition-all duration-300 ease-in-out`}
-            src={image}
-          />
-          <h3
-            className={`absolute font-bold text-mywhite bottom-0 ml-3 md:ml-5 mb-4 text-3xl md:text-[32px]`}
-          >
-            {title}
-          </h3>
-        </div>
+
+      <div
+        className="relative w-[16rem] h-[30rem] md:w-[18rem] md:h-[32rem] cursor-pointer bg-cover rounded-[28px] flex-shrink-0 bg-center hover:scale-[1.02] transition-all duration-200 ease-[cubic-bezier(0.445,0.05,0.55,0.95)] p-2"
+        style={{ backgroundImage: `url(${image})` }}
+        onClick={handleClickOpen}
+      >
+        <h3 className="absolute text-mywhite bottom-0 ml-2 mr-1 mb-3 text-2xl md:text-3xl md:text-[1.6rem]">
+          {title}
+        </h3>
       </div>
     </>
   );
