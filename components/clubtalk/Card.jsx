@@ -2,7 +2,7 @@ import { Raleway } from "next/font/google";
 
 const raleway = Raleway({subsets: ['latin']});
 
-export default function Card({ title, description, idno, cardNum }) {
+export default function Card({ title, description, idno, cardNum, image_link }) {
     const cardClasses = [
         "lg:ml-[10%] lg:-mt-2 lg:-rotate-3 sm:ml-[25%] -mt-1 rotate-3", // mobile #1
         "ml-auto mr-[2%] -mt-2 rotate-6",
@@ -24,9 +24,15 @@ export default function Card({ title, description, idno, cardNum }) {
                 <div className="border-colorE border-[1px] p-5 mb-5 rounded-xl">
                     <p className="mt-2 xl:text-lg lg:text-sm md:text-sm text-base">{description}</p>
                 </div>
-                <div className="pl-5">
-                    <h3 className="text-xl lg:text-xl md:text-lg">{title}</h3>
-                    <p className="text-sm">R2XXXXX</p>
+                <div className="flex justify-between items-center">
+                    <div className="pl-5">
+                        <h3 className="text-xl lg:text-xl md:text-lg">{title}</h3>
+                        <p className="text-sm">R2XXXXX</p>
+                    </div>
+                    <img 
+                        src={image_link ? image_link : `https://ui-avatars.com/api/?name=${title}&background=random`}
+                        className="w-8 h-8 mr-2 rounded-full"
+                    />
                 </div>
             </div>
         </div>
