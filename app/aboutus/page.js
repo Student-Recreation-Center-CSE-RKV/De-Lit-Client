@@ -1,12 +1,19 @@
 import TeamSection from "@/components/aboutus/TeamSection";
+import ContentBlock from "@/components/aboutus/ContentBlock";
 
 export default function Page() {
   return (
     <div className="container mt-[20vh]">
-      <div className="">
-          <h1 className="lg:text-[6rem] md:text-[3rem] text-[2.5rem] text-center tracking-wide">ABOUT US</h1>
-          <p className="text-center">Who are we?</p>
-      </div>
+      <ContentBlock 
+        title="The Story of De-Lit" 
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+      />
+      <ContentBlock 
+        title="Our Vision" 
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+      />
+      <h1 className="text-center text-5xl mt-10">The Fellowship</h1>
+      <p className="text-center text-lg mt-5">Meet the team that makes it all happen</p>
       <TeamSection />
     </div>
   )

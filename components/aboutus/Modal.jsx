@@ -4,7 +4,7 @@ export default function Modal({ character, setShowModal }) {
   return (
     <div>
       <div class="fixed inset-0 bg-black opacity-50 z-[55]"></div>
-      <div className="fixed inset-0 z-[57] backdrop-blur-sm overflow-auto">
+      <div className="fixed inset-0 z-[57] overflow-auto">
         <div className="flex justify-center items-center h-screen">
           <div className="flex flex-col bg-white rounded-2xl md:w-[50%] w-[90%]">
             <div className="sticky top-0 p-4 self-end z-[60]">

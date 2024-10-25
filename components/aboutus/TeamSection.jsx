@@ -1,5 +1,4 @@
 import Card from "./Card";
-import Modal from "./Modal";
 import { LOTR_CHARACTERS } from "@/utils/dummy";
 
 export default function TeamSection() {
