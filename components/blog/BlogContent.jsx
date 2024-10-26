@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 import BlogWrapper from './BlogWrapper';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { FaTimes } from 'react-icons/fa';
-
+import BlogSearch from './BlogSearch';
 export default function Blog() {
   const [posts] = useState([
     { id: 1, 
@@ -60,6 +60,8 @@ export default function Blog() {
       {/*Blog Page Title*/}
       <h1 className="lg:text-[6rem] md:text-[3rem] text-[2.5rem] text-center tracking-wide">Blog</h1>
       <p className='text-center'>Stay informed, inspired, and connected with our blog</p>
+
+      <BlogSearch posts={posts} />
 
       {/*Display each BLog card and content*/}
       <ul className="mx-4
