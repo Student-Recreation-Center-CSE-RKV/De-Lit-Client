@@ -1,7 +1,9 @@
 
 export default function BlogWrapper({ children, isSent }) {
     return (
+      
       <div className={`flex ${isSent ? 'justify-end' : 'justify-start'} my-8 `}>
+        {/*Apply styles to the blog based on blog status */}
         <div
           className={`relative  p-3 
                       ${isSent ? 'bg-mywhite text-left' : 'bg-colorF text-left'}
