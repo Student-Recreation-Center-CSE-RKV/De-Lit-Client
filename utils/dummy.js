@@ -1,34 +1,33 @@
 export const ANTHOLOGIES = [
   {
-    title: "Echoes of Time: A Historical Anthology",
+    title: "Echoes of Time",
     text: "An anthology that captures pivotal moments in history through short stories and essays from a diverse array of voices. Featuring works that transport readers to different eras and events.",
-    image:
-      "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?dpr=2&auto=compress,format&fit=crop&w=1199&h=798&q=80&cs=tinysrgb&crop=",
+    image: "https://i.pinimg.com/564x/a9/1e/80/a91e80c11fa6decbd2950388cca0ad4d.jpg",
     link: "https://example.com/echoes-of-time",
   },
   {
-    title: "Tales of the Heart: A Romance Anthology",
+    title: "Tales of the Heart",
     text: "This collection brings together love stories from both established and emerging authors, each exploring the complexities of romance and human connection.",
     image:
-      "https://images.unsplash.com/photo-1542351682-8453e2495f97?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fHJvbWFudGljfGVufDB8fDB8fHww",
+      "https://i.pinimg.com/564x/e2/fb/88/e2fb884005536ad5b4e054dba0bbb040.jpg",
     link: "https://example.com/tales-of-the-heart",
   },
   {
-    title: "Voices Unheard: A Social Justice Anthology",
+    title: "Voices Unheard",
     text: "A powerful collection of essays, poetry, and stories from underrepresented voices. This anthology explores themes of inequality, identity, and activism in today’s world.",
     image:
       "https://images.unsplash.com/photo-1576769562804-455efad26b4a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bGl0ZXJhdHVyZXxlbnwwfHwwfHx8MA%3D%3D",
     link: "https://example.com/voices-unheard",
   },
   {
-    title: "Of Magic and Myth: A Fantasy Anthology",
+    title: "Of Magic and Myth",
     text: "A journey into magical realms, this anthology is filled with enchanting tales of mythical creatures, powerful sorcery, and epic quests. A must-read for any fantasy lover.",
     image:
       "https://images.unsplash.com/photo-1531574749638-a25b3507b7ec?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fE1hZ2ljJTIwYW5kJTIwbWl0aHxlbnwwfHwwfHx8MA%3D%3D",
     link: "https://example.com/of-magic-and-myth",
   },
   {
-    title: "Whispers in the Dark: A Horror Anthology",
+    title: "Whispers in the Dark",
     text: "A spine-chilling anthology of short stories that delve into the supernatural, the unknown, and the terrifying. Perfect for fans of eerie tales and nightmarish scenarios.",
     image:
       "https://images.unsplash.com/photo-1511406361295-0a1ff814c0ce?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aG9ycm9yJTIwcGFpbnRzfGVufDB8fDB8fHww",
@@ -95,7 +94,6 @@ export const CLUB_TALK = [
   {
     "title": "Thanos",
     "description": "De-Lit taught me one thing: perfect balance. Half the books make you think, the other half make you feel. And just like my snap, one good discussion can change everything.",
-    "image_link": "https://upload.wikimedia.org/wikipedia/en/thumb/7/7b/Thanos_Infinity_Gauntlet.jpg/150px-Thanos_Infinity_Gauntlet.jpg"
   },
   {
     "title": "Albert Einstein",
@@ -105,7 +103,6 @@ export const CLUB_TALK = [
   {
     "title": "Tony Stark",
     "description": "De-Lit is like building a suit of armor. You start with scraps—an idea, a sentence—and before you know it, you’ve created something brilliant. It’s not rocket science, unless you're me.",
-    "image_link": "https://upload.wikimedia.org/wikipedia/en/thumb/e/ed/Tony_Stark_armor.jpg/150px-Tony_Stark_armor.jpg"
   },
   {
     "title": "Yoda",
@@ -120,7 +117,6 @@ export const CLUB_TALK = [
   {
     "title": "Elon Musk",
     "description": "De-Lit is like a SpaceX launch—bold ideas, fast discussions, and sometimes things blow up in unexpected ways. But hey, that’s how we innovate, one book at a time.",
-    "image_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Elon_Musk_Royal_Society.jpg/150px-Elon_Musk_Royal_Society.jpg"
   },
   {
     "title": "Neo",
@@ -130,12 +126,10 @@ export const CLUB_TALK = [
   {
     "title": "Sherlock Holmes",
     "description": "Elementary, my dear reader. De-Lit is a place where we deduce meaning from even the most obscure tales. Every book is a mystery, and every discussion is a clue that brings us closer to the truth.",
-    "image_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Sherlock_Holmes_Portrait_Paget.jpg/150px-Sherlock_Holmes_Portrait_Paget.jpg"
   },
   {
     "title": "Captain Jack Sparrow",
     "description": "Why is the rum gone? Because I traded it for a good book at De-Lit. This club’s discussions are like navigating the seas—sometimes rough, sometimes smooth, but always full of treasure.",
-    "image_link": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a2/Captain_Jack_Sparrow_In_Pirates_of_the_Caribbean.png/150px-Captain_Jack_Sparrow_In_Pirates_of_the_Caribbean.png"
   },
   {
     "title": "Voldemort",
