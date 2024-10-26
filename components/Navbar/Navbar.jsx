@@ -38,7 +38,7 @@ export default function Navbar() {
     { id: 2, link: "blog", text: "Blog" },
     { id: 3, link: "gallery", text: "Gallery" },
     { id: 4, link: "clubtalk", text: "Club Talk" },
-    { id: 5, link: "#", text: "About Us" },
+    { id: 5, link: "aboutus", text: "About Us" },
     { id: 6, link: "#", text: "Contact Us" },
   ];
 
