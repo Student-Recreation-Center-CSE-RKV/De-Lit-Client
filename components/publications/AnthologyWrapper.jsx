@@ -1,14 +1,23 @@
 import React from "react";
-import CardWrapper from "./CardWrapper";
+import Anthology from "./Anthology";
 import { ANTHOLOGIES } from "@/utils/dummy";
 
-export default function AnthologyWrapper({ isFirst }) {
+import dynamic from "next/dynamic";
+
+const CardWrapper = dynamic(
+  () => {
+    return import("./CardWrapper");
+  },
+  { ssr: false }
+);
+
+export default function AnthologyWrapper() {
   return (
     <CardWrapper
       data={ANTHOLOGIES}
       header={"Anthologies"}
       subheader={"A Journey Through Words: Our Anthologies"}
-      isFirst={isFirst}
+      CardComponent={Anthology}
     />
   );
 }

@@ -1,39 +1,43 @@
 "use client";
 import { useRef } from "react";
-import Card from "./Card";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import Card from "./Card";
+import useScreenSize from "@/hooks/useScreenSize";
 
-const CardWrapper = ({ header, data, subheader, isFirst }) => {
+const CardWrapper = ({ header, data, subheader, CardComponent, isFirst}) => {
   const scrollRef = useRef();
+  const screenSize = useScreenSize();
 
   const handleScrollLeft = () => {
     if (scrollRef.current) {
-      scrollRef.current.scrollLeft -= 300;
+      scrollRef.current.scrollLeft -= 600;
     }
   };
 
   const handleScrollRight = () => {
     if (scrollRef.current) {
-      scrollRef.current.scrollLeft += 300;
+      scrollRef.current.scrollLeft += 600;
     }
   };
 
   return (
     <>
       <div className={`ml-3 md:ml-16 mb-3 ${isFirst ? "" : "md:-mt-8"}`}>
-        <div class="mb-3 md:mb-8">
+        <div className="mb-3 md:mb-8">
           <h1 className="text-[2.8rem] md:text-7xl text-center text-myblack tracking-wide">
             {header}
           </h1>
-          <p className="hidden md:block text-center mt-4 text-colorA">{subheader}</p>
+          <p className="hidden md:block text-center mt-4 text-colorA">
+            {subheader}
+          </p>
         </div>
         <div
           ref={scrollRef}
-          className="w-full overflow-x-auto gap-3 p-4 flex no-scrollbar scroll-smooth"
+          className="w-full overflow-x-auto gap-3 p-4 flex no-scrollbar scroll-smooth snap-mandatory snap-x"
         >
           {data.map((card, index) => (
-            <Card key={index} {...card} scrollRef={scrollRef} />
+            screenSize.width > 768 ? <CardComponent key={index} {...card} scrollRef={scrollRef} /> : <Card key={index} {...card} />
           ))}
         </div>
 
