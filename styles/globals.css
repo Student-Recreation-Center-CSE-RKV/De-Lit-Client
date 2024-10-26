@@ -44,3 +44,7 @@
     width: 5px;
   }
 }
+
+.no-scroll {
+  overflow: hidden;
+}

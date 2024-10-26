@@ -2,8 +2,10 @@
 
 "use client";
 import { useState } from 'react';
+import { useEffect } from 'react';
 import BlogWrapper from './BlogWrapper';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import { FaTimes } from 'react-icons/fa';
 
 export default function Blog() {
   const [posts] = useState([
@@ -34,12 +36,23 @@ export default function Blog() {
    // Handler to open modal with the selected post
    const handlePostClick = (post) => {
      setSelectedPost(post);
+     // Disable scroll when modal is open
+    document.body.classList.add('overflow-hidden');
    };
  
    // Handler to close modal
    const closeModal = () => {
      setSelectedPost(null);
+     // Re-enable scroll when modal is closed
+    document.body.classList.remove('overflow-hidden');
    };
+
+   // Clean up the 'overflow-hidden' class when component unmounts or modal is closed
+  useEffect(() => {
+    return () => {
+      document.body.classList.remove('overflow-hidden'); // Clean up on component unmount
+    };
+  }, []);
  
 
   return (
@@ -72,19 +85,25 @@ export default function Blog() {
 
         {/* Modal Popup */}
       {selectedPost && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg p-6 max-w-lg w-3/4 h-3/4 overflow-scroll flex flex-col shadow-lg relative">
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex pt- items-center justify-center z-50">
+          <div className="bg-white rounded-lg p-6 max-w-3xl w-3/4 h-3/4 overflow-y-scroll  flex flex-col shadow-lg relative">
             {/* Close Button */}
-            <button onClick={closeModal} className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 ">
-              &#x2715; {/* Close icon */}
-            </button>
+            <button
+                className="bg-black p-1 md:p-2 absolute top-2 right-1 rounded-full text-mywhite hover:text-white"
+                onClick={closeModal}
+              >
+                <FaTimes size={10 } />
+              </button>
 
             {/* Modal Content */}
-            <h2 className="text-2xl font-semibold text-gray-800 mb-4">
+            <h2 className="text-2xl pt-3 font-semibold text-gray-800 mb-4">
               {selectedPost.title}
             </h2>
+            <div className='bg-gray-200 p-2 rounded-lg'>
             <p className="text-gray-600 mb-4">{selectedPost.description}</p>
-            <p className='text-gray-400 text-xs font-bold'>{selectedPost.author} - {selectedPost.date}</p>
+            <p className='text-gray-400 text-xs font-bold'>{selectedPost.author} - {selectedPost.date}</p> 
+            </div>
+            
           </div>
         </div>
       )}
