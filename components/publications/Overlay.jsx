@@ -2,7 +2,6 @@
 import { useEffect, useRef, useState } from "react";
 import { FaTimes } from "react-icons/fa";
 import PDFViewer from "./PDFViewer";
-import zIndex from "@mui/material/styles/zIndex";
 
 export default function Overlay({ link, handleClose }) {
   const overlayRef = useRef();
