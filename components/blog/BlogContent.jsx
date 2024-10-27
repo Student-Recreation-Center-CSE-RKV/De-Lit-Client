@@ -3,7 +3,6 @@
 "use client";
 import { useState } from 'react';
 import BlogSearch from './BlogSearch';
-import BlogDisplay from './BlogDisplay';
 
 export default function Blog() {
   const [posts] = useState([
