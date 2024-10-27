@@ -1,6 +1,5 @@
 import React from 'react'
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import BlogWrapper from './BlogWrapper';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import BlogPopup from './BlogPopup';
@@ -35,11 +34,11 @@ function BlogDisplay({posts}) {
     <div className="flex flex-col items-center bg-mywhite min-h-screen">
       {/*Display each BLog card and content*/}
       <ul className="mx-4 max-w-7xl">
-        {posts.map((post) => (
+        {posts.map((post,index) => (
           <li key={post.id}  >
             
-            <BlogWrapper isSent={post.id%2==0}> {/*Decides the status of the blog as sent or received*/}
-              <div  onClick={() => handlePostClick(post)} className="cursor-pointer">
+            <BlogWrapper handlePostClick={handlePostClick} post={post} isSent={index%2==0}> {/*Decides the status of the blog as sent or received*/}
+              <div>
             <AccountCircleIcon/> <span className='font-bold'>{post.author}</span>
 
             <h2 className="text-2xl font-semibold text-gray-800 my-2">

@@ -1,19 +1,19 @@
 
-export default function BlogWrapper({ children, isSent }) {
+export default function BlogWrapper({ children, handlePostClick, post, isSent }) {
     return (
       
       <div className={`flex ${isSent ? 'justify-end' : 'justify-start'} my-8 `}>
         {/*Apply styles to the blog based on blog status */}
-        <div
+        <div onClick={() => handlePostClick(post)}
           className={`relative  p-3 
                       ${isSent ? 'bg-mywhite text-left' : 'bg-colorF text-left'}
                       ${isSent ? 'ml-12' : 'ml-0'}
                       ${isSent ? 'mr-0' : 'mr-12'} 
                       
                       md:w-3/4
-                      
+                      transition duration-200 ease-in-out transform hover:scale-105 cursor-pointer hover:shadow-lg p-4 
                       rounded-xl shadow-md`
-                    
+                      
                     }
         >
           {children}
