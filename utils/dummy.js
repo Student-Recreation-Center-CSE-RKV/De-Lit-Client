@@ -83,12 +83,12 @@ export const MAGAZINES = [
 export const CLUB_TALK = [
   {
     "title": "Batman",
-    "description": "I am vengeance, I am the night, and at De-Lit, I am a reader. Every book here is a case to solve, each story a puzzle. In this club, we shine the light on every dark narrative and uncover justice through words.",
+    "description": "I am vengeance, I am the night, and at De-Lit, I am a reader.",
     "image_link": "https://upload.wikimedia.org/wikipedia/en/thumb/1/17/Batman-BenAffleck.jpg/150px-Batman-BenAffleck.jpg"
   },
   {
     "title": "Shakespeare",
-    "description": "To read, or not to read—there is no question at De-Lit. It’s a place where stories flow like poetry, and every discussion is an act in the grand play of life. Truly, all the world’s a page here!",
+    "description": "To read, or not to read—there is no question at De-Lit. It’s a place where stories flow like poetry, and every discussion is an act in the grand play of life. Truly, all the world’s a page here! ",
     "image_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Shakespeare.jpg/150px-Shakespeare.jpg"
   },
   {
@@ -116,7 +116,7 @@ export const CLUB_TALK = [
   },
   {
     "title": "Elon Musk",
-    "description": "De-Lit is like a SpaceX launch—bold ideas, fast discussions, and sometimes things blow up in unexpected ways. But hey, that’s how we innovate, one book at a time.",
+    "description": "Awesome",
   },
   {
     "title": "Neo",

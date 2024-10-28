@@ -14,7 +14,7 @@ export default function TestimonialRow({firstRow, firstTheega, talk1, talk2, las
             className="lg:my-40 lg:mx-24 mx-10 mb-24"
         >
             <img className="w-full" src={theegasvg} alt="Theega" />
-            <div className="md:flex md:flex-row block">
+            <div className="flex">
                 <Card 
                     {...talk1}
                     cardNum={lastAndSingle ? 4 : (firstTheega ? 0 : 2)} 
