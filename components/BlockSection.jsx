@@ -27,7 +27,7 @@ export default function BlockSection({ blocksData }) {
 
   return (
     <>
-      <motion.div className="container" ref={targetRef} style={{ height: `${(n + 1) * 100}vh` }} >
+      <motion.div className="container" ref={targetRef} style={{ height: `${(n + 1) * 100}dvh` }} >
         {blocksData.map((block, idx) => (
           <Block
             key={block._id}
