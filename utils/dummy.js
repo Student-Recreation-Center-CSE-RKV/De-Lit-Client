@@ -2,7 +2,8 @@ export const ANTHOLOGIES = [
   {
     title: "Echoes of Time",
     text: "An anthology that captures pivotal moments in history through short stories and essays from a diverse array of voices. Featuring works that transport readers to different eras and events.",
-    image: "https://i.pinimg.com/564x/a9/1e/80/a91e80c11fa6decbd2950388cca0ad4d.jpg",
+    image:
+      "https://i.pinimg.com/564x/a9/1e/80/a91e80c11fa6decbd2950388cca0ad4d.jpg",
     link: "https://example.com/echoes-of-time",
   },
   {
@@ -82,142 +83,219 @@ export const MAGAZINES = [
 
 export const CLUB_TALK = [
   {
-    "title": "Batman",
-    "description": "I am vengeance, I am the night, and at De-Lit, I am a reader.",
-    "image_link": "https://upload.wikimedia.org/wikipedia/en/thumb/1/17/Batman-BenAffleck.jpg/150px-Batman-BenAffleck.jpg"
+    title: "Batman",
+    description:
+      "I am vengeance, I am the night, and at De-Lit, I am a reader.",
+    image_link:
+      "https://upload.wikimedia.org/wikipedia/en/thumb/1/17/Batman-BenAffleck.jpg/150px-Batman-BenAffleck.jpg",
   },
   {
-    "title": "Shakespeare",
-    "description": "To read, or not to read—there is no question at De-Lit. It’s a place where stories flow like poetry, and every discussion is an act in the grand play of life. Truly, all the world’s a page here! ",
-    "image_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Shakespeare.jpg/150px-Shakespeare.jpg"
+    title: "Shakespeare",
+    description:
+      "To read, or not to read—there is no question at De-Lit. It’s a place where stories flow like poetry, and every discussion is an act in the grand play of life. Truly, all the world’s a page here! ",
+    image_link:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Shakespeare.jpg/150px-Shakespeare.jpg",
   },
   {
-    "title": "Thanos",
-    "description": "De-Lit taught me one thing: perfect balance. Half the books make you think, the other half make you feel. And just like my snap, one good discussion can change everything.",
+    title: "Thanos",
+    description:
+      "De-Lit taught me one thing: perfect balance. Half the books make you think, the other half make you feel. And just like my snap, one good discussion can change everything.",
   },
   {
-    "title": "Albert Einstein",
-    "description": "In De-Lit, I've learned that imagination is stronger than reality. It’s like reading the same paragraph in a loop—except here, you break out of it with every new perspective. It's all relative!",
-    "image_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Albert_Einstein_Head.jpg/150px-Albert_Einstein_Head.jpg"
+    title: "Albert Einstein",
+    description:
+      "In De-Lit, I've learned that imagination is stronger than reality. It’s like reading the same paragraph in a loop—except here, you break out of it with every new perspective. It's all relative!",
+    image_link:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Albert_Einstein_Head.jpg/150px-Albert_Einstein_Head.jpg",
   },
   {
-    "title": "Tony Stark",
-    "description": "De-Lit is like building a suit of armor. You start with scraps—an idea, a sentence—and before you know it, you’ve created something brilliant. It’s not rocket science, unless you're me.",
+    title: "Tony Stark",
+    description:
+      "De-Lit is like building a suit of armor. You start with scraps—an idea, a sentence—and before you know it, you’ve created something brilliant. It’s not rocket science, unless you're me.",
   },
   {
-    "title": "Yoda",
-    "description": "Powerful De-Lit is. Discussions here, insightful they are. Read, you must. Judge a book by its cover, you will not. The path to wisdom, through many pages it lies.",
-    "image_link": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Yoda_Empire_Strikes_Back.png/150px-Yoda_Empire_Strikes_Back.png"
+    title: "Yoda",
+    description:
+      "Powerful De-Lit is. Discussions here, insightful they are. Read, you must. Judge a book by its cover, you will not. The path to wisdom, through many pages it lies.",
+    image_link:
+      "https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Yoda_Empire_Strikes_Back.png/150px-Yoda_Empire_Strikes_Back.png",
   },
   {
-    "title": "Gandalf",
-    "description": "De-Lit is like a long journey. You never know where the next chapter will take you, but one thing’s for sure—you shall not pass up the chance for a great story!",
-    "image_link": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e9/Gandalf600ppx.jpg/150px-Gandalf600ppx.jpg"
+    title: "Gandalf",
+    description:
+      "De-Lit is like a long journey. You never know where the next chapter will take you, but one thing’s for sure—you shall not pass up the chance for a great story!",
+    image_link:
+      "https://upload.wikimedia.org/wikipedia/en/thumb/e/e9/Gandalf600ppx.jpg/150px-Gandalf600ppx.jpg",
   },
   {
-    "title": "Elon Musk",
-    "description": "Awesome",
+    title: "Elon Musk",
+    description: "Awesome",
   },
   {
-    "title": "Neo",
-    "description": "In De-Lit, I’ve learned that stories are the red pill. Once you dive into a book, there's no going back. The truth is out there, hidden between the lines—just like code in the Matrix.",
-    "image_link": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c6/NeoTheMatrix.jpg/150px-NeoTheMatrix.jpg"
+    title: "Neo",
+    description:
+      "In De-Lit, I’ve learned that stories are the red pill. Once you dive into a book, there's no going back. The truth is out there, hidden between the lines—just like code in the Matrix.",
+    image_link:
+      "https://upload.wikimedia.org/wikipedia/en/thumb/c/c6/NeoTheMatrix.jpg/150px-NeoTheMatrix.jpg",
   },
   {
-    "title": "Sherlock Holmes",
-    "description": "Elementary, my dear reader. De-Lit is a place where we deduce meaning from even the most obscure tales. Every book is a mystery, and every discussion is a clue that brings us closer to the truth.",
+    title: "Sherlock Holmes",
+    description:
+      "Elementary, my dear reader. De-Lit is a place where we deduce meaning from even the most obscure tales. Every book is a mystery, and every discussion is a clue that brings us closer to the truth.",
   },
   {
-    "title": "Captain Jack Sparrow",
-    "description": "Why is the rum gone? Because I traded it for a good book at De-Lit. This club’s discussions are like navigating the seas—sometimes rough, sometimes smooth, but always full of treasure.",
+    title: "Captain Jack Sparrow",
+    description:
+      "Why is the rum gone? Because I traded it for a good book at De-Lit. This club’s discussions are like navigating the seas—sometimes rough, sometimes smooth, but always full of treasure.",
   },
   {
-    "title": "Voldemort",
-    "description": "De-Lit? It’s a club of magic, where words hold power. Trust me, I know a thing or two about power. Here, we explore stories even darker than my soul (if I had one).",
-    "image_link": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a3/Lordvoldemort.jpg/150px-Lordvoldemort.jpg"
+    title: "Voldemort",
+    description:
+      "De-Lit? It’s a club of magic, where words hold power. Trust me, I know a thing or two about power. Here, we explore stories even darker than my soul (if I had one).",
+    image_link:
+      "https://upload.wikimedia.org/wikipedia/en/thumb/a/a3/Lordvoldemort.jpg/150px-Lordvoldemort.jpg",
   },
   {
-    "title": "Tanjiro",
-    "description": "At De-Lit, even the toughest books can't break my spirit! Each story feels like facing another demon, but with every discussion, I grow stronger. Reading here is like breathing—necessary and life-giving.",
-    "image_link": "https://cdn.prod.website-files.com/61789b489343c8242282a0ae/64d8acdc4c758e0313a67b46_tU9ppR7b_400x400.jpg"
-  }
+    title: "Tanjiro",
+    description:
+      "At De-Lit, even the toughest books can't break my spirit! Each story feels like facing another demon, but with every discussion, I grow stronger. Reading here is like breathing—necessary and life-giving.",
+    image_link:
+      "https://cdn.prod.website-files.com/61789b489343c8242282a0ae/64d8acdc4c758e0313a67b46_tU9ppR7b_400x400.jpg",
+  },
 ];
 
 export const BLOCKS_DATA = [
   {
-      "id": 0,
-      "image": "/mag.jpg",
-      "title": "MAGAZINES",
-      "description": "We call ourselves 'dreamers and doers' for a reason: we can make happen not just what is possible, but what is impossible. NEOM is a unique investment opportunity, unrivalled anywhere else.",
-      "link": '/publications'
+    id: 0,
+    image: "/mag.jpg",
+    title: "MAGAZINES",
+    description:
+      "We call ourselves 'dreamers and doers' for a reason: we can make happen not just what is possible, but what is impossible. NEOM is a unique investment opportunity, unrivalled anywhere else.",
+    link: "/publications",
   },
   {
-      "id": 1,
-      "image": "https://images.unsplash.com/photo-1528359645462-5ff224bf906e?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "title": "BLOGS",
-      "description": "Pandas are large, peaceful bears native to the mountainous forests of China, known for their distinctive black-and-white fur. They primarily eat bamboo, which makes up over 99% of their diet, though they occasionally eat other plants and small animals. Pandas are solitary animals and spend most of their time eating and resting.",
-      "link": "/blog"
+    id: 1,
+    image:
+      "https://images.unsplash.com/photo-1528359645462-5ff224bf906e?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "BLOGS",
+    description:
+      "Pandas are large, peaceful bears native to the mountainous forests of China, known for their distinctive black-and-white fur. They primarily eat bamboo, which makes up over 99% of their diet, though they occasionally eat other plants and small animals. Pandas are solitary animals and spend most of their time eating and resting.",
+    link: "/blog",
   },
   {
-      "id": 2,
-      "image": "https://plus.unsplash.com/premium_photo-1664303314018-d59cbbb5b13d?q=80&w=1370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "title": "GALLERY",
-      "description": "I am ChatGPT, an AI language model created by OpenAI, designed to assist with a wide range of tasks, including answering questions, generating text, solving problems, and even engaging in creative writing",
-      "link": "/gallery"
+    id: 2,
+    image:
+      "https://plus.unsplash.com/premium_photo-1664303314018-d59cbbb5b13d?q=80&w=1370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "GALLERY",
+    description:
+      "I am ChatGPT, an AI language model created by OpenAI, designed to assist with a wide range of tasks, including answering questions, generating text, solving problems, and even engaging in creative writing",
+    link: "/gallery",
   },
   {
-      "id": 3,
-      "image": "https://images.unsplash.com/photo-1607396508599-5d61627a058f?q=80&w=1494&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "title": "CLUB\u00A0TALK",
-      "description": "Most birds can fly, which distinguishes them from almost all other vertebrate classes. Flight is the primary means of locomotion for most bird species and is used for searching for food and for escaping from predators. Birds have various adaptations for flight, including a lightweight skeleton, two large flight muscles.",
-      "link": "/clubtalk"
-  }
+    id: 3,
+    image:
+      "https://images.unsplash.com/photo-1607396508599-5d61627a058f?q=80&w=1494&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "CLUB\u00A0TALK",
+    description:
+      "Most birds can fly, which distinguishes them from almost all other vertebrate classes. Flight is the primary means of locomotion for most bird species and is used for searching for food and for escaping from predators. Birds have various adaptations for flight, including a lightweight skeleton, two large flight muscles.",
+    link: "/clubtalk",
+  },
 ];
 
 export const LOTR_CHARACTERS = [
   {
-    "name": "Gandalf",
-    "quote": "“A wizard is never late, nor is he early, he arrives precisely when he means to.”",
-    "about": "Gandalf, wise and powerful, leads us on paths that reveal courage within ourselves, guiding us through the dark as we find our own light.",
-    "image_link": "https://i.pinimg.com/736x/84/e8/ec/84e8ec6cc44d217dbb8738322a44e25a.jpg"
+    name: "Gandalf",
+    quote:
+      "“A wizard is never late, nor is he early, he arrives precisely when he means to.”",
+    about:
+      "Gandalf, wise and powerful, leads us on paths that reveal courage within ourselves, guiding us through the dark as we find our own light.",
+    image_link:
+      "https://i.pinimg.com/736x/84/e8/ec/84e8ec6cc44d217dbb8738322a44e25a.jpg",
   },
   {
-    "name": "Legolas",
-    "quote": "“A red sun rises. Blood has been spilled this night.”",
-    "about": "Legolas, the Elven archer, speaks to the quiet mysteries of nature, his keen senses and unbreakable loyalty to friends helping light the way on the toughest of journeys.",
-    "image_link": "https://i.pinimg.com/564x/a0/bb/19/a0bb197138f1cc7f0b8e53ab678f9a4e.jpg"
+    name: "Legolas",
+    quote: "“A red sun rises. Blood has been spilled this night.”",
+    about:
+      "Legolas, the Elven archer, speaks to the quiet mysteries of nature, his keen senses and unbreakable loyalty to friends helping light the way on the toughest of journeys.",
+    image_link:
+      "https://i.pinimg.com/564x/a0/bb/19/a0bb197138f1cc7f0b8e53ab678f9a4e.jpg",
   },
   {
-    "name": "Aragorn",
-    "quote": "“I am Aragorn, son of Arathorn; and if by life or death I can save you, I will.”",
-    "about": "Aragorn, a leader with boundless bravery, shoulders responsibility with humility, willing to sacrifice all to protect those he holds dear.",
-    "image_link": "https://i.pinimg.com/564x/a8/53/bf/a853bfbfebf7f40e5d90f9ab0a84bc37.jpg"
+    name: "Aragorn",
+    quote:
+      "“I am Aragorn, son of Arathorn; and if by life or death I can save you, I will.”",
+    about:
+      "Aragorn, a leader with boundless bravery, shoulders responsibility with humility, willing to sacrifice all to protect those he holds dear.",
+    image_link:
+      "https://i.pinimg.com/564x/a8/53/bf/a853bfbfebf7f40e5d90f9ab0a84bc37.jpg",
   },
   {
-    "name": "Frodo",
-    "quote": "“I will take the Ring, though I do not know the way.”",
-    "about": "Frodo embodies the courage to face the unknown, willing to bear the weight of an impossible quest, guided by friendship and the hope of a better world.",
-    "image_link": "https://i.pinimg.com/564x/14/76/40/147640ff910df72e24d58c180641b8c3.jpg"
+    name: "Frodo",
+    quote: "“I will take the Ring, though I do not know the way.”",
+    about:
+      "Frodo embodies the courage to face the unknown, willing to bear the weight of an impossible quest, guided by friendship and the hope of a better world.",
+    image_link:
+      "https://i.pinimg.com/564x/14/76/40/147640ff910df72e24d58c180641b8c3.jpg",
   },
   {
-    "name": "Samwise Gamgee",
-    "quote": "“I can't carry it for you, but I can carry you!”",
-    "about": "Sam, the heart of the fellowship, is endlessly loyal, inspiring us all to be brave in the face of fear, and to always look out for one another.",
-    "image_link": "https://i.pinimg.com/564x/87/46/7b/87467b753a9b12217c80d8ca12e07911.jpg"
+    name: "Samwise Gamgee",
+    quote: "“I can't carry it for you, but I can carry you!”",
+    about:
+      "Sam, the heart of the fellowship, is endlessly loyal, inspiring us all to be brave in the face of fear, and to always look out for one another.",
+    image_link:
+      "https://i.pinimg.com/564x/87/46/7b/87467b753a9b12217c80d8ca12e07911.jpg",
   },
   {
-    "name": "Gimli",
-    "quote": "“Let them come! There is one Dwarf yet in Moria who still draws breath!”",
-    "about": "Brave and loyal, Gimli is as fierce in battle as he is loyal to his friends, bringing strength and humor to the Fellowship.",
-    "image_link": "https://i.pinimg.com/564x/67/17/4f/67174f369ba0059b1c81fea39e3df1ef.jpg"
+    name: "Gimli",
+    quote:
+      "“Let them come! There is one Dwarf yet in Moria who still draws breath!”",
+    about:
+      "Brave and loyal, Gimli is as fierce in battle as he is loyal to his friends, bringing strength and humor to the Fellowship.",
+    image_link:
+      "https://i.pinimg.com/564x/67/17/4f/67174f369ba0059b1c81fea39e3df1ef.jpg",
   },
   {
-    "name": "Gollum",
-    "quote": "“My precious!”",
-    "about": "Torn between his darker and lighter sides, Gollum embodies the tragic consequences of obsession, bringing complexity and an eerie unpredictability to the journey of the Ring.",
-    "image_link": "https://i.pinimg.com/564x/e3/6f/48/e36f485660944ae698391df5bed3380f.jpg"
-  }
+    name: "Gollum",
+    quote: "“My precious!”",
+    about:
+      "Torn between his darker and lighter sides, Gollum embodies the tragic consequences of obsession, bringing complexity and an eerie unpredictability to the journey of the Ring.",
+    image_link:
+      "https://i.pinimg.com/564x/e3/6f/48/e36f485660944ae698391df5bed3380f.jpg",
+  },
 ];
 
+export const ARTICLES = [
+  {
+    title: "The Quest for the One Piece",
+    description:
+      "Join the epic journey as Luffy and his crew navigate the Grand Line in search of the legendary One Piece, encountering strange lands, powerful foes, and lifelong friendships along the way.",
+  },
+  {
+    title: "The Power of the Force",
+    description:
+      "The Force binds the galaxy together, granting mysterious powers to those who can harness it. Jedi and Sith wage an endless battle for the balance of the galaxy, each wielding unique abilities.",
+  },
+  {
+    title: "The Battle for the Iron Throne",
+    description:
+      "In Westeros, noble families vie for control of the Iron Throne. Alliances are made and broken as lords and ladies fight for power in a brutal game where loyalty is as dangerous as betrayal.",
+  },
+  {
+    title: "Exploring the Grand Line's Mysteries",
+    description:
+      "The Grand Line holds countless mysteries, from hidden islands to mystical powers. With strange sea currents and bizarre climates, it's a place where danger lurks behind every wave.",
+  },
+  {
+    title: "The Rebellion Strikes Back",
+    description:
+      "In a galaxy oppressed by the Empire, the Rebellion wages a relentless fight for freedom. Rebels from every corner of the galaxy come together to overthrow tyranny and restore peace.",
+  },
+  {
+    title: "A Song of Ice and Fire",
+    description:
+      "Legends of dragons and ancient magic echo across Westeros, as powerful families prepare for the coming winter. The Wall stands tall, yet threats beyond it continue to grow.",
+  },
+];
 
-export const BANNER_IMAGE = "https://images.unsplash.com/photo-1500320821405-8fc1732209ca?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3";
+export const BANNER_IMAGE =
+  "https://images.unsplash.com/photo-1500320821405-8fc1732209ca?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3";
