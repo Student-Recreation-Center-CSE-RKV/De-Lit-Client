@@ -59,11 +59,11 @@ function BlogPopup({selectedPost, closeModal}) {
         <h2 className="text-2xl pt-3 font-semibold text-gray-800 mb-4">
           {selectedPost.title}
         </h2>
-        <p className="text-gray-600 mb-4">
-          {selectedPost.description}
-        </p>
         <p className="text-gray-400 text-xs font-bold">
           {selectedPost.author} - {selectedPost.date}
+        </p> <br />
+        <p className="text-gray-600 text-lg mb-4">
+          {selectedPost.description}
         </p>
       </div>
     </div>

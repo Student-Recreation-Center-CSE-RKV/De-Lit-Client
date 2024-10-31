@@ -33,7 +33,7 @@ function BlogDisplay({posts}) {
   return (
     <div className="flex flex-col items-center bg-mywhite min-h-screen">
       {/*Display each BLog card and content*/}
-      <ul className="mx-4 max-w-7xl">
+      <ul className="mx-4 max-w-5xl">
         {posts.map((post,index) => (
           <li key={post.id}  >
             
