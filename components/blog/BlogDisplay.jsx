@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react';
 import BlogWrapper from './BlogWrapper';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import BlogPopup from './BlogPopup';
+import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
 
 function BlogDisplay({posts}) {
 
@@ -31,9 +33,9 @@ function BlogDisplay({posts}) {
   }, []);
 
   return (
-    <div className="flex flex-col items-center bg-mywhite min-h-screen">
+    <div className="flex flex-col  items-center bg-mywhite min-h-screen">
       {/*Display each BLog card and content*/}
-      <ul className="mx-4 max-w-7xl">
+      <ul className="mx-4  max-w-5xl">
         {posts.map((post,index) => (
           <li key={post.id}  >
             
@@ -44,7 +46,7 @@ function BlogDisplay({posts}) {
             <h2 className="text-2xl font-semibold text-gray-800 my-2">
               {post.title}
             </h2>
-            <p className="text-gray-600 my-2">{post.content}</p>
+            <ReactMarkdown rehypePlugins={[rehypeRaw]} className="text-gray-600 my-2">{post.content.substring(0,100)+"..."}</ReactMarkdown>
             <p className='text-gray-400 text-xs font-bold my-2'>{post.date}</p>
             </div>
             </BlogWrapper>
