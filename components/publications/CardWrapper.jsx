@@ -34,16 +34,16 @@ const CardWrapper = ({ header, data, subheader, CardComponent, isFirst }) => {
             {subheader}
           </p>
         </div>
-        {/* <div
+        <div
           ref={scrollRef}
           className="w-full overflow-x-auto gap-3 p-4 flex no-scrollbar scroll-smooth snap-mandatory snap-x"
         >
           {data.map((card, index) => (
             screenSize.width > 1024 ? <CardComponent key={index} {...card} scrollRef={scrollRef} /> : <Card key={index} {...card} />
           ))}
-        </div> */}
+        </div>
 
-        <div
+        {/* <div
           ref={scrollRef}
           className="w-full overflow-x-auto gap-3 p-4 flex no-scrollbar scroll-smooth snap-mandatory snap-x"
         >
@@ -60,7 +60,7 @@ const CardWrapper = ({ header, data, subheader, CardComponent, isFirst }) => {
                 <CardSkeleton key={index} />
                 // <AnthologySkeleton key={index} />
               ))}
-        </div>
+        </div> */}
 
         <div className="text-end pt-6 mr-12  hidden md:block">
           <button

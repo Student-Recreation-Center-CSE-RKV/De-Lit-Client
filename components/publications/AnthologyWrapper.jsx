@@ -11,10 +11,10 @@ const CardWrapper = dynamic(
   { ssr: false }
 );
 
-export default function AnthologyWrapper() {
+export default async function AnthologyWrapper() {
   return (
     <CardWrapper
-      data={[]}
+      data={ANTHOLOGIES}
       header={"Anthologies"}
       subheader={"A Journey Through Words: Our Anthologies"}
       CardComponent={Anthology}

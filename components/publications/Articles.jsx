@@ -9,12 +9,16 @@ import ArticleCardSkeleton from "./skeletons/ArticleSkeleton";
 export default function Articles({ header, subheader }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const [loading, setLoading] = useState(true); // loading state for skeleton
+  const [loading, setLoading] = useState(false); // loading state for skeleton
   const articlesPerPage = 9;
 
+  // useEffect(() => {
+  //   setTimeout(() => setLoading(false), 1000); // simulate loading time
+  // }, []);
+
   useEffect(() => {
-    setTimeout(() => setLoading(false), 10000); // simulate loading time
-  }, []);
+    setCurrentPage(1);
+  }, [searchTerm]);
 
   const filteredArticles = ARTICLES.filter(
     (article) =>
@@ -38,11 +42,13 @@ export default function Articles({ header, subheader }) {
 
   return (
     <div className="container mx-auto pb-10 px-5">
-      <div className="mb-5">
-        <h1 className="text-[2.8rem] md:text-5xl text-center font-bold text-myblack tracking-wide">
+      <div className="mb-3 md:mb-8 md:-mt-5">
+        <h1 className="text-[2.8rem] md:text-7xl text-center text-myblack tracking-wide">
           {header}
         </h1>
-        <p className="text-center mt-2 text-gray-500">{subheader}</p>
+        <p className="hidden md:block text-center mt-4 text-colorA">
+          {subheader}
+        </p>
       </div>
 
       <div className="flex justify-center mb-6">
@@ -51,7 +57,7 @@ export default function Articles({ header, subheader }) {
           placeholder="Search articles"
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="border border-gray-400 rounded-full p-2 w-full max-w-md focus:outline-none focus:ring-2 focus:ring-gray-400 transition duration-150"
+          className="border border-gray-400 rounded-full p-2 w-full max-w-md focus:outline-none focus:ring-1 focus:ring-colorC transition duration-150"
         />
       </div>
 
