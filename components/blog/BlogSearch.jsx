@@ -11,12 +11,13 @@ const BlogSearch = ({ posts }) => {
   );
 
   return (
-    <div className="container  mx-auto p-4">
-      <div className='p-2 text-center  flex    justify-center '>
-      <select
+    <div className="container mt-10 mx-auto p-4">
+      <div className='p-2 text-center  flex justify-center '>
+        <div className='flex w-1/2 flex-row justify-center items-center p-2 rounded-full transition-all duration-200 focus-within:shadow-lg focus-within:ring-0 bg-white'>
+        <select
           value={searchField}
           onChange={(e) => setSearchField(e.target.value)}
-          className="p-2 border border-gray-300 w-2/4 md:w-2/12 rounded-3xl"
+          className="px-4 py-2 bg-mywhite border border-none  rounded-3xl"
         >
           <option value="title">Title</option>
           <option value="content">Content</option>
@@ -29,8 +30,11 @@ const BlogSearch = ({ posts }) => {
           placeholder={`Search by ${searchField}...`}
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="md:w-1/2 p-2 border border-gray-300 rounded-3xl"
+          className=" px-4 py-2 text-gray-900 rounded-full focus:outline-none flex-grow-[2] border-none"
         />
+
+        </div>
+      
 
         
       </div>

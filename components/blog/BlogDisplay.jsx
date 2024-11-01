@@ -76,7 +76,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import BlogPopup from './BlogPopup';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
-import DOMPurify from 'dompurify';
+import DOMPurify from 'isomorphic-dompurify';
 
 function BlogDisplay({ posts }) {
   // State to manage selected post for modal
@@ -112,19 +112,25 @@ function BlogDisplay({ posts }) {
   return (
     <div className="flex flex-col items-center bg-mywhite min-h-screen">
       {/* Display each Blog card and content */}
-      <ul className="mx-4 max-w-5xl">
+      <ul className="mx-4 p-10 max-w-5xl">
         {posts.map((post, index) => (
           <li key={post.id}>
             <BlogWrapper handlePostClick={() => handlePostClick(post)} post={post} isSent={index % 2 === 0}>
-              <div>
-                <AccountCircleIcon /> <span className='font-bold'>{post.author}</span>
+              <div className='p-2'>
+                
                 <h2 className="text-2xl font-semibold text-gray-800 my-2">
                   {post.title}
                 </h2>
-                <p className="text-gray-600 my-2">
+                <p className="text-gray-600 text my-2">
                   {stripMarkdownAndHTML(post.content).substring(0, 100) + '...'}
                 </p>
-                <p className='text-gray-400 text-xs font-bold my-2'>{post.date}</p>
+                <div className='flex justify-between'>
+                  <div>
+                  <AccountCircleIcon /> <span className='text-gray-400 text-xs font-bold'>{post.author}</span>
+                  </div>
+                
+                <span className='text-gray-400 text-xs font-bold my-2 '>{post.date}</span>
+                </div>
               </div>
             </BlogWrapper>
           </li>
