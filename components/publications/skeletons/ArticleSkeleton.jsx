@@ -1,15 +1,17 @@
-function ArticleCardSkeleton() {
-    return (
-      <div className="bg-white shadow-md rounded-lg overflow-hidden xl:p-10 p-5">
-        <div className="w-1/2 h-4 bg-gray-300 rounded mt-2 animate-pulse"></div>
-        <div className="h-6 bg-gray-300 rounded w-3/4 mt-4 animate-pulse"></div>
-        <div className="h-4 bg-gray-300 rounded w-full mt-2 animate-pulse"></div>
-        <div className="h-4 bg-gray-300 rounded w-full mt-2 animate-pulse"></div>
-        <div className="h-4 bg-gray-300 rounded w-2/3 mt-2 animate-pulse"></div>
-        <div className="h-4 bg-gray-300 rounded w-1/3 mt-6 animate-pulse"></div>
+import HeaderSkeleton from "./HeaderSkeleton";
+import ArticleCardSkeleton from "./ArticleCardSkeleton";
+
+export default function ArticleSkeleton() {
+  return (
+    <>
+      <div className="ml-3 md:ml-16 mb-9">
+        <HeaderSkeleton />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-5">
+          {Array.from({ length: 6 }).map((_, index) => (
+            <ArticleCardSkeleton key={index} />
+          ))}
+        </div>
       </div>
-    );
-  }
-  
-  export default ArticleCardSkeleton;
-  
+    </>
+  );
+}

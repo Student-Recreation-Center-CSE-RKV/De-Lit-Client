@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { FaTimes } from "react-icons/fa";
-import PDFViewer from "./PDFViewer";
+import PDFViewer from "@/components/publications/PDFViewer";
 
 export default function Overlay({ link, handleClose }) {
   const overlayRef = useRef();
