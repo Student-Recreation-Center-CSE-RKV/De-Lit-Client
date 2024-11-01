@@ -76,7 +76,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import BlogPopup from './BlogPopup';
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
-import DOMPurify from 'dompurify';
+import DOMPurify from 'isomorphic-dompurify';
 
 function BlogDisplay({ posts }) {
   // State to manage selected post for modal
