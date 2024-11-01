@@ -3,9 +3,11 @@ import { useRef } from "react";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import Card from "./Card";
+import CardSkeleton from "./skeletons/CardSkeleton";
+import AnthologySkeleton from "./skeletons/AnthologySkeleton";
 import useScreenSize from "@/hooks/useScreenSize";
 
-const CardWrapper = ({ header, data, subheader, CardComponent, isFirst}) => {
+const CardWrapper = ({ header, data, subheader, CardComponent, isFirst }) => {
   const scrollRef = useRef();
   const screenSize = useScreenSize();
 
@@ -32,13 +34,32 @@ const CardWrapper = ({ header, data, subheader, CardComponent, isFirst}) => {
             {subheader}
           </p>
         </div>
-        <div
+        {/* <div
           ref={scrollRef}
           className="w-full overflow-x-auto gap-3 p-4 flex no-scrollbar scroll-smooth snap-mandatory snap-x"
         >
           {data.map((card, index) => (
-            screenSize.width > 768 ? <CardComponent key={index} {...card} scrollRef={scrollRef} /> : <Card key={index} {...card} />
+            screenSize.width > 1024 ? <CardComponent key={index} {...card} scrollRef={scrollRef} /> : <Card key={index} {...card} />
           ))}
+        </div> */}
+
+        <div
+          ref={scrollRef}
+          className="w-full overflow-x-auto gap-3 p-4 flex no-scrollbar scroll-smooth snap-mandatory snap-x"
+        >
+          {data && data.length > 0
+            ? data.map((card, index) =>
+                screenSize.width > 1024 ? (
+                  <CardComponent key={index} {...card} scrollRef={scrollRef} />
+                ) : (
+                  <Card key={index} {...card} />
+                )
+              )
+            : // Render 5 skeleton cards as placeholders
+              Array.from({ length: 5 }).map((_, index) => (
+                <CardSkeleton key={index} />
+                // <AnthologySkeleton key={index} />
+              ))}
         </div>
 
         <div className="text-end pt-6 mr-12  hidden md:block">

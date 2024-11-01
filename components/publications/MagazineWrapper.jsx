@@ -10,12 +10,10 @@ const CardWrapper = dynamic(
   { ssr: false }
 );
 
-
-
 export default async function MagazineWrapper({ isFirst }) {
   return (
     <CardWrapper
-      data={MAGAZINES}
+      data={[]}
       header={"Magazines"}
       subheader={"Dive Into Our Curated Magazine Collection"}
       isFirst={isFirst}

@@ -14,7 +14,7 @@ const Card = ({ title, text, image, link, scrollRef }) => {
   const handleClose = () => {
     document.body.style.overflow = "visible";
     setOpen(false);
-    if (scrollRef.current) {
+    if (scrollRef && scrollRef.current) {
       scrollRef.current.scrollLeft += 280;
     }
   };
