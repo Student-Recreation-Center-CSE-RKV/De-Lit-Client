@@ -18,11 +18,8 @@ async function getAnthologies() {
 }
 
 export default async function AnthologyWrapper() {
-<<<<<<< HEAD:components/publications/AnthologyWrapper.jsx
+  await getAnthologies();
   const data = await addBase64(ANTHOLOGIES);
-=======
-  const data = await getAnthologies();
->>>>>>> e7707ca (style, chore(publications): change file structure and update fallback animations for magazine, anthology, article):components/publications/anthology/AnthologyWrapper.jsx
   return (
     <CardWrapper
       data={data}
