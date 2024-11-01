@@ -13,8 +13,9 @@ const Banner = ({image, base64}) => {
           src={image}
           fill
           placeholder="blur"
+          quality={90}
           blurDataURL={base64}
-          sizes="100vh"
+          sizes="(max-width: 1000px) 200vw, 100vw"
           className="object-cover object-center"
         />
       {/* Overlay */}

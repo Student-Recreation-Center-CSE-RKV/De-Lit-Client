@@ -31,7 +31,7 @@ export default function Card({
       <img src="clip.svg" className={`absolute top-[-10px] w-[12px] z-10 ${clipClasses[cardNum]}`} alt="clip" />
       <div className={`flex flex-col bg-white shadow-lg rounded-xl overflow-hidden xl:p-10 p-5 h-full ${raleway.className}`}>
         <div className="flex items-center justify-center border-colorE border-[1px] p-5 mb-5 rounded-xl flex-grow">
-          <p className="xl:text-lg md:text-sm text-base">{description}</p>
+          <p className="xl:text-lg md:text-sm text-base text-colorA">{description}</p>
         </div>
         <div className="flex justify-between items-center">
           <div className="pl-5">
@@ -44,7 +44,8 @@ export default function Card({
                 image_link ? image_link : `https://ui-avatars.com/api/?name=${title}&background=random`
               }
               alt={title}
-              sizes="3vw"
+              quality={100}
+              sizes="64px"
               fill
               className="object-cover rounded-full"
             />

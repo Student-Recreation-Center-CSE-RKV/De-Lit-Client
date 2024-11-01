@@ -22,6 +22,7 @@ export default function Card({ character }) {
             src={character.image_link}
             alt={character.name}
             fill
+            sizes="(max-width: 768px) 90vw, 40vw"
             placeholder="blur"
             blurDataURL={character.base64}
             className="object-cover rounded-lg"

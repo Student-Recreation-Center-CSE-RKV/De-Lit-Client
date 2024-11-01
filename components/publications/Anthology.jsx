@@ -31,7 +31,9 @@ const Anthology = ({ title, text, image, base64, link, scrollRef }) => {
         <div className="flex flex-row h-[32rem]">
           <div className="w-2/3 h-full">
             <div className="relative w-[16rem] h-full md:w-full md:h-full">
-              <Image src={image} alt={title} fill className="object-cover rounded-[28px]" placeholder="blur" blurDataURL={base64}/>
+              <Image src={image} alt={title} fill className="object-cover rounded-[28px]" 
+              placeholder="blur" blurDataURL={base64}
+              sizes="50vw"/>
             </div>
           </div>
           <div className="flex flex-col justify-center gap-12 w-full p-10">
