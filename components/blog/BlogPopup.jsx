@@ -64,7 +64,7 @@ function BlogPopup({selectedPost, closeModal}) {
         <p className="text-gray-400 text-xs font-bold">
           {selectedPost.author} - {selectedPost.date}
         </p> <br />
-        <ReactMarkdown rehypePlugins={[rehypeRaw]} className="text-gray-600 text-lg mb-4">
+        <ReactMarkdown rehypePlugins={[rehypeRaw]} className="text-gray-600 text-justify text-lg mb-4">
           {selectedPost.content}
         </ReactMarkdown>
       </div>
