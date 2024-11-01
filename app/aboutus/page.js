@@ -1,7 +1,10 @@
 import TeamSection from "@/components/aboutus/TeamSection";
 import ContentBlock from "@/components/aboutus/ContentBlock";
+import { LOTR_CHARACTERS } from "@/utils/dummy";
+import { addBase64 } from "@/utils/image-load";
 
-export default function Page() {
+export default async function Page() {
+  const data = await addBase64(LOTR_CHARACTERS);
   return (
     <div className="container mt-[20vh]">
       <ContentBlock 
@@ -14,7 +17,7 @@ export default function Page() {
       />
       <h1 className="text-center text-5xl mt-10">The Fellowship</h1>
       <p className="text-center text-lg mt-5">Meet the team that makes it all happen</p>
-      <TeamSection />
+      <TeamSection data={data}/>
     </div>
   )
 }

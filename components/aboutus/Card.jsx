@@ -1,6 +1,7 @@
 "use client";
 import Modal from "./Modal";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 export default function Card({ character }) {
   const [showModal, setShowModal] = useState(false);
@@ -16,11 +17,16 @@ export default function Card({ character }) {
                    transition-transform duration-200 ease-[cubic-bezier(0.455,0.030,0.515,0.955)] cursor-pointer"
         onClick={() => setShowModal(true)}
       >
-        <img
-          src={character.image_link}
-          alt={character.name}
-          className="w-full h-[200px] object-cover rounded-lg"
-        />
+        <div className="relative w-full h-[200px]">
+          <Image
+            src={character.image_link}
+            alt={character.name}
+            fill
+            placeholder="blur"
+            blurDataURL={character.base64}
+            className="object-cover rounded-lg"
+          />
+        </div>
         <p className="text-colorB xl:text-lg text-base text-center">
           {character.quote}
         </p>

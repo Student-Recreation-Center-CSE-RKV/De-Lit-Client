@@ -87,7 +87,7 @@ export const CLUB_TALK = [
     description:
       "I am vengeance, I am the night, and at De-Lit, I am a reader.",
     image_link:
-      "https://upload.wikimedia.org/wikipedia/en/thumb/1/17/Batman-BenAffleck.jpg/150px-Batman-BenAffleck.jpg",
+      "https://m.media-amazon.com/images/S/pv-target-images/81ef275effa427553a847bc220bebe1dc314b2e79d00333f94a6bcadd7cce851.jpg",
   },
   {
     title: "Shakespeare",

@@ -1,14 +1,22 @@
 import React from "react";
 import { Playfair_Display } from "next/font/google";
+import Image from "next/image";
 
 const font = Playfair_Display({ subsets: ["latin"], weight: ["400"] });
 
-const Banner = ({image}) => {
+const Banner = ({image, base64}) => {
   return (
     <div
-      className="relative w-full h-screen bg-cover bg-center"
-      style={{ backgroundImage: `url(${image})` }}
+      className="relative w-full h-screen"
     >
+        <Image
+          src={image}
+          fill
+          placeholder="blur"
+          blurDataURL={base64}
+          sizes="100vh"
+          className="object-cover object-center"
+        />
       {/* Overlay */}
       <div className="absolute inset-0 bg-black opacity-50 -z-0"></div>
       {/* Content */}

@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import Overlay from "@/components/publications/Overlay";
+import Image from "next/image";
 
-const Anthology = ({ title, text, image, link, scrollRef }) => {
+const Anthology = ({ title, text, image, base64, link, scrollRef }) => {
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {
@@ -29,11 +30,9 @@ const Anthology = ({ title, text, image, link, scrollRef }) => {
       >
         <div className="flex flex-row h-[32rem]">
           <div className="w-2/3 h-full">
-            <img
-              src={image}
-              alt=""
-              className="w-[16rem] h-full md:w-full md:h-full object-cover rounded-[28px]"
-            />
+            <div className="relative w-[16rem] h-full md:w-full md:h-full">
+              <Image src={image} alt={title} fill className="object-cover rounded-[28px]" placeholder="blur" blurDataURL={base64}/>
+            </div>
           </div>
           <div className="flex flex-col justify-center gap-12 w-full p-10">
             <h1 className="md:text-5xl">{title}</h1>
