@@ -2,7 +2,7 @@
 .gallery {
   column-count: 3;
   column-width: 33%;
-  padding: 0 100px;
+  padding: 0 70px;
   margin: 100px 0;
 }
 
@@ -16,34 +16,35 @@
   overflow: hidden;
 }
 
+/* Responsive Gallery Columns */
 @media (max-width: 991px) {
   .gallery {
-      column-count: 2;
-      column-width: 50%;
+    column-count: 2;
+    column-width: 50%;
   }
 }
 
 @media (max-width: 480px) {
   .gallery {
-      column-count: 1;
-      column-width: 100%;
+    column-count: 1;
+    column-width: 100%;
   }
 }
 
 /* Hover Effect */
 .gallery .pics img:hover {
-  transform: scale(1.05); /* Scale to 105% on hover */
+  transform: rotate3d(1, 2, 0, 25deg);
 }
 
 /* Fade-In Animation for Gallery */
 @keyframes fadeInUp {
   0% {
-      opacity: 0;
-      transform: translateY(20px);
+    opacity: 0;
+    transform: translateY(20px);
   }
   100% {
-      opacity: 1;
-      transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -54,7 +55,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(37, 37, 37, 0.8);
+  background-color: rgba(37, 37, 37, 0.959);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -64,40 +65,45 @@
 
 .modal-content {
   display: flex;
-  width: 70%;
+  width: 100%;
+  height: 90%;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background: rgba(37, 37, 37, 0.8);
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   animation: modalFadeIn 0.4s ease;
 }
 
 .modal-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
+  max-width: 50%;
+  height: 90%;
+  border-radius: 70px;
   opacity: 0;
   animation: fadeInImage 0.5s ease forwards;
 }
 
+/* Fade-In Animations */
 @keyframes modalFadeIn {
   from {
-      opacity: 0;
-      transform: scale(0.9);
+    opacity: 0;
+    transform: scale(0.9);
   }
   to {
-      opacity: 1;
-      transform: scale(1);
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
-/* Image Fade-In Animation */
 @keyframes fadeInImage {
   from {
-      opacity: 0;
+    opacity: 0;
   }
   to {
-      opacity: 1;
+    opacity: 1;
   }
 }
 
@@ -114,20 +120,21 @@
 }
 
 .close:hover {
-  color: #bbb; 
+  color: #bbb;
 }
 
+/* Instruction Overlay */
 .instruction-overlay {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateX(-50%);
-  background-color:rgb(112, 248, 112);
+  background-color: rgb(112, 248, 112);
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
-  z-index: 100; /* Ensure it is above other elements */
-  animation: fade-in 0.2s; /* Optional fade-in animation */
+  z-index: 100;
+  animation: fade-in 0.2s;
 }
 
 @keyframes fade-in {
@@ -136,5 +143,76 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+/* Responsive Modal Content and Modal Image */
+@media (max-width: 1200px) {
+  .modal-content {
+    flex-direction: column;
+    padding: 10px;
+    gap: 5px;
+  }
+
+  .modal-image {
+    max-width: 70%;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 90%;
+    height: 80%;
+  }
+
+  .modal-image {
+    max-width: 80%;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .modal-content {
+    width: 90%;
+    height: 70%;
+    padding: 5px;
+  }
+
+  .modal-image {
+    width: 100%;
+    height: auto;
+    max-height: 70vh;
+    border-radius: 20px;
+  }
+
+  .close {
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+  }
+
+  .instruction-overlay {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1200px) {
+  .modal-content {
+    width: 80%;
+    max-height: 90%;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .modal-image {
+    width: 100%;
+    max-width: 70%;
+    max-height: 80vh;
+    height: auto;
+    border-radius: 20px;
   }
 }
