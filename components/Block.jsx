@@ -1,8 +1,8 @@
 import Link from 'next/link';
 import clsx from 'clsx';
+import Image from 'next/image';
 
-export default function Block({name, image_link, content, link, isActive}) {
-
+export default function Block({name, image_link, base64, content, link, isActive}) {
   const titleClasses = {
     "md:left-3/4 md:top-[calc(14%)]": isActive,
     "md:left-[116%] md:top-[14%]": !isActive
@@ -24,7 +24,12 @@ export default function Block({name, image_link, content, link, isActive}) {
     <div className={clsx("min-h-[85dvh] flex items-center justify-center sticky top-[15dvh] overflow-x-hidden transition-all duration-100 overflow-hidden ease-[cubic-bezier(0.455,0.030,0.515,0.955)]", blockClasses)}>
       <div className="flex md:flex-row lg:space-x-24 my-auto mx-20 items-center flex-col md:space-x-10 max-md:space-y-12 self-stretch md:max-h-[70dvh] max-md:h-1/3">
         <Link href={link} className="relative self-stretch md:w-1/3 max-md:flex max-md:flex-col max-md:items-center max-md:text-center max-md:h-[40dvh]">
-            <img className={clsx("object-cover opacity-1 w-full h-full rounded-3xl transition-all duration-700 ease-[cubic-bezier(.455,.03,.515,.955)]", imageClasses)} src={image_link} alt="" />
+            <div className={clsx("opacity-1 w-full h-full transition-all duration-700 ease-[cubic-bezier(.455,.03,.515,.955)]", imageClasses)}>
+              <Image src={image_link} alt="block-img" fill placeholder="blur" blurDataURL={base64}
+                sizes="(max-width: 768px) 70vw, 25vw"
+                className="rounded-3xl object-cover" 
+              />
+            </div>
             <span className={clsx("absolute max-md:-bottom-6 text-5xl lg:text-8xl md:text-5xl tracking-widest bg-gradient-to-br from-black to-colorC bg-clip-text text-transparent transition-all duration-[800ms] ease-[cubic-bezier(.455,.03,.515,.955)]", titleClasses)}>{name}</span>
         </Link>
         <div className={clsx("md:w-3/6 mt-[20%] mb-7 text-center md:text-justify transition-all ease-[cubic-bezier(.455,.03,.515,.955)] duration-500", contentClasses)}>

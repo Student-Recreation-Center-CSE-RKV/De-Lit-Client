@@ -8,9 +8,11 @@
   --color-b: #494949;
   --color-c: #6d6d6d;
   --color-d: #929292;
-  --color-e: #b6b6b6;
+  --color-e: #b8b8b8;
   --color-f: #dbdbdb;
   --mywhite: #f1f0ee;
+  /* --mywhite: #33ccab; */
+  --mycardwhite: #f6f7f5;
   --pdfbackground: #525659;
   --nav-height: 10vh;
 }

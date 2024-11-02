@@ -2,7 +2,8 @@ export const ANTHOLOGIES = [
   {
     title: "Echoes of Time",
     text: "An anthology that captures pivotal moments in history through short stories and essays from a diverse array of voices. Featuring works that transport readers to different eras and events.",
-    image: "https://i.pinimg.com/564x/a9/1e/80/a91e80c11fa6decbd2950388cca0ad4d.jpg",
+    image:
+      "https://i.pinimg.com/564x/a9/1e/80/a91e80c11fa6decbd2950388cca0ad4d.jpg",
     link: "https://example.com/echoes-of-time",
   },
   {
@@ -82,142 +83,309 @@ export const MAGAZINES = [
 
 export const CLUB_TALK = [
   {
-    "title": "Batman",
-    "description": "I am vengeance, I am the night, and at De-Lit, I am a reader.",
-    "image_link": "https://upload.wikimedia.org/wikipedia/en/thumb/1/17/Batman-BenAffleck.jpg/150px-Batman-BenAffleck.jpg"
+    title: "Batman",
+    description:
+      "I am vengeance, I am the night, and at De-Lit, I am a reader.",
+    image_link:
+      "https://m.media-amazon.com/images/S/pv-target-images/81ef275effa427553a847bc220bebe1dc314b2e79d00333f94a6bcadd7cce851.jpg",
   },
   {
-    "title": "Shakespeare",
-    "description": "To read, or not to read—there is no question at De-Lit. It’s a place where stories flow like poetry, and every discussion is an act in the grand play of life. Truly, all the world’s a page here! ",
-    "image_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Shakespeare.jpg/150px-Shakespeare.jpg"
+    title: "Shakespeare",
+    description:
+      "To read, or not to read—there is no question at De-Lit. It’s a place where stories flow like poetry, and every discussion is an act in the grand play of life. Truly, all the world’s a page here! ",
+    image_link:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Shakespeare.jpg/150px-Shakespeare.jpg",
   },
   {
-    "title": "Thanos",
-    "description": "De-Lit taught me one thing: perfect balance. Half the books make you think, the other half make you feel. And just like my snap, one good discussion can change everything.",
+    title: "Thanos",
+    description:
+      "De-Lit taught me one thing: perfect balance. Half the books make you think, the other half make you feel. And just like my snap, one good discussion can change everything.",
   },
   {
-    "title": "Albert Einstein",
-    "description": "In De-Lit, I've learned that imagination is stronger than reality. It’s like reading the same paragraph in a loop—except here, you break out of it with every new perspective. It's all relative!",
-    "image_link": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Albert_Einstein_Head.jpg/150px-Albert_Einstein_Head.jpg"
+    title: "Albert Einstein",
+    description:
+      "In De-Lit, I've learned that imagination is stronger than reality. It’s like reading the same paragraph in a loop—except here, you break out of it with every new perspective. It's all relative!",
+    image_link:
+      "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Albert_Einstein_Head.jpg/150px-Albert_Einstein_Head.jpg",
   },
   {
-    "title": "Tony Stark",
-    "description": "De-Lit is like building a suit of armor. You start with scraps—an idea, a sentence—and before you know it, you’ve created something brilliant. It’s not rocket science, unless you're me.",
+    title: "Tony Stark",
+    description:
+      "De-Lit is like building a suit of armor. You start with scraps—an idea, a sentence—and before you know it, you’ve created something brilliant. It’s not rocket science, unless you're me.",
   },
   {
-    "title": "Yoda",
-    "description": "Powerful De-Lit is. Discussions here, insightful they are. Read, you must. Judge a book by its cover, you will not. The path to wisdom, through many pages it lies.",
-    "image_link": "https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Yoda_Empire_Strikes_Back.png/150px-Yoda_Empire_Strikes_Back.png"
+    title: "Yoda",
+    description:
+      "Powerful De-Lit is. Discussions here, insightful they are. Read, you must. Judge a book by its cover, you will not. The path to wisdom, through many pages it lies.",
+    image_link:
+      "https://upload.wikimedia.org/wikipedia/en/thumb/9/9b/Yoda_Empire_Strikes_Back.png/150px-Yoda_Empire_Strikes_Back.png",
   },
   {
-    "title": "Gandalf",
-    "description": "De-Lit is like a long journey. You never know where the next chapter will take you, but one thing’s for sure—you shall not pass up the chance for a great story!",
-    "image_link": "https://upload.wikimedia.org/wikipedia/en/thumb/e/e9/Gandalf600ppx.jpg/150px-Gandalf600ppx.jpg"
+    title: "Gandalf",
+    description:
+      "De-Lit is like a long journey. You never know where the next chapter will take you, but one thing’s for sure—you shall not pass up the chance for a great story!",
+    image_link:
+      "https://upload.wikimedia.org/wikipedia/en/thumb/e/e9/Gandalf600ppx.jpg/150px-Gandalf600ppx.jpg",
   },
   {
-    "title": "Elon Musk",
-    "description": "Awesome",
+    title: "Elon Musk",
+    description: "Awesome",
   },
   {
-    "title": "Neo",
-    "description": "In De-Lit, I’ve learned that stories are the red pill. Once you dive into a book, there's no going back. The truth is out there, hidden between the lines—just like code in the Matrix.",
-    "image_link": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c6/NeoTheMatrix.jpg/150px-NeoTheMatrix.jpg"
+    title: "Neo",
+    description:
+      "In De-Lit, I’ve learned that stories are the red pill. Once you dive into a book, there's no going back. The truth is out there, hidden between the lines—just like code in the Matrix.",
+    image_link:
+      "https://upload.wikimedia.org/wikipedia/en/thumb/c/c6/NeoTheMatrix.jpg/150px-NeoTheMatrix.jpg",
   },
   {
-    "title": "Sherlock Holmes",
-    "description": "Elementary, my dear reader. De-Lit is a place where we deduce meaning from even the most obscure tales. Every book is a mystery, and every discussion is a clue that brings us closer to the truth.",
+    title: "Sherlock Holmes",
+    description:
+      "Elementary, my dear reader. De-Lit is a place where we deduce meaning from even the most obscure tales. Every book is a mystery, and every discussion is a clue that brings us closer to the truth.",
   },
   {
-    "title": "Captain Jack Sparrow",
-    "description": "Why is the rum gone? Because I traded it for a good book at De-Lit. This club’s discussions are like navigating the seas—sometimes rough, sometimes smooth, but always full of treasure.",
+    title: "Captain Jack Sparrow",
+    description:
+      "Why is the rum gone? Because I traded it for a good book at De-Lit. This club’s discussions are like navigating the seas—sometimes rough, sometimes smooth, but always full of treasure.",
   },
   {
-    "title": "Voldemort",
-    "description": "De-Lit? It’s a club of magic, where words hold power. Trust me, I know a thing or two about power. Here, we explore stories even darker than my soul (if I had one).",
-    "image_link": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a3/Lordvoldemort.jpg/150px-Lordvoldemort.jpg"
+    title: "Voldemort",
+    description:
+      "De-Lit? It’s a club of magic, where words hold power. Trust me, I know a thing or two about power. Here, we explore stories even darker than my soul (if I had one).",
+    image_link:
+      "https://upload.wikimedia.org/wikipedia/en/thumb/a/a3/Lordvoldemort.jpg/150px-Lordvoldemort.jpg",
   },
   {
-    "title": "Tanjiro",
-    "description": "At De-Lit, even the toughest books can't break my spirit! Each story feels like facing another demon, but with every discussion, I grow stronger. Reading here is like breathing—necessary and life-giving.",
-    "image_link": "https://cdn.prod.website-files.com/61789b489343c8242282a0ae/64d8acdc4c758e0313a67b46_tU9ppR7b_400x400.jpg"
-  }
+    title: "Tanjiro",
+    description:
+      "At De-Lit, even the toughest books can't break my spirit! Each story feels like facing another demon, but with every discussion, I grow stronger. Reading here is like breathing—necessary and life-giving.",
+    image_link:
+      "https://cdn.prod.website-files.com/61789b489343c8242282a0ae/64d8acdc4c758e0313a67b46_tU9ppR7b_400x400.jpg",
+  },
 ];
 
 export const BLOCKS_DATA = [
   {
-      "id": 0,
-      "image": "/mag.jpg",
-      "title": "MAGAZINES",
-      "description": "We call ourselves 'dreamers and doers' for a reason: we can make happen not just what is possible, but what is impossible. NEOM is a unique investment opportunity, unrivalled anywhere else.",
-      "link": '/publications'
+    id: 0,
+    image: "/mag.jpg",
+    title: "MAGAZINES",
+    description:
+      "We call ourselves 'dreamers and doers' for a reason: we can make happen not just what is possible, but what is impossible. NEOM is a unique investment opportunity, unrivalled anywhere else.",
+    link: "/publications",
   },
   {
-      "id": 1,
-      "image": "https://images.unsplash.com/photo-1528359645462-5ff224bf906e?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "title": "BLOGS",
-      "description": "Pandas are large, peaceful bears native to the mountainous forests of China, known for their distinctive black-and-white fur. They primarily eat bamboo, which makes up over 99% of their diet, though they occasionally eat other plants and small animals. Pandas are solitary animals and spend most of their time eating and resting.",
-      "link": "/blog"
+    id: 1,
+    image:
+      "https://images.unsplash.com/photo-1528359645462-5ff224bf906e?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "BLOGS",
+    description:
+      "Pandas are large, peaceful bears native to the mountainous forests of China, known for their distinctive black-and-white fur. They primarily eat bamboo, which makes up over 99% of their diet, though they occasionally eat other plants and small animals. Pandas are solitary animals and spend most of their time eating and resting.",
+    link: "/blog",
   },
   {
-      "id": 2,
-      "image": "https://plus.unsplash.com/premium_photo-1664303314018-d59cbbb5b13d?q=80&w=1370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "title": "GALLERY",
-      "description": "I am ChatGPT, an AI language model created by OpenAI, designed to assist with a wide range of tasks, including answering questions, generating text, solving problems, and even engaging in creative writing",
-      "link": "/gallery"
+    id: 2,
+    image:
+      "https://plus.unsplash.com/premium_photo-1664303314018-d59cbbb5b13d?q=80&w=1370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "GALLERY",
+    description:
+      "I am ChatGPT, an AI language model created by OpenAI, designed to assist with a wide range of tasks, including answering questions, generating text, solving problems, and even engaging in creative writing",
+    link: "/gallery",
   },
   {
-      "id": 3,
-      "image": "https://images.unsplash.com/photo-1607396508599-5d61627a058f?q=80&w=1494&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "title": "CLUB\u00A0TALK",
-      "description": "Most birds can fly, which distinguishes them from almost all other vertebrate classes. Flight is the primary means of locomotion for most bird species and is used for searching for food and for escaping from predators. Birds have various adaptations for flight, including a lightweight skeleton, two large flight muscles.",
-      "link": "/clubtalk"
-  }
+    id: 3,
+    image:
+      "https://images.unsplash.com/photo-1607396508599-5d61627a058f?q=80&w=1494&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    title: "CLUB\u00A0TALK",
+    description:
+      "Most birds can fly, which distinguishes them from almost all other vertebrate classes. Flight is the primary means of locomotion for most bird species and is used for searching for food and for escaping from predators. Birds have various adaptations for flight, including a lightweight skeleton, two large flight muscles.",
+    link: "/clubtalk",
+  },
 ];
 
 export const LOTR_CHARACTERS = [
   {
-    "name": "Gandalf",
-    "quote": "“A wizard is never late, nor is he early, he arrives precisely when he means to.”",
-    "about": "Gandalf, wise and powerful, leads us on paths that reveal courage within ourselves, guiding us through the dark as we find our own light.",
-    "image_link": "https://i.pinimg.com/736x/84/e8/ec/84e8ec6cc44d217dbb8738322a44e25a.jpg"
+    name: "Gandalf",
+    quote:
+      "“A wizard is never late, nor is he early, he arrives precisely when he means to.”",
+    about:
+      "Gandalf, wise and powerful, leads us on paths that reveal courage within ourselves, guiding us through the dark as we find our own light.",
+    image_link:
+      "https://i.pinimg.com/736x/84/e8/ec/84e8ec6cc44d217dbb8738322a44e25a.jpg",
   },
   {
-    "name": "Legolas",
-    "quote": "“A red sun rises. Blood has been spilled this night.”",
-    "about": "Legolas, the Elven archer, speaks to the quiet mysteries of nature, his keen senses and unbreakable loyalty to friends helping light the way on the toughest of journeys.",
-    "image_link": "https://i.pinimg.com/564x/a0/bb/19/a0bb197138f1cc7f0b8e53ab678f9a4e.jpg"
+    name: "Legolas",
+    quote: "“A red sun rises. Blood has been spilled this night.”",
+    about:
+      "Legolas, the Elven archer, speaks to the quiet mysteries of nature, his keen senses and unbreakable loyalty to friends helping light the way on the toughest of journeys.",
+    image_link:
+      "https://i.pinimg.com/564x/a0/bb/19/a0bb197138f1cc7f0b8e53ab678f9a4e.jpg",
   },
   {
-    "name": "Aragorn",
-    "quote": "“I am Aragorn, son of Arathorn; and if by life or death I can save you, I will.”",
-    "about": "Aragorn, a leader with boundless bravery, shoulders responsibility with humility, willing to sacrifice all to protect those he holds dear.",
-    "image_link": "https://i.pinimg.com/564x/a8/53/bf/a853bfbfebf7f40e5d90f9ab0a84bc37.jpg"
+    name: "Aragorn",
+    quote:
+      "“I am Aragorn, son of Arathorn; and if by life or death I can save you, I will.”",
+    about:
+      "Aragorn, a leader with boundless bravery, shoulders responsibility with humility, willing to sacrifice all to protect those he holds dear.",
+    image_link:
+      "https://i.pinimg.com/564x/a8/53/bf/a853bfbfebf7f40e5d90f9ab0a84bc37.jpg",
   },
   {
-    "name": "Frodo",
-    "quote": "“I will take the Ring, though I do not know the way.”",
-    "about": "Frodo embodies the courage to face the unknown, willing to bear the weight of an impossible quest, guided by friendship and the hope of a better world.",
-    "image_link": "https://i.pinimg.com/564x/14/76/40/147640ff910df72e24d58c180641b8c3.jpg"
+    name: "Frodo",
+    quote: "“I will take the Ring, though I do not know the way.”",
+    about:
+      "Frodo embodies the courage to face the unknown, willing to bear the weight of an impossible quest, guided by friendship and the hope of a better world.",
+    image_link:
+      "https://i.pinimg.com/564x/14/76/40/147640ff910df72e24d58c180641b8c3.jpg",
   },
   {
-    "name": "Samwise Gamgee",
-    "quote": "“I can't carry it for you, but I can carry you!”",
-    "about": "Sam, the heart of the fellowship, is endlessly loyal, inspiring us all to be brave in the face of fear, and to always look out for one another.",
-    "image_link": "https://i.pinimg.com/564x/87/46/7b/87467b753a9b12217c80d8ca12e07911.jpg"
+    name: "Samwise Gamgee",
+    quote: "“I can't carry it for you, but I can carry you!”",
+    about:
+      "Sam, the heart of the fellowship, is endlessly loyal, inspiring us all to be brave in the face of fear, and to always look out for one another.",
+    image_link:
+      "https://i.pinimg.com/564x/87/46/7b/87467b753a9b12217c80d8ca12e07911.jpg",
   },
   {
-    "name": "Gimli",
-    "quote": "“Let them come! There is one Dwarf yet in Moria who still draws breath!”",
-    "about": "Brave and loyal, Gimli is as fierce in battle as he is loyal to his friends, bringing strength and humor to the Fellowship.",
-    "image_link": "https://i.pinimg.com/564x/67/17/4f/67174f369ba0059b1c81fea39e3df1ef.jpg"
+    name: "Gimli",
+    quote:
+      "“Let them come! There is one Dwarf yet in Moria who still draws breath!”",
+    about:
+      "Brave and loyal, Gimli is as fierce in battle as he is loyal to his friends, bringing strength and humor to the Fellowship.",
+    image_link:
+      "https://i.pinimg.com/564x/67/17/4f/67174f369ba0059b1c81fea39e3df1ef.jpg",
   },
   {
-    "name": "Gollum",
-    "quote": "“My precious!”",
-    "about": "Torn between his darker and lighter sides, Gollum embodies the tragic consequences of obsession, bringing complexity and an eerie unpredictability to the journey of the Ring.",
-    "image_link": "https://i.pinimg.com/564x/e3/6f/48/e36f485660944ae698391df5bed3380f.jpg"
+    name: "Gollum",
+    quote: "“My precious!”",
+    about:
+      "Torn between his darker and lighter sides, Gollum embodies the tragic consequences of obsession, bringing complexity and an eerie unpredictability to the journey of the Ring.",
+    image_link:
+      "https://i.pinimg.com/564x/e3/6f/48/e36f485660944ae698391df5bed3380f.jpg",
+  },
+];
+
+export const ARTICLES = [
+  {
+    title: "Exploring Quantum Computing",
+    description:
+      "Quantum computing is set to revolutionize how we process data and solve complex problems, moving beyond classical limits and enabling new approaches in AI, encryption, and more.",
+    author: "Alice Johnson",
+  },
+  {
+    title: "The Rise of Artificial Intelligence",
+    description:
+      "Artificial intelligence (AI) is transforming industries, impacting the job market, and raising ethical questions. Advancements span natural language processing, machine learning, and robotics.",
+    author: "John Doe",
+  },
+  {
+    title: "Climate Change and Its Impacts",
+    description:
+      "Climate change is one of the biggest challenges of our time, affecting ecosystems, weather patterns, and human health. Climate action is crucial for sustainable development.",
+    author: "Emily Green",
+  },
+  {
+    title: "Advancements in Renewable Energy",
+    description:
+      "Renewable energy sources, such as solar and wind, are helping reduce our carbon footprint and create sustainable futures. New technologies make energy production more efficient.",
+    author: "David Smith",
+  },
+  {
+    title: "Blockchain Beyond Cryptocurrency",
+    description:
+      "Blockchain technology is transforming industries beyond finance, impacting data security, supply chains, and voting systems. Its decentralized nature offers secure data transactions.",
+    author: "Sarah Brown",
+  },
+  {
+    title: "The Future of Space Exploration",
+    description:
+      "Space exploration is entering a new era with advancements in reusable rockets, interplanetary missions, and commercial space travel. New initiatives aim for Mars colonization and deep space exploration.",
+    author: "James White",
+  },
+  {
+    title: "The Evolution of Web Development",
+    description:
+      "Web development has evolved rapidly over the years, introducing new frameworks, tools, and standards that make building robust applications faster and more accessible.",
+    author: "Mia Lee",
+  },
+  {
+    title: "Machine Learning in Healthcare",
+    description:
+      "Machine learning is transforming healthcare, enabling advancements in diagnostics, personalized treatment, and drug discovery, offering new possibilities for patient care.",
+    author: "Oliver Brown",
+  },
+  {
+    title: "The Impact of Virtual Reality",
+    description:
+      "Virtual reality is reshaping fields such as gaming, education, and training by providing immersive experiences that can enhance learning and engagement.",
+    author: "Sophia Miller",
+  },
+  {
+    title: "Cybersecurity in a Digital Age",
+    description:
+      "As our reliance on digital technologies grows, cybersecurity is becoming increasingly important, protecting against data breaches and ensuring privacy in a connected world.",
+    author: "Ethan Wilson",
+  },
+  {
+    title: "Understanding Genetic Engineering",
+    description:
+      "Genetic engineering allows scientists to modify organisms’ genes, impacting medicine, agriculture, and environmental science with far-reaching potential.",
+    author: "Rebecca Moore",
+  },
+  {
+    title: "Cryptocurrency and Digital Finance",
+    description:
+      "Cryptocurrency is reshaping finance, offering decentralized solutions outside traditional banks and revolutionizing transactions, remittances, and investments.",
+    author: "Max Daniels",
+  },
+  {
+    title: "History of Space Exploration",
+    description:
+      "From the first moon landing to current Mars missions, space exploration has opened up possibilities beyond Earth, inspiring generations to reach for the stars.",
+    author: "Sandra Lee",
+  },
+  {
+    title: "The Psychology of Social Media",
+    description:
+      "Social media's influence on mental health, self-perception, and social dynamics has transformed communication, with both positive and negative implications.",
+    author: "Daniel Kim",
+  },
+  {
+    title: "Advances in Biotechnology",
+    description:
+      "Biotechnology merges biology with technology, creating innovations in medical treatments, genetic research, and agriculture for sustainable solutions.",
+    author: "Amelia Walker",
+  },
+  {
+    title: "The Future of Electric Vehicles",
+    description:
+      "Electric vehicles are driving the shift towards a sustainable future, with technological advances enhancing battery efficiency and reducing carbon footprints.",
+    author: "Leonard White",
+  },
+  {
+    title: "Augmented Reality in Education",
+    description:
+      "Augmented reality (AR) is enhancing learning by providing interactive experiences that make complex concepts more accessible and engaging for students.",
+    author: "Rachel Yang",
+  },
+  {
+    title: "Nanotechnology in Medicine",
+    description:
+      "Nanotechnology is transforming medicine, allowing for precise drug delivery, advanced imaging techniques, and targeted therapies at the cellular level.",
+    author: "Matthew King",
+  },
+  {
+    title: "Ethics in Artificial Intelligence",
+    description:
+      "As AI continues to evolve, ethical considerations around privacy, bias, and autonomy are shaping the future of responsible AI development.",
+    author: "Julia Sanchez",
+  },
+  {
+    title: "Revolutionizing Education with Online Learning",
+    description:
+      "Online learning platforms have democratized education, offering flexibility and accessibility, while reshaping traditional education systems.",
+    author: "Ben Clark",
   }
 ];
 
-
-export const BANNER_IMAGE = "https://images.unsplash.com/photo-1500320821405-8fc1732209ca?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3";
+export const BANNER_IMAGE =
+  "https://images.unsplash.com/photo-1500320821405-8fc1732209ca?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3";

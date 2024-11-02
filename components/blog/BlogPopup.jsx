@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { FaTimes } from 'react-icons/fa';
+import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
 
 function BlogPopup({selectedPost, closeModal}) {
 
@@ -59,12 +61,12 @@ function BlogPopup({selectedPost, closeModal}) {
         <h2 className="text-2xl pt-3 font-semibold text-gray-800 mb-4">
           {selectedPost.title}
         </h2>
-        <p className="text-gray-600 mb-4">
-          {selectedPost.description}
-        </p>
         <p className="text-gray-400 text-xs font-bold">
           {selectedPost.author} - {selectedPost.date}
-        </p>
+        </p> <br />
+        <ReactMarkdown rehypePlugins={[rehypeRaw]} className="text-gray-600 text-justify text-lg mb-4">
+          {selectedPost.content}
+        </ReactMarkdown>
       </div>
     </div>
   </div>

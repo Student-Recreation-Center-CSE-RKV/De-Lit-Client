@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { FaTimes } from "react-icons/fa";
-import PDFViewer from "./PDFViewer";
+import PDFViewer from "@/components/publications/PDFViewer";
 
 export default function Overlay({ link, handleClose }) {
   const overlayRef = useRef();
@@ -11,7 +11,7 @@ export default function Overlay({ link, handleClose }) {
   });
   return (
     <>
-      <div class="fixed inset-0 bg-black opacity-40 z-[55]"></div>
+      <div className="fixed inset-0 bg-black opacity-40 z-[55]"></div>
       <div
         ref={overlayRef}
         className="fixed top-0 left-0 right-0 bottom-0 z-[57] overflow-auto backdrop-blur-sm text-center"

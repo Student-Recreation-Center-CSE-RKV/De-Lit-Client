@@ -6,12 +6,12 @@ export default function BlogWrapper({ children, handlePostClick, post, isSent })
         {/*Apply styles to the blog based on blog status */}
         <div onClick={() => handlePostClick(post)}
           className={`relative  p-3 
-                      ${isSent ? 'bg-mywhite text-left' : 'bg-colorF text-left'}
+                      ${isSent ? 'bg-white text-left' : 'bg-white text-left'}
                       ${isSent ? 'ml-12' : 'ml-0'}
                       ${isSent ? 'mr-0' : 'mr-12'} 
                       
                       md:w-3/4
-                      transition duration-200 ease-in-out transform hover:scale-105 cursor-pointer hover:shadow-lg p-4 
+                      transition duration-200 ease-in-out transform hover:scale-[1.01] cursor-pointer hover:shadow-lg p-4 
                       rounded-xl shadow-md`
                       
                     }

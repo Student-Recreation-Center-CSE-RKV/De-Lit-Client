@@ -20,6 +20,7 @@ module.exports = {
         colorE: 'var(--color-e)',
         colorF: 'var(--color-f)',
         pdfBg: 'var(--pdfbackground)',
+        cardW: 'var(--mycardwhite)',
       },
       spacing: {
         navHeight: 'var(--nav-height)',
