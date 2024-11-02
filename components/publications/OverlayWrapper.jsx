@@ -3,7 +3,13 @@
 import { useState } from "react";
 import Overlay from "@/components/publications/Overlay";
 
-export default function OverlayWrapper({ children, overlayLink, scrollRef, scrollDistance }) {
+export default function OverlayWrapper({
+  children,
+  overlayLink,
+  scrollRef,
+  scrollDistance,
+  title,
+}) {
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {
@@ -22,11 +28,11 @@ export default function OverlayWrapper({ children, overlayLink, scrollRef, scrol
 
   return (
     <>
-      {open && <Overlay handleClose={handleClose} link={overlayLink} />}
+      {open && (
+        <Overlay handleClose={handleClose} link={overlayLink} title={title} />
+      )}
 
-      <section onClick={handleClickOpen}>
-        {children}
-      </section>
+      <section onClick={handleClickOpen}>{children}</section>
     </>
   );
 }

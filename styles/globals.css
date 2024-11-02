@@ -45,6 +45,9 @@
   .customScrollbar::-webkit-scrollbar {
     width: 5px;
   }
+  .glow {
+    text-shadow: 0 0 50px var(--mywhite), 0 0 80px var(--mywhite), 0 0 100px var(--mywhite);
+  }
 }
 
 .no-scroll {

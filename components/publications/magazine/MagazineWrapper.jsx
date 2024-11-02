@@ -1,6 +1,8 @@
 import React from "react";
 import { MAGAZINES } from "@/utils/dummy";
 import Card from "@/components/publications/magazine/Card";
+import CardSkeleton from "../skeletons/CardSkeleton";
+import SkeletonWrapper from "../skeletons/SkeletonWrapper";
 import dynamic from "next/dynamic";
 import { addBase64 } from "@/utils/image-load";
 
@@ -8,11 +10,11 @@ const CardWrapper = dynamic(
   () => {
     return import("../CardWrapper");
   },
-  { ssr: false }
+  { loading: () => <SkeletonWrapper Skeleton={CardSkeleton} />, ssr: false }
 );
 
 async function getMagazines() {
-  await new Promise((resolve) => setTimeout(resolve, 3000));
+  // await new Promise((resolve) => setTimeout(resolve, 3000));
   return MAGAZINES;
 }
 

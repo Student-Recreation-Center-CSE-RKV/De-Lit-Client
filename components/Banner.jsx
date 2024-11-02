@@ -11,6 +11,7 @@ const Banner = ({image, base64}) => {
     >
         <Image
           src={image}
+          alt="Banner"
           fill
           placeholder="blur"
           quality={90}
