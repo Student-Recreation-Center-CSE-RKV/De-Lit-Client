@@ -1,8 +1,16 @@
 import { ARTICLES } from "@/utils/dummy";
-import Articles from "@/components/publications/article/Articles";
+import dynamic from "next/dynamic";
+import ArticleSkeleton from "../skeletons/ArticleSkeleton";
+const Articles = dynamic(
+  () => import("@/components/publications/article/Articles"),
+  {
+    loading: () => <ArticleSkeleton />,
+    ssr: false,
+  }
+);
 
 async function getArticles() {
-  await new Promise((resolve) => setTimeout(resolve, 5000));
+  // await new Promise((resolve) => setTimeout(resolve, 5000));
   return ARTICLES;
 }
 
