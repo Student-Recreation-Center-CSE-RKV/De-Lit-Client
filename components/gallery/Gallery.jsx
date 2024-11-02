@@ -1,34 +1,13 @@
+"use client";
 import React, { useEffect, useState, useRef } from 'react';
 import './gallery2.css';
+import Image from 'next/image';
 
-const Gallery = () => {
-  const [images, setImages] = useState([]);
+const Gallery = ({images}) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showInstruction, setShowInstruction] = useState(true); // State for instruction message
   const galleryRef = useRef(null); // Reference to the gallery
-
-  useEffect(() => {
-    const getRandomDimensions = () => {
-      const width = Math.floor(Math.random() * (500 - 300 + 1)) + 1000;
-      const height = Math.floor(Math.random() * (500 - 300 + 1)) + 1000;
-      return { width, height };
-    };
-
-    const fetchImages = () => {
-      const fetchedImages = Array.from({ length: 30 }).map((_, index) => {
-        const { width, height } = getRandomDimensions();
-        return {
-          src: `https://picsum.photos/${width}/${height}`,
-          alt: `Random Image ${index + 1}`,
-          caption: `Dimensions: ${width}x${height}`,
-        };
-      });
-      setImages(fetchedImages);
-    };
-
-    fetchImages();
-  }, []);
 
   const openModal = (index) => {
     setCurrentIndex(index);
@@ -109,8 +88,8 @@ const Gallery = () => {
         </div>
       )}
       {images.map((item, index) => (
-        <div className="pics" key={index} onClick={() => openModal(index)}>
-          <img src={item.src} alt={item.alt} className="w-[100%] rounded-[10px]" />
+        <div className="relative pics" key={index} onClick={() => openModal(index)}>
+          <Image src={item.src} alt={item.alt} width={item.width} height={item.height} placeholder="blur" blurDataURL={item.base64} className="rounded-[10px]" />
         </div>
       ))}
 
