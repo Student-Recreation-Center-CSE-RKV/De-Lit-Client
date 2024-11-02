@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { FaTimes } from "react-icons/fa";
 import PDFViewer from "@/components/publications/PDFViewer";
 
-export default function Overlay({ link, handleClose }) {
+export default function Overlay({ link, handleClose, title }) {
   const overlayRef = useRef();
   const [pdfWidth, setPdfWidth] = useState(250);
   const [isLoading, setIsLoading] = useState(true);
@@ -32,6 +32,9 @@ export default function Overlay({ link, handleClose }) {
                 <FaTimes size={17} />
               </button>
             </div>
+            <h1 className="hidden md:block text-5xl lg:text-6xl text-colorA mb-12">
+              {title}
+            </h1>
             <PDFViewer
               file="/sample.pdf"
               width={pdfWidth}
