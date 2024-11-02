@@ -56,7 +56,7 @@ export default function Navbar() {
       <div
         className={
           clsx(
-            `bg-${navBackground} flex justify-between items-center w-full h-[10vh] md:h-navHeight px-4 top-0 z-50 fixed overflow-hidden transition-all duration-200`, 
+            `bg-${navBackground} flex justify-between items-center w-full h-[10vh] md:h-navHeight px-4 top-0 z-50 fixed overflow-hidden transition-all duration-200 border-b-[1px] border-[#ffffff20]`, 
             { "shadow-lg": !(atStart | atEnd), "bg-transparent": atStart }
         )}
       >
