@@ -264,6 +264,79 @@ export const LOTR_CHARACTERS = [
   },
 ];
 
+export const AVENGERS_CHARACTERS = [
+  {
+    name: "Iron Man",
+    quote: "“I am Iron Man.”",
+    about:
+      "Tony Stark, the genius billionaire in the suit, showcases bravery and sacrifice. His wit and determination prove that even flawed heroes can make a lasting impact.",
+    image_link: "https://i.pinimg.com/564x/fb/bc/34/fbbc3461fc0b63edcdb741a57377dc18.jpg"
+  },
+  {
+    name: "Captain America",
+    quote: "“I can do this all day.”",
+    about:
+      "Steve Rogers, a symbol of hope and justice, stands unwavering in the face of danger, embodying honor and the belief in doing what's right.",
+    image_link: "https://i.pinimg.com/564x/36/01/b3/3601b349f9f4b95528d7a85104c5ff15.jpg"
+  },
+  {
+    name: "Thor",
+    quote: "“Bring me Thanos!”",
+    about:
+      "Thor, the God of Thunder, combines strength and nobility, facing each battle with courage, learning humility, and growing to be worthy of his power.",
+    image_link: "https://i.pinimg.com/564x/f6/2d/a2/f62da2d31bf8205726fba86f805764da.jpg"
+  },
+  {
+    name: "Loki",
+    quote: "“I am Loki of Asgard, and I am burdened with glorious purpose.”",
+    about:
+      "Loki, the God of Mischief, is cunning and unpredictable, walking the line between villain and anti-hero as he navigates loyalty, ambition, and redemption.",
+    image_link:
+      "https://i.pinimg.com/736x/52/b4/18/52b418b7917b1c874716a95e34c85166.jpg",
+  },
+  {
+    name: "Doctor Strange",
+    quote: "“We never lose our demons, we only learn to live above them.”",
+    about:
+      "Doctor Stephen Strange, once an arrogant surgeon, now a master of the mystic arts, protects reality with intellect and courage, mastering his inner battles to wield great power.",
+    image_link:
+      "https://i.pinimg.com/736x/5f/e7/0a/5fe70a1429c79d8ec0f7b4461b471267.jpg",
+  },
+  {
+    name: "Hawkeye",
+    quote: "“The city is flying, we’re fighting an army of robots... and I have a bow and arrow. None of this makes sense.”",
+    about:
+      "Clint Barton, the sharpshooter, relies on precision and courage, proving that ordinary skills can achieve extraordinary feats.",
+    image_link: "https://i.pinimg.com/564x/22/88/39/228839b8d794dfb36f88a077b83fdaab.jpg"
+  },
+  {
+    name: "Spider-Man",
+    quote: "“With great power comes great responsibility.”",
+    about:
+      "Peter Parker, the young hero, balances his life with newfound powers and endless challenges, showing that true heroism lies in resilience and selflessness.",
+    image_link: "https://i.pinimg.com/564x/16/a7/a1/16a7a1433ecbdfab67b93da082ca5a75.jpg"
+  },
+  {
+    name: "Thanos",
+    quote: "“I am inevitable.”",
+    about:
+      "Thanos, the Mad Titan, driven by a twisted sense of balance, wields unimaginable power, making ruthless sacrifices to achieve his vision of a perfect universe.",
+    image_link: "https://i.pinimg.com/564x/e2/c0/35/e2c035cc042f51169ee46de9a3d2ba18.jpg"
+  }
+];
+
+export const ABOUTUS = [
+  {
+    year: "R20",
+    team: LOTR_CHARACTERS
+  },
+  {
+    year: "R21",
+    team: AVENGERS_CHARACTERS
+  }
+]
+
+
 export const ARTICLES = [
   {
     title: "Exploring Quantum Computing",
