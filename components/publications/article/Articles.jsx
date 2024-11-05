@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import ArticleCard from "@/components/publications/article/ArticleCard";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 
@@ -8,6 +8,8 @@ export default function Articles({ header, subheader, data }) {
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const articlesPerPage = 9;
+  const articlesRef = useRef(null);
+  const scrollTimeout = useRef(null);
 
   useEffect(() => {
     setCurrentPage(1);
@@ -29,11 +31,31 @@ export default function Articles({ header, subheader, data }) {
   );
 
   const handlePageChange = (newPage) => {
+    if (newPage < 1 || newPage > totalPages) return;
     setCurrentPage(newPage);
+
+    if (scrollTimeout.current) {
+      clearTimeout(scrollTimeout.current);
+    }
+
+    scrollTimeout.current = setTimeout(() => {
+      articlesRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 100);
   };
 
+  useEffect(() => {
+    return () => {
+      if (scrollTimeout.current) {
+        clearTimeout(scrollTimeout.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="container mx-auto pb-10 px-5">
+    <div className="container mx-auto pb-10 px-5" ref={articlesRef}>
       <div className="mb-3 md:mb-8 md:-mt-5">
         <h1 className="text-[2.8rem] md:text-7xl text-center text-myblack tracking-wide">
           {header}
