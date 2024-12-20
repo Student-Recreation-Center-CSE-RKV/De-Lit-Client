@@ -7,10 +7,10 @@ export default function BlogWrapper({ children, handlePostClick, post, isSent })
         <div onClick={() => handlePostClick(post)}
           className={`relative  p-3 
                       ${isSent ? 'bg-white text-left' : 'bg-white text-left'}
-                      ${isSent ? 'ml-12' : 'ml-0'}
-                      ${isSent ? 'mr-0' : 'mr-12'} 
+                      ${isSent ? 'md:ml-12' : 'ml-0'}
+                      ${isSent ? 'mr-0' : 'md:mr-12'} 
                       
-                      md:w-3/4
+                      w-full md:w-3/4
                       transition duration-200 ease-in-out transform hover:scale-[1.01] cursor-pointer hover:shadow-lg p-4 
                       rounded-xl shadow-md`
                       

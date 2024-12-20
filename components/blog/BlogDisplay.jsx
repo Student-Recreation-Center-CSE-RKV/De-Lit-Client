@@ -124,12 +124,12 @@ function BlogDisplay({ posts }) {
                 <p className="text-gray-600 text my-2">
                   {stripMarkdownAndHTML(post.content).substring(0, 100) + '...'}
                 </p>
-                <div className='flex justify-between'>
+                <div className='flex flex-col md:flex-row md:justify-between'>
                   <div>
                   <AccountCircleIcon /> <span className='text-gray-400 text-xs font-bold'>{post.author}</span>
                   </div>
                 
-                <span className='text-gray-400 text-xs font-bold my-2 '>{post.date}</span>
+                <span className='text-gray-400 text-xs text-right font-bold my-2 '>{post.date}</span>
                 </div>
               </div>
             </BlogWrapper>
