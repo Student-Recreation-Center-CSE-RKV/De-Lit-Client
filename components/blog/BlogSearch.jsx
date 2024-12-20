@@ -13,7 +13,7 @@ const BlogSearch = ({ posts }) => {
   return (
     <div className="container mt-10 mx-auto p-4">
       <div className='p-2 text-center  flex justify-center '>
-        <div className='flex w-1/2 flex-row justify-center items-center p-2 rounded-full transition-all duration-200 focus-within:shadow-lg focus-within:ring-0 bg-white'>
+        <div className='flex md:w-1/2 flex-row justify-center items-center p-2 rounded-full transition-all duration-200 focus-within:shadow-lg focus-within:ring-0 bg-white'>
         <select
           value={searchField}
           onChange={(e) => setSearchField(e.target.value)}
