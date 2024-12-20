@@ -2,7 +2,7 @@ import { FaTimes } from "react-icons/fa";
 
 export default function Modal({ character, setShowModal }) {
   return (
-    <div>
+    <>
       <div class="fixed inset-0 bg-black opacity-50 z-[55]"></div>
       <div className="fixed inset-0 z-[57] overflow-auto">
         <div className="flex justify-center items-center h-screen">
@@ -24,6 +24,6 @@ export default function Modal({ character, setShowModal }) {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

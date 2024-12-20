@@ -2,10 +2,10 @@
 import { useRef } from "react";
 import { MdKeyboardArrowLeft } from "react-icons/md";
 import { MdKeyboardArrowRight } from "react-icons/md";
-import Card from "./Card";
+import Card from "@/components/publications/magazine/Card";
 import useScreenSize from "@/hooks/useScreenSize";
 
-const CardWrapper = ({ header, data, subheader, CardComponent, isFirst}) => {
+const CardWrapper = ({ header, data, subheader, CardComponent, isFirst }) => {
   const scrollRef = useRef();
   const screenSize = useScreenSize();
 
@@ -36,9 +36,13 @@ const CardWrapper = ({ header, data, subheader, CardComponent, isFirst}) => {
           ref={scrollRef}
           className="w-full overflow-x-auto gap-3 p-4 flex no-scrollbar scroll-smooth snap-mandatory snap-x"
         >
-          {data.map((card, index) => (
-            screenSize.width > 768 ? <CardComponent key={index} {...card} scrollRef={scrollRef} /> : <Card key={index} {...card} />
-          ))}
+          {data.map((card, index) =>
+            screenSize.width > 1024 ? (
+              <CardComponent key={index} {...card} scrollRef={scrollRef} />
+            ) : (
+              <Card key={index} {...card} />
+            )
+          )}
         </div>
 
         <div className="text-end pt-6 mr-12  hidden md:block">

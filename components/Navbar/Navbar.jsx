@@ -4,14 +4,17 @@ import React, { useState, useEffect } from "react";
 import "./navbar.css";
 import { FaBars, FaTimes } from "react-icons/fa";
 import clsx from "clsx";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
   const [atStart, setAtStart] = useState(true);
   const [atEnd, setAtEnd] = useState(false);
+  const pathname = usePathname();
 
   // Scroll effect for navbar and sidebar background and text color
   useEffect(() => {
+    setAtStart(window.scrollY < 30);  // set atStart when component renders initially
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
@@ -45,7 +48,7 @@ export default function Navbar() {
   // derived variables from states
   const navMode = atEnd ? "dark" : "light";
   const navBackground = navMode === "light" ? "mywhite" : "myblack";
-  const navColor = navMode === "light" ? "black" : "white";
+  const navColor = (navMode === "dark" || (pathname === '/' && atStart)) ? "white" : "black";
 
   return (
     "#",
@@ -53,11 +56,11 @@ export default function Navbar() {
       <div
         className={
           clsx(
-            `bg-${navBackground} flex justify-between items-center w-full h-[10vh] md:h-navHeight px-4 top-0 z-50 fixed overflow-hidden transition-all duration-500`, 
+            `bg-${navBackground} flex justify-between items-center w-full h-[10vh] md:h-navHeight px-4 top-0 z-50 fixed overflow-hidden transition-all duration-200 border-b-[1px] border-[#ffffff20]`, 
             { "shadow-lg": !(atStart | atEnd), "bg-transparent": atStart }
         )}
       >
-        <svg
+        {/* <svg
           height="30"
           width="100%"
           xmlns="http://www.w3.org/2000/svg"
@@ -75,7 +78,7 @@ export default function Navbar() {
             stroke={navColor}
             strokeWidth="1"
           />
-        </svg>
+        </svg> */}
       {/* Logo */}
       <div>
         <h1 className="text-5xl font-signature ml-2">
@@ -83,7 +86,7 @@ export default function Navbar() {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               version="1.0"
-              className="w-[65px]"
+              className="w-[50px]"
               viewBox="0 0 1668.000000 2464.000000"
               preserveAspectRatio="xMidYMid meet"
             >

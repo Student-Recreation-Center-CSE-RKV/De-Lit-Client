@@ -18,6 +18,7 @@ export default function RootLayout({ children }) {
           content="user-scalable=no, width=device-width, initial-scale=1.0"
         />
         <meta name="mobile-web-app-capable" content="yes" />
+        <script src="https://cdn.jsdelivr.net/npm/story-show-gallery@3/dist/ssg.min.js"></script>
       </head>
       <body id="body">
         <Navbar />

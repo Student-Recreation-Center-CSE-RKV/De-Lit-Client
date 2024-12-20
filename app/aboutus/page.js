@@ -1,7 +1,12 @@
-import TeamSection from "@/components/aboutus/TeamSection";
 import ContentBlock from "@/components/aboutus/ContentBlock";
+import { addBase64 } from "@/utils/image-load";
+import AllTeams from "@/components/aboutus/AllTeams";
+import { ABOUTUS } from "@/utils/dummy";
 
-export default function Page() {
+export default async function Page() {
+  for (let i = 0; i < ABOUTUS.length; i++) {
+    ABOUTUS[i].team = await addBase64(ABOUTUS[i].team);
+  }
   return (
     <div className="container mt-[20vh]">
       <ContentBlock 
@@ -14,7 +19,7 @@ export default function Page() {
       />
       <h1 className="text-center text-5xl mt-10">The Fellowship</h1>
       <p className="text-center text-lg mt-5">Meet the team that makes it all happen</p>
-      <TeamSection />
+      <AllTeams allteamsdata={ABOUTUS}/>
     </div>
   )
 }

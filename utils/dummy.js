@@ -87,7 +87,7 @@ export const CLUB_TALK = [
     description:
       "I am vengeance, I am the night, and at De-Lit, I am a reader.",
     image_link:
-      "https://upload.wikimedia.org/wikipedia/en/thumb/1/17/Batman-BenAffleck.jpg/150px-Batman-BenAffleck.jpg",
+      "https://m.media-amazon.com/images/S/pv-target-images/81ef275effa427553a847bc220bebe1dc314b2e79d00333f94a6bcadd7cce851.jpg",
   },
   {
     title: "Shakespeare",
@@ -264,37 +264,200 @@ export const LOTR_CHARACTERS = [
   },
 ];
 
+export const AVENGERS_CHARACTERS = [
+  {
+    name: "Iron Man",
+    quote: "“I am Iron Man.”",
+    about:
+      "Tony Stark, the genius billionaire in the suit, showcases bravery and sacrifice. His wit and determination prove that even flawed heroes can make a lasting impact.",
+    image_link: "https://i.pinimg.com/564x/fb/bc/34/fbbc3461fc0b63edcdb741a57377dc18.jpg"
+  },
+  {
+    name: "Captain America",
+    quote: "“I can do this all day.”",
+    about:
+      "Steve Rogers, a symbol of hope and justice, stands unwavering in the face of danger, embodying honor and the belief in doing what's right.",
+    image_link: "https://i.pinimg.com/564x/36/01/b3/3601b349f9f4b95528d7a85104c5ff15.jpg"
+  },
+  {
+    name: "Thor",
+    quote: "“Bring me Thanos!”",
+    about:
+      "Thor, the God of Thunder, combines strength and nobility, facing each battle with courage, learning humility, and growing to be worthy of his power.",
+    image_link: "https://i.pinimg.com/564x/f6/2d/a2/f62da2d31bf8205726fba86f805764da.jpg"
+  },
+  {
+    name: "Loki",
+    quote: "“I am Loki of Asgard, and I am burdened with glorious purpose.”",
+    about:
+      "Loki, the God of Mischief, is cunning and unpredictable, walking the line between villain and anti-hero as he navigates loyalty, ambition, and redemption.",
+    image_link:
+      "https://i.pinimg.com/736x/52/b4/18/52b418b7917b1c874716a95e34c85166.jpg",
+  },
+  {
+    name: "Doctor Strange",
+    quote: "“We never lose our demons, we only learn to live above them.”",
+    about:
+      "Doctor Stephen Strange, once an arrogant surgeon, now a master of the mystic arts, protects reality with intellect and courage, mastering his inner battles to wield great power.",
+    image_link:
+      "https://i.pinimg.com/736x/5f/e7/0a/5fe70a1429c79d8ec0f7b4461b471267.jpg",
+  },
+  {
+    name: "Hawkeye",
+    quote: "“The city is flying, we’re fighting an army of robots... and I have a bow and arrow. None of this makes sense.”",
+    about:
+      "Clint Barton, the sharpshooter, relies on precision and courage, proving that ordinary skills can achieve extraordinary feats.",
+    image_link: "https://i.pinimg.com/564x/22/88/39/228839b8d794dfb36f88a077b83fdaab.jpg"
+  },
+  {
+    name: "Spider-Man",
+    quote: "“With great power comes great responsibility.”",
+    about:
+      "Peter Parker, the young hero, balances his life with newfound powers and endless challenges, showing that true heroism lies in resilience and selflessness.",
+    image_link: "https://i.pinimg.com/564x/16/a7/a1/16a7a1433ecbdfab67b93da082ca5a75.jpg"
+  },
+  {
+    name: "Thanos",
+    quote: "“I am inevitable.”",
+    about:
+      "Thanos, the Mad Titan, driven by a twisted sense of balance, wields unimaginable power, making ruthless sacrifices to achieve his vision of a perfect universe.",
+    image_link: "https://i.pinimg.com/564x/e2/c0/35/e2c035cc042f51169ee46de9a3d2ba18.jpg"
+  }
+];
+
+export const ABOUTUS = [
+  {
+    year: "R20",
+    team: LOTR_CHARACTERS
+  },
+  {
+    year: "R21",
+    team: AVENGERS_CHARACTERS
+  }
+]
+
+
 export const ARTICLES = [
   {
-    title: "The Quest for the One Piece",
+    title: "Exploring Quantum Computing",
     description:
-      "Join the epic journey as Luffy and his crew navigate the Grand Line in search of the legendary One Piece, encountering strange lands, powerful foes, and lifelong friendships along the way.",
+      "Quantum computing is set to revolutionize how we process data and solve complex problems, moving beyond classical limits and enabling new approaches in AI, encryption, and more.",
+    author: "Alice Johnson",
   },
   {
-    title: "The Power of the Force",
+    title: "The Rise of Artificial Intelligence",
     description:
-      "The Force binds the galaxy together, granting mysterious powers to those who can harness it. Jedi and Sith wage an endless battle for the balance of the galaxy, each wielding unique abilities.",
+      "Artificial intelligence (AI) is transforming industries, impacting the job market, and raising ethical questions. Advancements span natural language processing, machine learning, and robotics.",
+    author: "John Doe",
   },
   {
-    title: "The Battle for the Iron Throne",
+    title: "Climate Change and Its Impacts",
     description:
-      "In Westeros, noble families vie for control of the Iron Throne. Alliances are made and broken as lords and ladies fight for power in a brutal game where loyalty is as dangerous as betrayal.",
+      "Climate change is one of the biggest challenges of our time, affecting ecosystems, weather patterns, and human health. Climate action is crucial for sustainable development.",
+    author: "Emily Green",
   },
   {
-    title: "Exploring the Grand Line's Mysteries",
+    title: "Advancements in Renewable Energy",
     description:
-      "The Grand Line holds countless mysteries, from hidden islands to mystical powers. With strange sea currents and bizarre climates, it's a place where danger lurks behind every wave.",
+      "Renewable energy sources, such as solar and wind, are helping reduce our carbon footprint and create sustainable futures. New technologies make energy production more efficient.",
+    author: "David Smith",
   },
   {
-    title: "The Rebellion Strikes Back",
+    title: "Blockchain Beyond Cryptocurrency",
     description:
-      "In a galaxy oppressed by the Empire, the Rebellion wages a relentless fight for freedom. Rebels from every corner of the galaxy come together to overthrow tyranny and restore peace.",
+      "Blockchain technology is transforming industries beyond finance, impacting data security, supply chains, and voting systems. Its decentralized nature offers secure data transactions.",
+    author: "Sarah Brown",
   },
   {
-    title: "A Song of Ice and Fire",
+    title: "The Future of Space Exploration",
     description:
-      "Legends of dragons and ancient magic echo across Westeros, as powerful families prepare for the coming winter. The Wall stands tall, yet threats beyond it continue to grow.",
+      "Space exploration is entering a new era with advancements in reusable rockets, interplanetary missions, and commercial space travel. New initiatives aim for Mars colonization and deep space exploration.",
+    author: "James White",
   },
+  {
+    title: "The Evolution of Web Development",
+    description:
+      "Web development has evolved rapidly over the years, introducing new frameworks, tools, and standards that make building robust applications faster and more accessible.",
+    author: "Mia Lee",
+  },
+  {
+    title: "Machine Learning in Healthcare",
+    description:
+      "Machine learning is transforming healthcare, enabling advancements in diagnostics, personalized treatment, and drug discovery, offering new possibilities for patient care.",
+    author: "Oliver Brown",
+  },
+  {
+    title: "The Impact of Virtual Reality",
+    description:
+      "Virtual reality is reshaping fields such as gaming, education, and training by providing immersive experiences that can enhance learning and engagement.",
+    author: "Sophia Miller",
+  },
+  {
+    title: "Cybersecurity in a Digital Age",
+    description:
+      "As our reliance on digital technologies grows, cybersecurity is becoming increasingly important, protecting against data breaches and ensuring privacy in a connected world.",
+    author: "Ethan Wilson",
+  },
+  {
+    title: "Understanding Genetic Engineering",
+    description:
+      "Genetic engineering allows scientists to modify organisms’ genes, impacting medicine, agriculture, and environmental science with far-reaching potential.",
+    author: "Rebecca Moore",
+  },
+  {
+    title: "Cryptocurrency and Digital Finance",
+    description:
+      "Cryptocurrency is reshaping finance, offering decentralized solutions outside traditional banks and revolutionizing transactions, remittances, and investments.",
+    author: "Max Daniels",
+  },
+  {
+    title: "History of Space Exploration",
+    description:
+      "From the first moon landing to current Mars missions, space exploration has opened up possibilities beyond Earth, inspiring generations to reach for the stars.",
+    author: "Sandra Lee",
+  },
+  {
+    title: "The Psychology of Social Media",
+    description:
+      "Social media's influence on mental health, self-perception, and social dynamics has transformed communication, with both positive and negative implications.",
+    author: "Daniel Kim",
+  },
+  {
+    title: "Advances in Biotechnology",
+    description:
+      "Biotechnology merges biology with technology, creating innovations in medical treatments, genetic research, and agriculture for sustainable solutions.",
+    author: "Amelia Walker",
+  },
+  {
+    title: "The Future of Electric Vehicles",
+    description:
+      "Electric vehicles are driving the shift towards a sustainable future, with technological advances enhancing battery efficiency and reducing carbon footprints.",
+    author: "Leonard White",
+  },
+  {
+    title: "Augmented Reality in Education",
+    description:
+      "Augmented reality (AR) is enhancing learning by providing interactive experiences that make complex concepts more accessible and engaging for students.",
+    author: "Rachel Yang",
+  },
+  {
+    title: "Nanotechnology in Medicine",
+    description:
+      "Nanotechnology is transforming medicine, allowing for precise drug delivery, advanced imaging techniques, and targeted therapies at the cellular level.",
+    author: "Matthew King",
+  },
+  {
+    title: "Ethics in Artificial Intelligence",
+    description:
+      "As AI continues to evolve, ethical considerations around privacy, bias, and autonomy are shaping the future of responsible AI development.",
+    author: "Julia Sanchez",
+  },
+  {
+    title: "Revolutionizing Education with Online Learning",
+    description:
+      "Online learning platforms have democratized education, offering flexibility and accessibility, while reshaping traditional education systems.",
+    author: "Ben Clark",
+  }
 ];
 
 export const BANNER_IMAGE =
