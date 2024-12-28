@@ -1,6 +1,7 @@
 //
 // components/Footer.js
 "use client";
+import Link from "next/link";
 import React, { useState } from "react";
 import { FaWhatsapp, FaInstagram, FaLinkedin, FaRegEnvelope } from "react-icons/fa";
 
@@ -43,12 +44,12 @@ const Footer = () => {
             Contribute
           </h2>
             <div className="flex flex-col space-y-4  text-center">
-              <button
-                type="button"
+              <Link href={"/submissionForm"}
+                
                 className="bg-gray-600 text-white px-6 py-2 rounded hover:bg-gray-700 transition-colors duration-300 w-full sm:w-auto"
               >
                 Upload Your Work
-              </button>
+              </Link>
             
               <button
                 type="button"
