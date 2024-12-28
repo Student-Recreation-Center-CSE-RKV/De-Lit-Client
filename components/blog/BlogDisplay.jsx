@@ -1,142 +1,109 @@
-// import React from 'react'
-// import { useState, useEffect } from 'react';
-// import BlogWrapper from './BlogWrapper';
-// import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-// import BlogPopup from './BlogPopup';
-// import ReactMarkdown from 'react-markdown';
-// import rehypeRaw from 'rehype-raw';
-
-// function BlogDisplay({posts}) {
-
-//     // State to manage selected post for modal
-//    const [selectedPost, setSelectedPost] = useState(null);
-
-//    // Handler to open modal with the selected post
-//    const handlePostClick = (post) => {
-//      setSelectedPost(post);
-//      // Disable scroll when modal is open
-//     document.body.style.overflow= 'hidden'
-//    };
- 
-//    // Handler to close modal
-//    const closeModal = () => {
-//      setSelectedPost(null);
-//      // Re-enable scroll when modal is closed
-//     document.body.style.overflow= 'auto'
-//    };
-
-//    // Clean up the 'overflow-hidden' class when component unmounts or modal is closed
-//   useEffect(() => {
-//     return () => {
-//         document.body.style.overflow= 'auto' // Clean up on component unmount
-//     };
-//   }, []);
-
-//   return (
-//     <div className="flex flex-col  items-center bg-mywhite min-h-screen">
-//       {/*Display each BLog card and content*/}
-//       <ul className="mx-4  max-w-5xl">
-//         {posts.map((post,index) => (
-//           <li key={post.id}  >
-            
-//             <BlogWrapper handlePostClick={handlePostClick} post={post} isSent={index%2==0}> {/*Decides the status of the blog as sent or received*/}
-//               <div>
-//             <AccountCircleIcon/> <span className='font-bold'>{post.author}</span>
-
-//             <h2 className="text-2xl font-semibold text-gray-800 my-2">
-//               {post.title}
-//             </h2>
-//             <ReactMarkdown rehypePlugins={[rehypeRaw]} className="text-gray-600 my-2">{post.content.substring(0,100)+"..."}</ReactMarkdown>
-//             <p className='text-gray-400 text-xs font-bold my-2'>{post.date}</p>
-//             </div>
-//             </BlogWrapper>
-            
-//           </li>
-//         ))}
-//       </ul>
-//       <BlogPopup selectedPost={selectedPost} closeModal={closeModal}/>
-//     </div>
-//   )
-// }
-
-// export default BlogDisplay
-
-// import React from 'react'
-// import { useState, useEffect } from 'react';
-// import BlogWrapper from './BlogWrapper';
-// import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-// import BlogPopup from './BlogPopup';
-// import ReactMarkdown from 'react-markdown';
-// import rehypeRaw from 'rehype-raw';
-
-
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import BlogWrapper from './BlogWrapper';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import BlogPopup from './BlogPopup';
-import ReactMarkdown from 'react-markdown';
-import rehypeRaw from 'rehype-raw';
 import DOMPurify from 'isomorphic-dompurify';
 
 function BlogDisplay({ posts }) {
-  // State to manage selected post for modal
   const [selectedPost, setSelectedPost] = useState(null);
+  const blogRef = useRef(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const blogsPerPage = 10;
 
-  // Handler to open modal with the selected post
+  const totalPages = Math.ceil(posts.length / blogsPerPage);
+
   const handlePostClick = (post) => {
     setSelectedPost(post);
-    // Disable scroll when modal is open
     document.body.style.overflow = 'hidden';
   };
 
-  // Handler to close modal
   const closeModal = () => {
     setSelectedPost(null);
-    // Re-enable scroll when modal is closed
     document.body.style.overflow = 'auto';
   };
 
-  // Clean up overflow style when component unmounts or modal closes
   useEffect(() => {
     return () => {
       document.body.style.overflow = 'auto';
     };
   }, []);
 
-  // Function to strip Markdown and HTML tags for preview
   const stripMarkdownAndHTML = (text) => {
     const cleanHTML = DOMPurify.sanitize(text, { ALLOWED_TAGS: [] });
     return cleanHTML.replace(/[*_~`#>-]/g, '');
   };
 
+  const AuthorIcon = ({ name }) => {
+    const initial = name ? name.charAt(0).toUpperCase() : '?';
+    return (
+      <div
+        className="flex items-center justify-center rounded-full bg-gray-400 text-white font-semibold text-lg w-10 h-10"
+      >
+        {initial}
+      </div>
+    );
+  };
+
+  // Paginate blogs
+  const startIndex = (currentPage - 1) * blogsPerPage;
+  const currentBlogs = posts.slice(startIndex, startIndex + blogsPerPage);
+
+  // Scroll to the blog container smoothly
+  const scrollToBlogContainer = () => {
+    if (blogRef.current) {
+      blogRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
+  const handlePageChange = (newPage) => {
+    if (newPage >= 1 && newPage <= totalPages) {
+      setCurrentPage(newPage);
+      scrollToBlogContainer();
+    }
+  };
+
   return (
-    <div className="flex flex-col items-center bg-mywhite min-h-screen">
-      {/* Display each Blog card and content */}
+    <div className="flex flex-col items-center bg-mywhite min-h-screen" ref={blogRef}>
       <ul className="mx-4 p-10 max-w-5xl">
-        {posts.map((post, index) => (
+        {currentBlogs.map((post, index) => (
           <li key={post.id}>
             <BlogWrapper handlePostClick={() => handlePostClick(post)} post={post} isSent={index % 2 === 0}>
-              <div className='p-2'>
-                
-                <h2 className="text-2xl font-semibold text-gray-800 my-2">
-                  {post.title}
-                </h2>
+              <div className="p-2">
+                <h2 className="text-2xl font-semibold text-gray-800 my-2">{post.title}</h2>
+                <p className="text-gray-400 text-xs text-left font-bold my-2">{post.date}</p>
                 <p className="text-gray-600 text my-2">
                   {stripMarkdownAndHTML(post.content).substring(0, 100) + '...'}
                 </p>
-                <div className='flex flex-col md:flex-row md:justify-between'>
-                  <div>
-                  <AccountCircleIcon /> <span className='text-gray-400 text-xs font-bold'>{post.author}</span>
-                  </div>
-                
-                <span className='text-gray-400 text-xs text-right font-bold my-2 '>{post.date}</span>
+                <div className="flex flex-row items-center gap-2">
+                  <AuthorIcon name={post.author} />
+                  <span className="text-gray-400 text-xs font-bold">{post.author}</span>
                 </div>
               </div>
             </BlogWrapper>
           </li>
         ))}
       </ul>
-      
+
+      {/* Pagination Controls */}
+      <div className="flex justify-center items-center mt-4 gap-4">
+        <button
+          onClick={() => handlePageChange(currentPage - 1)}
+          disabled={currentPage === 1}
+          className="px-4 py-2 bg-gray-200 text-gray-600 rounded disabled:opacity-50"
+        >
+          Previous
+        </button>
+        <span className="text-gray-600">
+          Page {currentPage} of {totalPages}
+        </span>
+        <button
+          onClick={() => handlePageChange(currentPage + 1)}
+          disabled={currentPage === totalPages}
+          className="px-4 py-2 bg-gray-200 text-gray-600 rounded disabled:opacity-50"
+        >
+          Next
+        </button>
+      </div>
+
       {/* BlogPopup component for displaying the full post */}
       <BlogPopup selectedPost={selectedPost} closeModal={closeModal} />
     </div>
