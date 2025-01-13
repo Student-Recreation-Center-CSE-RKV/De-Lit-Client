@@ -28,13 +28,13 @@ export default function Navbar() {
   }, []);
 
   // Disable body scroll when mobile menu is open
-  useEffect(() => {
-    if (nav) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "auto";
-    }
-  }, [nav]);
+  // useEffect(() => {
+  //   if (nav) {
+  //     document.body.style.overflow = "hidden";
+  //   } else {
+  //     document.body.style.overflow = "auto";
+  //   }
+  // }, [nav]);
 
   const links = [
     { id: 1, link: "publications", text: "Magazines & Publications" },

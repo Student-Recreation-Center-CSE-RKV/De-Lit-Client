@@ -26,6 +26,10 @@
     background: linear-gradient(90deg, var(--color-b) 0%, var(--color-a) 100%);
   } */
   
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     background-color: var(--mywhite);
     /* cursor: url("/feather.png") 0 41, auto; */
@@ -100,6 +104,9 @@
   }
   .glow {
     text-shadow: 0 0 50px var(--mywhite), 0 0 80px var(--mywhite), 0 0 100px var(--mywhite);
+  }
+  .mobile-glow {
+    text-shadow: 0 -1px 30px var(--mywhite), 0 -2px 50px var(--mywhite), 0 -1px 80px var(--mywhite), 0 0 100px var(--mywhite);
   }
 }
 

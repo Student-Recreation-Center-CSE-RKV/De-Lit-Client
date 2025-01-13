@@ -1,6 +1,7 @@
 import BlockSection from "@/components/BlockSection";
 import Banner from "@/components/Banner";
 import { getPlaceholderImage, addBase64 } from "@/utils/image-load";
+import HomeSections from "@/components/HomeSections";
 
 export default async function Home() {
   const getBlocks = async () => {
@@ -21,13 +22,12 @@ export default async function Home() {
   }
 
   const blocksData = await getBlocks();
-  const bannerImage = "https://m.media-amazon.com/images/S/pv-target-images/81ef275effa427553a847bc220bebe1dc314b2e79d00333f94a6bcadd7cce851.jpg";
+  const bannerImage = "https://www.pixel4k.com/wp-content/uploads/2023/02/the-batman-2022-wide-4k_1675639354-1536x864.jpg";
   const { base64 } = await getPlaceholderImage(bannerImage);
 
   return (
     <>
-      <Banner image={bannerImage} base64={base64} />
-      <BlockSection blocksData={blocksData} />
+      <HomeSections bannerImage={bannerImage} base64={base64} blocksData={blocksData} />
     </>
   );
 }
