@@ -9,17 +9,21 @@ import { useSwipeable } from "react-swipeable";
 export default function HomeSections({ bannerImage, base64, blocksData }) {
   const router = useRouter();
   blocksData.forEach((block) => {
-    block.id = block.name.toLowerCase().replace(/[^a-z]/g, "");
+    block.id = block.name.toLowerCase().replace(/[^a-z]/g, "");  // keep only alphabets
   });
 
   const ids = ["banner"].concat(blocksData.map((block) => block.id)).concat(["footer"]);
   const [currentBlock, setCurrentBlock] = useState(0);
   
+  // for mobile swipe
   const swipeHandlers = useSwipeable({
-    onSwipedUp: () => scrollDown(() => {}),
-    onSwipedDown: () => scrollUp(() => {})
+    onSwipeStart: ({dir}) => {
+      if (dir === "Up") scrollDown(() => {});
+      else if (dir === "Down") scrollUp(() => {});
+    }
   });
 
+  // the function to scroll down
   const scrollDown = (removeListener) => {
     if (currentBlock === ids.length - 1) return;
     router.push("#" + ids[currentBlock + 1]);
@@ -27,6 +31,7 @@ export default function HomeSections({ bannerImage, base64, blocksData }) {
     removeListener();
   }
 
+  // the function to scroll up
   const scrollUp = (removeListener) => {
     if (currentBlock === 0) return;
     router.push("#" + ids[currentBlock - 1]);
@@ -51,7 +56,7 @@ export default function HomeSections({ bannerImage, base64, blocksData }) {
     const delay = setTimeout(() => {
         window.addEventListener("wheel", handleScroll);
         window.addEventListener("keydown", handleKeyPress);
-    }, 500);
+    }, 1000);
 
     return () => {
       window.removeEventListener("wheel", handleScroll);
@@ -62,7 +67,7 @@ export default function HomeSections({ bannerImage, base64, blocksData }) {
   return (
     <div {...swipeHandlers}>
       <Banner image={bannerImage} base64={base64} />
-      <BlockSection blocksData={blocksData} activeBlock={currentBlock  - 1} />
+      <BlockSection blocksData={blocksData} />
       <Footer />
     </div>
   );

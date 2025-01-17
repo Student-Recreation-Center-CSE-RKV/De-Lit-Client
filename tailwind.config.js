@@ -11,6 +11,10 @@ module.exports = {
   		center: true
   	},
   	extend: {
+			screens: {
+				"2xl": "1900px"
+			},
+
   		colors: {
   			myblack: 'var(--myblack)',
   			mywhite: 'var(--mywhite)',

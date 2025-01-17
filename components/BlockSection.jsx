@@ -1,4 +1,3 @@
-"use client";
 import Block from "@/components/Block";
 // import { BLOCKS_DATA } from '@/utils/dummy';
 
@@ -9,20 +8,18 @@ const links = {
   "CLUB\u00a0TALK": "/clubtalk",
 };
 
-export default function BlockSection({ blocksData, activeBlock }) {
+export default function BlockSection({ blocksData }) {
   const n = blocksData.length;
 
   return (
     <>
       <div className="container" style={{ height: `${n * 100}dvh` }} >
-        {blocksData.map((block, idx) => (
-          <Block
-            key={block._id}
-            {...block}
-            link={links[block.name]}
-            // isActive={activeBlock === idx}
-            isActive={true}
-          />
+        {blocksData.map((block) => (
+            <Block
+              key={block.id}
+              {...block}
+              link={links[block.name]}
+            />
         ))}
       </div>
     </>
