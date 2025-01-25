@@ -8,6 +8,11 @@ import { useSwipeable } from "react-swipeable";
 
 export default function HomeSections({ blocksData, bannerData }) {
   const router = useRouter();
+
+  useEffect(() => {
+    router.push("#banner");
+  }, []);
+
   blocksData.forEach((block) => {
     block.block_title = block.block_title.toUpperCase();
     block.id = block.block_title.toLowerCase().replace(/[^a-z]/g, "");  // keep only alphabets
