@@ -4,14 +4,15 @@ import Image from "next/image";
 
 const font = Playfair_Display({ subsets: ["latin"], weight: ["400"] });
 
-const Banner = ({image, base64}) => {
+const Banner = ({ bannerData }) => {
+  const { banner_link, quote, base64 } = bannerData;
   return (
     <div
       className="relative w-full h-[100dvh]"
       id="banner"
     >
         <Image
-          src={image}
+          src={banner_link}
           alt="Banner"
           fill
           placeholder="blur"
@@ -25,7 +26,7 @@ const Banner = ({image, base64}) => {
       {/* Content */}
       <div className="relative h-[100dvh] md:w-2/3 w-5/6 m-auto flex items-center justify-center">
           <h1 className={`text-white md:leading-[1] leading-[1.3] 2xl:text-9xl lg:text-[5rem] sm:text-5xl text-4xl text-center ${font.className}`} >
-            Building a like-minded community!
+            {quote}
           </h1>
       </div>
     </div>

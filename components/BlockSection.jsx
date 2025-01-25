@@ -3,7 +3,7 @@ import Block from "@/components/Block";
 
 const links = {
   "PUBLICATIONS": "/publications",
-  "BLOGS": "/blog",
+  "BLOG": "/blog",
   "GALLERY": "/gallery",
   "CLUB\u00a0TALK": "/clubtalk",
 };
@@ -18,7 +18,7 @@ export default function BlockSection({ blocksData }) {
             <Block
               key={block.id}
               {...block}
-              link={links[block.name]}
+              link={links[block.block_title]}
             />
         ))}
       </div>

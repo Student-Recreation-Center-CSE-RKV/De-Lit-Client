@@ -6,10 +6,11 @@ import { useRouter } from "next/navigation";
 import Footer from "./Footer";
 import { useSwipeable } from "react-swipeable";
 
-export default function HomeSections({ bannerImage, base64, blocksData }) {
+export default function HomeSections({ blocksData, bannerData }) {
   const router = useRouter();
   blocksData.forEach((block) => {
-    block.id = block.name.toLowerCase().replace(/[^a-z]/g, "");  // keep only alphabets
+    block.block_title = block.block_title.toUpperCase();
+    block.id = block.block_title.toLowerCase().replace(/[^a-z]/g, "");  // keep only alphabets
   });
 
   const ids = ["banner"].concat(blocksData.map((block) => block.id)).concat(["footer"]);
@@ -66,7 +67,7 @@ export default function HomeSections({ bannerImage, base64, blocksData }) {
 
   return (
     <div {...swipeHandlers}>
-      <Banner image={bannerImage} base64={base64} />
+      <Banner bannerData={bannerData} />
       <BlockSection blocksData={blocksData} />
       <Footer />
     </div>
