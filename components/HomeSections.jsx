@@ -5,7 +5,8 @@ import BlockSection from "./BlockSection";
 import { useRouter } from "next/navigation";
 import Footer from "./Footer";
 import { useSwipeable } from "react-swipeable";
-import { useGesture, useWheel } from "@use-gesture/react";
+import { useWheel } from "@use-gesture/react";
+import slugify from "slugify";
 
 export default function HomeSections({ blocksData, bannerData }) {
   const router = useRouter();
@@ -18,12 +19,12 @@ export default function HomeSections({ blocksData, bannerData }) {
   }, []);
 
   blocksData.forEach((block) => {
-    block.block_title = block.block_title.toUpperCase();
-    block.id = block.block_title.toLowerCase().replace(/[^a-z]/g, ""); // keep only alphabets
+    block.slug = slugify(block.block_title, { lower: true, strict: true });
+    block.block_title = block.block_title.toUpperCase().replace(" ", "\u00A0"); // replace space with non-breaking space
   });
 
   const ids = ["banner"]
-    .concat(blocksData.map((block) => block.id))
+    .concat(blocksData.map((block) => block.slug))
     .concat(["footer"]);
 
   // for mobile swipe

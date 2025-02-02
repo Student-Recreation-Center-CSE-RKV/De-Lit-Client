@@ -2,13 +2,13 @@ import Link from 'next/link';
 import clsx from 'clsx';
 import Image from 'next/image';
 
-export default function Block({block_title, id, block_image_link, base64, block_content, link}) {
+export default function Block({block_title, slug, block_image_link, base64, block_content, link}) {
   const headingClasses = {
     "text-5xl": block_title.length <= 9,
     "text-4xl": block_title.length > 9
   }
   return (
-    <div id={id} className={clsx("min-h-[100dvh] flex items-center justify-center overflow-x-hidden overflow-hidden")}>
+    <div id={slug} className={clsx("min-h-[100dvh] flex items-center justify-center overflow-x-hidden overflow-hidden")}>
       <div className="mt-[10dvh] flex justify-center items-center">
         <div className="flex md:flex-row lg:space-x-24 max-md:mx-14 items-center justify-center flex-col md:space-x-7 max-md:space-y-12 self-stretch 2xl:h-[50dvh] lg:h-[67dvh] md:h-[50dvh] max-md:h-1/3">
           <Link href={link} className="relative self-stretch md:w-1/3 max-md:flex max-md:flex-col max-md:items-center max-md:text-center max-md:h-[40vh]">

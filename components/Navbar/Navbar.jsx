@@ -40,8 +40,8 @@ export default function Navbar() {
     { id: 1, link: "publications", text: "Magazines & Publications" },
     { id: 2, link: "blog", text: "Blog" },
     { id: 3, link: "gallery", text: "Gallery" },
-    { id: 4, link: "clubtalk", text: "Club Talk" },
-    { id: 5, link: "aboutus", text: "About Us" },
+    { id: 4, link: "club-talk", text: "Club Talk" },
+    { id: 5, link: "about-us", text: "About Us" },
     { id: 6, link: "#", text: "Contact Us" },
   ];
 
