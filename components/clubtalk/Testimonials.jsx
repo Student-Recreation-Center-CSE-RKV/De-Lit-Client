@@ -1,10 +1,12 @@
-import { CLUB_TALK } from "@/utils/dummy";
+import { getData } from "@/services/api";
 import TestimonialRow from "./TestimonialRow";
 
-export default function Testimonials() {
+export default async function Testimonials() {
+    let data = (await getData("get_all_cards")).cards;
+    data.sort((a, b) => b.createdAt - a.createdAt);
     const pairs = [];
-    for (let i = 0; i < CLUB_TALK.length; i += 2) {
-      pairs.push([CLUB_TALK[i], CLUB_TALK[i + 1] || null]);
+    for (let i = 0; i < data.length; i += 2) {
+      pairs.push([data[i], data[i + 1] || null]);
     }
     return (
         <>
@@ -27,7 +29,7 @@ export default function Testimonials() {
         {/* one card per row in mobiles */}
         <div className="min-h-screen block lg:hidden">
             {
-                CLUB_TALK.map((talk, index) => (
+                data.map((talk, index) => (
                     <TestimonialRow 
                         key={index} 
                         firstTheega={index % 2 === 0} 
