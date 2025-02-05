@@ -1,6 +1,6 @@
 import { FaTimes } from "react-icons/fa";
 
-export default function Modal({ character, setShowModal }) {
+export default function Modal({ member, setShowModal }) {
   return (
     <>
       <div class="fixed inset-0 bg-black opacity-50 z-[55]"></div>
@@ -17,9 +17,9 @@ export default function Modal({ character, setShowModal }) {
             </div>
             <div className="p-10">
               <h1 className="text-3xl font-bold text-center -mt-10">
-                {character.name}
+                {member.member_name}
               </h1>
-              <p className="text-lg mt-10 text-center">{character.about}</p>
+              <p className="text-lg mt-10 text-center">{member.about}</p>
             </div>
           </div>
         </div>

@@ -3,7 +3,7 @@ import Modal from "./Modal";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-export default function Card({ character }) {
+export default function Card({ member }) {
   const [showModal, setShowModal] = useState(false);
   useEffect(() => {
     document.body.style.overflow = showModal ? "hidden" : "auto";
@@ -19,21 +19,21 @@ export default function Card({ character }) {
       >
         <div className="relative w-full h-[250px]">
           <Image
-            src={character.image_link}
-            alt={character.name}
+            src={member.profile_image}
+            alt={member.member_name}
             fill
             sizes="(max-width: 768px) 90vw, 40vw"
             placeholder="blur"
-            blurDataURL={character.base64}
+            blurDataURL={member.base64}
             className="object-cover rounded-lg"
           />
         </div>
         <div className="flex justify-center items-center xl:min-h-[120px] min-h-[80px]">
-          <p className="text-colorB xl:text-xl text-lg text-center m-auto">{character.quote}</p>
+          <p className="text-colorB xl:text-xl text-lg text-center m-auto">{member.quote}</p>
         </div>
-        <h1 className="md:text-xl text-lg self-end">{character.name}</h1>
+        <h1 className="md:text-xl text-lg self-end">{member.member_name}</h1>
       </div>
-      {showModal && <Modal character={character} setShowModal={setShowModal} />}
+      {showModal && <Modal member={member} setShowModal={setShowModal} />}
     </>
   );
 }
