@@ -1,6 +1,6 @@
 import ContentBlock from "@/components/aboutus/ContentBlock";
 import { addBase64 } from "@/utils/image-load";
-import AllTeams from "@/components/aboutus/AllBatches";
+import AllBatches from "@/components/aboutus/AllBatches";
 import { getData } from "@/services/api";
 
 export default async function Page() {
@@ -28,7 +28,7 @@ export default async function Page() {
       />
       <h1 className="text-center text-5xl mt-10">The Fellowship</h1>
       <p className="text-center text-lg mt-5">Meet the team that makes it all happen</p>
-      <AllTeams allBatches={batchMap}/>
+      <AllBatches allBatches={batchMap}/>
     </div>
   )
 }

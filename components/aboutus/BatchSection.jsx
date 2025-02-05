@@ -1,6 +1,6 @@
 import Card from "./Card";
 
-export default function TeamSection({ members, batchName, year }) {
+export default function BatchSection({ members, batchName, year }) {
   return (
     <div className="mt-10">
         <h1 className="text-center text-4xl lg:mt-24 m-10">{batchName}</h1>

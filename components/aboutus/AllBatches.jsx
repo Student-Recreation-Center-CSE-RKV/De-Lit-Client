@@ -1,13 +1,13 @@
-import TeamSection from "./BatchSection";
+import BatchSection from "./BatchSection";
 
-export default function AllTeams({ allBatches }) {
+export default function AllBatches({ allBatches }) {
   const batchesOrder = Object.keys(allBatches).sort(
     (a, b) => allBatches[a].year - allBatches[b].year
   );
   return (
     <div className="my-10">
       {batchesOrder.map((batch, index) => (
-        <TeamSection
+        <BatchSection
           key={index}
           members={allBatches[batch].members}
           batchName={batch}
