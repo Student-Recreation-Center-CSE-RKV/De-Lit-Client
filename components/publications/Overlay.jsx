@@ -36,7 +36,7 @@ export default function Overlay({ link, handleClose, title }) {
               {title}
             </h1>
             <PDFViewer
-              file="/sample.pdf"
+              file={link}
               width={pdfWidth}
               setIsLoading={setIsLoading}
             />

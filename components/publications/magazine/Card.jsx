@@ -3,7 +3,14 @@
 import Image from "next/image";
 import OverlayWrapper from "@/components/publications/OverlayWrapper";
 
-const Card = ({ title, text, image, base64, link, scrollRef }) => {
+const Card = ({
+  title,
+  text,
+  cover_image_link: image,
+  base64,
+  publication_file_link: link,
+  scrollRef,
+}) => {
   return (
     <>
       <OverlayWrapper

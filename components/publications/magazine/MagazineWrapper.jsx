@@ -5,6 +5,7 @@ import CardSkeleton from "../skeletons/CardSkeleton";
 import SkeletonWrapper from "../skeletons/SkeletonWrapper";
 import dynamic from "next/dynamic";
 import { addBase64 } from "@/utils/image-load";
+import { getData } from "@/services/api";
 
 const CardWrapper = dynamic(
   () => {
@@ -13,17 +14,13 @@ const CardWrapper = dynamic(
   { loading: () => <SkeletonWrapper Skeleton={CardSkeleton} />, ssr: false }
 );
 
-async function getMagazines() {
-  // await new Promise((resolve) => setTimeout(resolve, 3000));
-  return MAGAZINES;
-}
-
 export default async function MagazineWrapper({ isFirst }) {
-  await getMagazines();
-  const data = await addBase64(MAGAZINES);
+  const data = (await getData("get_all_publications?type=magazine"))
+    .publications;
+  const magazines = await addBase64(data, "cover_image_link");
   return (
     <CardWrapper
-      data={data}
+      data={magazines}
       header={"Magazines"}
       subheader={"Dive Into Our Curated Magazine Collection"}
       isFirst={isFirst}
