@@ -4,7 +4,14 @@ import { useState } from "react";
 import Overlay from "@/components/publications/Overlay";
 import Image from "next/image";
 
-const Anthology = ({ title, text, image, base64, link, scrollRef }) => {
+const Anthology = ({
+  title,
+  description,
+  cover_image_link: image,
+  base64,
+  publication_file_link: link,
+  scrollRef,
+}) => {
   const [open, setOpen] = useState(false);
 
   const handleClickOpen = () => {
@@ -44,17 +51,7 @@ const Anthology = ({ title, text, image, base64, link, scrollRef }) => {
           </div>
           <div className="flex flex-col justify-center gap-12 w-full p-10">
             <h1 className="md:text-5xl">{title}</h1>
-            <p className=" text-colorB text-lg">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia
-              voluptas quibusdam, nobis necessitatibus repellendus distinctio
-              velit animi reprehenderit iure. Exercitationem consequuntur beatae
-              architecto, impedit magnam ad quod mollitia at error. Lorem ipsum,
-              dolor sit amet consectetur adipisicing elit. Debitis sit itaque
-              quas ullam nam? Accusamus, excepturi, aliquam ratione beatae
-              provident perspiciatis qui, sed vero ullam necessitatibus labore
-              iste ab distinctio Lorem ipsum dolor sit amet, consectetur
-              adipisicing elit.
-            </p>
+            <p className=" text-colorB text-lg">{description}</p>
           </div>
         </div>
       </div>

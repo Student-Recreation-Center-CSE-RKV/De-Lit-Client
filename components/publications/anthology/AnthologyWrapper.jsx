@@ -4,6 +4,7 @@ import { ANTHOLOGIES } from "@/utils/dummy";
 import { addBase64 } from "@/utils/image-load";
 import AnthologySkeleton from "../skeletons/AnthologySkeleton";
 import SkeletonWrapper from "../skeletons/SkeletonWrapper";
+import { getData } from "@/services/api";
 
 import dynamic from "next/dynamic";
 
@@ -17,14 +18,10 @@ const CardWrapper = dynamic(
   }
 );
 
-async function getAnthologies() {
-  // await new Promise((resolve) => setTimeout(resolve, 4000));
-  return ANTHOLOGIES;
-}
-
 export default async function AnthologyWrapper() {
-  await getAnthologies();
-  const data = await addBase64(ANTHOLOGIES);
+  const anthologies = (await getData("get_all_publications?type=anthology"))
+    .publications;
+  const data = await addBase64(anthologies, "cover_image_link");
   return (
     <CardWrapper
       data={data}
