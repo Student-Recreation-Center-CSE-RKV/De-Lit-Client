@@ -2,8 +2,8 @@ import { getData } from "@/services/api";
 import TestimonialRow from "./TestimonialRow";
 
 export default async function Testimonials() {
-    let data = (await getData("get_all_cards")).cards;
-    data.sort((a, b) => b.createdAt - a.createdAt);
+    const data = (await getData("get_all_cards")).cards;
+    data.sort((a, b) => new Date(b.created_at) - new Date(a.created_at));
     const pairs = [];
     for (let i = 0; i < data.length; i += 2) {
       pairs.push([data[i], data[i + 1] || null]);
