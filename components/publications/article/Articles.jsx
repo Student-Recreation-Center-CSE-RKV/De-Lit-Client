@@ -79,7 +79,7 @@ export default function Articles({ header, subheader, data }) {
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-5">
         {currentArticles.map((article, index) => (
-          <ArticleCard key={index} article={article} />
+          <ArticleCard key={article.id} article={article} />
         ))}
       </div>
 

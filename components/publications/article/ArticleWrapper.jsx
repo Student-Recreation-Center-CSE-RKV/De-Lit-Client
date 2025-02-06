@@ -9,18 +9,17 @@ const Articles = dynamic(
   }
 );
 
-async function getArticles() {
-  // await new Promise((resolve) => setTimeout(resolve, 5000));
-  return ARTICLES;
-}
+import { getData } from "@/services/api";
 
 export default async function ArticleWrapper() {
-  const data = await getArticles();
+  const articles = (await getData("get_all_publications?type=article"))
+    .publications;
+
   return (
     <Articles
       header={"Articles"}
       subheader={"Your source for fascinating reads and ideas."}
-      data={data}
+      data={articles}
     />
   );
 }

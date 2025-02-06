@@ -2,7 +2,10 @@ import OverlayWrapper from "@/components/publications/OverlayWrapper";
 
 export default function ArticleCard({ article }) {
   return (
-    <OverlayWrapper overlayLink="" title={article.title}>
+    <OverlayWrapper
+      overlayLink={article.publication_file_link}
+      title={article.title}
+    >
       <div
         className="bg-white shadow-md rounded-lg  overflow-hidden xl:p-10 p-5 hover:-translate-y-1 
                    transition-transform duration-200 ease-[cubic-bezier(0.455,0.030,0.515,0.955)] cursor-pointer"
