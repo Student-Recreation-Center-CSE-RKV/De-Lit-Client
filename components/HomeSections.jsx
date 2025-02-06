@@ -6,7 +6,6 @@ import { useRouter } from "next/navigation";
 import Footer from "./Footer";
 import { useSwipeable } from "react-swipeable";
 import { useWheel } from "@use-gesture/react";
-import slugify from "slugify";
 
 export default function HomeSections({ blocksData, bannerData }) {
   const router = useRouter();
@@ -17,11 +16,6 @@ export default function HomeSections({ blocksData, bannerData }) {
     router.push("#banner");
     setCurrentBlock(0);
   }, []);
-
-  blocksData.forEach((block) => {
-    block.slug = slugify(block.block_title, { lower: true, strict: true });
-    block.block_title = block.block_title.toUpperCase().replace(" ", "\u00A0"); // replace space with non-breaking space
-  });
 
   const ids = ["banner"]
     .concat(blocksData.map((block) => block.slug))
