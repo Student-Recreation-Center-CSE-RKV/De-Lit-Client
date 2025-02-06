@@ -1,6 +1,5 @@
 import React from "react";
 import Anthology from "@/components/publications/anthology/Anthology";
-import { ANTHOLOGIES } from "@/utils/dummy";
 import { addBase64 } from "@/utils/image-load";
 import AnthologySkeleton from "../skeletons/AnthologySkeleton";
 import SkeletonWrapper from "../skeletons/SkeletonWrapper";

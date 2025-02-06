@@ -1,4 +1,3 @@
-import { ARTICLES } from "@/utils/dummy";
 import dynamic from "next/dynamic";
 import ArticleSkeleton from "../skeletons/ArticleSkeleton";
 const Articles = dynamic(

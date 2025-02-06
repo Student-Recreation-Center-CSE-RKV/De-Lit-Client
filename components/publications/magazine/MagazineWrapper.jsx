@@ -1,5 +1,4 @@
 import React from "react";
-import { MAGAZINES } from "@/utils/dummy";
 import Card from "@/components/publications/magazine/Card";
 import CardSkeleton from "../skeletons/CardSkeleton";
 import SkeletonWrapper from "../skeletons/SkeletonWrapper";
