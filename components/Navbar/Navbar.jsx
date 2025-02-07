@@ -91,7 +91,7 @@ export default function Navbar() {
               className="group nav-links px-4 cursor-pointer capitalize duration-100 hover:text-[white] h-full flex flex-col justify-center items-center"
               style={{ color: navColor }}
             >
-              <Link href={link}>{text}</Link>
+              <Link href={link} className="mt-2">{text}</Link>
               <div className={cn(
                 `h-[2px] mt-1 group-hover:w-1/2 transition-all duration-300`,
                 pathname === '/' + link ? "w-1/2" : "w-0"
