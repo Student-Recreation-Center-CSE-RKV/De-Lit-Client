@@ -5,6 +5,7 @@ import "./navbar.css";
 import { FaBars, FaTimes } from "react-icons/fa";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
+import { cn } from "@/lib/utils";
 
 export default function Navbar() {
   const [nav, setNav] = useState(false);
@@ -37,7 +38,7 @@ export default function Navbar() {
   // }, [nav]);
 
   const links = [
-    { id: 1, link: "publications", text: "Magazines & Publications" },
+    { id: 1, link: "publications", text: "Publications" },
     { id: 2, link: "blog", text: "Blog" },
     { id: 3, link: "gallery", text: "Gallery" },
     { id: 4, link: "club-talk", text: "Club Talk" },
@@ -60,26 +61,6 @@ export default function Navbar() {
             { "shadow-lg": !(atStart | atEnd), "bg-transparent": atStart }
         )}
       >
-        {/* <svg
-          height="30"
-          width="100%"
-          xmlns="http://www.w3.org/2000/svg"
-          className={`absolute top-[9.3vh] left-[4.6vw] transition-opacity duration-300 md:${
-            (atEnd) ? "block" : "hidden"
-          } hidden`} // for mobile svg is overflowing which causing horizantal scroll bar when opening dialog box. So, I hide it for mobile
-          style={{
-            zIndex: "100", // Ensure it stays on top
-          }}
-        >
-          <path
-            className="animated-line"
-            d="M0 20 Q 50 10, 100 20 T 200 20 T 300 20 T 400 20 T 500 20 T 600 20 T 700 20 T 800 20 T 900 20 T 1000 20 T 1100 20 T 1200 20 T 1300 20 T 1400 20 T 1500 20"
-            fill="transparent"
-            stroke={navColor}
-            strokeWidth="1"
-          />
-        </svg> */}
-      {/* Logo */}
       <div>
         <h1 className="text-5xl font-signature ml-2">
           <Link href="/" rel="noreferrer">
@@ -103,14 +84,20 @@ export default function Navbar() {
       </div>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex">
+        <ul className="hidden md:flex h-full">
           {links.map(({ id, link, text }) => (
             <li
               key={id}
-              className="nav-links px-4 cursor-pointer capitalize font-medium hover:bg-[#4d58489c] duration-100 hover:text-[white] rounded-[50px] link-underline"
+              className="group nav-links px-4 cursor-pointer capitalize duration-100 hover:text-[white] h-full flex flex-col justify-center items-center"
               style={{ color: navColor }}
             >
               <Link href={link}>{text}</Link>
+              <div className={cn(
+                `h-[2px] mt-1 group-hover:w-1/2 transition-all duration-300`,
+                pathname === '/' + link ? "w-1/2" : "w-0"
+              )} 
+                  style={{ background: navColor }}>    
+              </div>
             </li>
           ))}
         </ul>
