@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
         <meta name="mobile-web-app-capable" content="yes" />
       </head>
       <body style={{ overflow: "hidden" }}>
-        <Navbar />
+        <Navbar homepage={true} />
         {children}
       </body>
     </html>

@@ -2,12 +2,12 @@
 import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import "./navbar.css";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { Menu, X } from "lucide-react";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
-export default function Navbar() {
+export default function Navbar({ homepage = false }) {
   const [nav, setNav] = useState(false);
   const [atStart, setAtStart] = useState(true);
   const [atEnd, setAtEnd] = useState(false);
@@ -29,13 +29,13 @@ export default function Navbar() {
   }, []);
 
   // Disable body scroll when mobile menu is open
-  // useEffect(() => {
-  //   if (nav) {
-  //     document.body.style.overflow = "hidden";
-  //   } else {
-  //     document.body.style.overflow = "auto";
-  //   }
-  // }, [nav]);
+  useEffect(() => {
+    if (nav) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = homepage ? "hidden" : "auto";
+    }
+  }, [nav]);
 
   const links = [
     { id: 1, link: "publications", text: "Publications" },
@@ -105,12 +105,12 @@ export default function Navbar() {
         {/* Hamburger Icon for Mobile */}
         <div
           onClick={() => setNav(!nav)}
-          className="cursor-pointer pr-4 md:hidden"
+          className="cursor-pointer pr-4 md:hidden z-50"
         >
           {nav ? (
-            <FaTimes size={30} style={{ color: navColor }} />
+            <X size={27} color="white" />
           ) : (
-            <FaBars size={30} style={{ color: navColor }} />
+            <Menu size={27} color={navColor} />
           )}
         </div>
 
@@ -125,7 +125,7 @@ export default function Navbar() {
               {links.map(({ id, link, text }) => (
                 <li
                   key={id}
-                  className="text-2xl capitalize hover:text-mywhite hover:text-3xl transition-all duration-200"
+                  className="text-2xl capitalize hover:text-mywhite hover:text-3xl transition-all duration-200 text-center"
                   onClick={() => setNav(false)} // Close menu on link click
                 >
                   <Link href={link}>{text}</Link>
